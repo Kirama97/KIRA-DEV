@@ -1,24 +1,31 @@
 export const projects = [
   {
     id: 1,
-    slug: 'nova-dashboard',
-    title: 'Nova Dashboard',
-    shortDesc: 'Tableau de bord analytics temps réel avec KPIs, visualisations D3.js et filtres avancés.',
-    fullDesc: `Nova Dashboard est une application analytics complète conçue pour les équipes data-driven qui veulent des insights en temps réel sans compromis sur l'expérience utilisateur.
+    slug: 'villa petit baobab',
+    title: 'Villa Petit Baobab',
+    shortDesc: 'le site villa petit baobab est un site de réservation situé à Warang Mbour.',
+    fullDesc: `La Villa Petit Baobab est une résidence d’exception nichée dans un cadre paisible et raffiné, pensée pour offrir une expérience unique alliant confort, élégance et sérénité. Située dans un environnement naturel privilégié, la villa incarne parfaitement le charme authentique et l’hospitalité chaleureuse du Sénégal.
 
-L'interface épurée cache une architecture robuste : WebSocket pour les données live, workers pour les calculs lourds, et rendu optimisé pour gérer des milliers de points de données sans lag.
+Dès votre arrivée, vous serez séduit par son architecture harmonieuse mêlant modernité et touches traditionnelles. Les espaces de vie sont spacieux, lumineux et soigneusement aménagés pour garantir un séjour agréable, que ce soit en famille, entre amis ou pour un séjour professionnel.
 
-Chaque composant a été pensé pour réduire la friction cognitive : les KPIs les plus importants sont visibles au premier coup d'œil, les filtres sont accessibles en un clic, et les exports se font en background.`,
+La villa propose des chambres confortables, décorées avec goût et équipées de toutes les commodités modernes. Chaque détail a été pensé pour offrir un cadre reposant et intime, propice à la détente et au bien-être.
+
+À l’extérieur, vous profiterez d’un espace convivial avec piscine, terrasse et coin détente, idéal pour savourer des moments inoubliables sous le soleil. Le jardin, agrémenté de végétation locale et dominé par le majestueux baobab, apporte une touche naturelle et apaisante à l’ensemble.
+
+La Villa Petit Baobab  se distingue également par la qualité de ses services : accueil personnalisé, entretien régulier, sécurité et accompagnement tout au long de votre séjour. Tout est mis en œuvre pour répondre aux attentes des visiteurs les plus exigeants.
+
+Que vous soyez à la recherche de calme, de luxe discret ou d’une escapade authentique, la Villa Petit Baobab est la destination idéale pour vivre une expérience unique et mémorable.
+`,
     features: [
-      'Visualisations temps réel via WebSocket',
-      'Dashboard customisable drag & drop',
-      'Export CSV / PDF automatisé',
+      'Reservation instannée',
+      'interface intuitive ',
+      'Calendrier qui adaptative',
       'Alertes intelligentes par email',
-      'Mode sombre natif',
-      'API REST + GraphQL',
+      'un dashboard remplie et comprehensive'
+      
     ],
-    tags: ['React', 'TypeScript', 'D3.js'],
-    tech: ['React 18', 'TypeScript', 'D3.js', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Socket.io', 'Redis'],
+    tags: ['wordpresse'],
+    tech: ['wordpress , wp-rental'],
     emoji: '🚀',
     gradient: 'from-[#0d0d20] to-[#1a0535]',
     gradientStyle: 'linear-gradient(135deg, #0d0d20, #1a0535)',

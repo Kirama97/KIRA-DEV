@@ -21,6 +21,7 @@ export default function ProjectCard({ project, index }) {
           style={{ background: project.gradientStyle }}
         >
           {project.emoji}
+          
         </div>
         {/* Overlay on hover */}
         <div className="absolute inset-0 bg-bg/85 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
