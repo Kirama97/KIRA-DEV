@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { HiOutlineVideoCamera } from 'react-icons/hi2'
 import { skills } from '../data/skills'
 
 const categories = ['Tous', 'Frontend', 'Backend', 'Mobile', 'Créatif', 'Design', 'DevOps']
 
 function SkillCard({ skill, index }) {
+  const Icon = skill.icon
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -16,7 +18,14 @@ function SkillCard({ skill, index }) {
       className="group glass p-3 rounded-2xl text-center cursor-default hover:border-accent/40 hover:bg-accent/[0.06] transition-colors duration-300"
       data-hover
     >
-      <div className="text-2xl mb-1.5">{skill.icon}</div>
+      <div className="flex justify-center mb-1.5">
+        <div 
+          className="text-xl group-hover:scale-110 transition-transform duration-300"
+          style={{ color: skill.color || 'var(--accent)' }}
+        >
+          <Icon />
+        </div>
+      </div>
       <div className="text-xs text-muted group-hover:text-white transition-colors duration-300 font-medium">
         {skill.name}
       </div>
@@ -73,7 +82,9 @@ export default function About() {
                 className="absolute -bottom-4 -left-4 glass px-3 py-2.5 rounded-xl z-20"
               >
                 <div className="flex items-center gap-2">
-                  <span className="text-lg">🎬</span>
+                  <span className="text-xl text-accent2">
+                    <HiOutlineVideoCamera />
+                  </span>
                   <div>
                     <div className="text-xs font-medium">Motion & Dev</div>
                     <div className="text-[10px] text-muted">Créatif complet</div>
@@ -111,7 +122,7 @@ export default function About() {
             </h2>
             <p className="text-muted leading-relaxed mb-4">
               Bonjour ! Je suis <strong className="text-white">Diene Thiam</strong>, développeur
-              Frontend & Fullstack basé à Dakar. Depuis 3 ans, je conçois des expériences
+              Frontend & Fullstack basé à Thiés. Depuis 3 ans, je conçois des expériences
               digitales qui allient performance technique et excellence esthétique.
             </p>
             <p className="text-muted leading-relaxed mb-8">

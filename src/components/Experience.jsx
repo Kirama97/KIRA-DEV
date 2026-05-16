@@ -39,6 +39,7 @@ function TimelineItem({ exp, index }) {
 }
 
 function ServiceCard({ service, index }) {
+  const Icon = service.icon
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -46,10 +47,12 @@ function ServiceCard({ service, index }) {
       viewport={{ once: true }}
       transition={{ delay: index * 0.08, duration: 0.6 }}
       whileHover={{ y: -4, borderColor: 'rgba(108,99,255,0.4)' }}
-      className="glass p-5 rounded-2xl hover:bg-accent/[0.04] transition-all duration-300 cursor-default"
+      className="glass p-5 rounded-2xl hover:bg-accent/[0.04] transition-all duration-300 cursor-default group"
       data-hover
     >
-      <div className="text-3xl mb-3">{service.icon}</div>
+      <div className="text-3xl mb-3 text-accent group-hover:scale-110 transition-transform duration-300">
+        <Icon />
+      </div>
       <h4 className="font-display font-bold text-base mb-2">{service.title}</h4>
       <p className="text-muted text-sm leading-relaxed">{service.desc}</p>
     </motion.div>

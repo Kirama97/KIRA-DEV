@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import { SiReact, SiFlutter } from 'react-icons/si'
+import { HiOutlineVideoCamera } from 'react-icons/hi2'
 import profil from '../assets/profil.png'
 
 const container = {
@@ -184,7 +186,11 @@ export default function Hero() {
                 className="absolute -bottom-4 -left-6 glass px-4 py-3 rounded-2xl"
               >
                 <div className="text-xs text-muted mb-1">Stack</div>
-                <div className="flex gap-1.5 text-base">⚛️ 📱 🎬</div>
+                <div className="flex gap-2 text-base text-accent">
+                  <SiReact title="React" />
+                  <SiFlutter title="Flutter" />
+                  <HiOutlineVideoCamera title="Motion" />
+                </div>
               </motion.div>
             </div>
           </motion.div>

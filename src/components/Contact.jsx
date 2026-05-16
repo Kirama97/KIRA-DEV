@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { FaGithub, FaLinkedin, FaTwitter, FaDribbble } from 'react-icons/fa'
 
 const socials = [
-  { icon: '👨‍💻', name: 'GitHub', handle: '@kirama97', url: 'https://github.com' },
-  { icon: '💼', name: 'LinkedIn', handle: 'Diene Thiam', url: 'https://linkedin.com' },
-  { icon: '𝕏', name: 'Twitter / X', handle: '@dienethiam', url: 'https://twitter.com' },
-  { icon: '🎨', name: 'Dribbble', handle: 'dienethiam', url: 'https://dribbble.com' },
+  { icon: FaGithub, name: 'GitHub', handle: '@kirama97', url: 'https://github.com' },
+  { icon: FaLinkedin, name: 'LinkedIn', handle: 'Diene Thiam', url: 'https://linkedin.com' },
+  { icon: FaTwitter, name: 'Twitter / X', handle: '@dienethiam', url: 'https://twitter.com' },
+  { icon: FaDribbble, name: 'Dribbble', handle: 'dienethiam', url: 'https://dribbble.com' },
 ]
 
 export default function Contact() {
@@ -88,7 +89,9 @@ export default function Contact() {
                     className="flex items-center gap-3 glass p-3 rounded-xl text-muted hover:text-white hover:border-accent/30 hover:bg-accent/[0.04] transition-all duration-300 group"
                     data-hover
                   >
-                    <span className="text-xl">{s.icon}</span>
+                    <span className="text-xl">
+                      <s.icon />
+                    </span>
                     <div className="flex-1 min-w-0">
                       <div className="text-sm font-medium text-white/80 group-hover:text-white transition-colors">
                         {s.name}
