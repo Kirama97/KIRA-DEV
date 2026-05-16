@@ -50,16 +50,28 @@ export default function ProjectDetail({ projects }) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full h-72 md:h-96 rounded-3xl flex items-center justify-center text-8xl mb-10 border border-white/[0.07] overflow-hidden"
+          className="w-full h-72 md:h-[450px] rounded-3xl flex items-center justify-center mb-10 border border-white/[0.07] overflow-hidden relative group"
           style={{ background: project.gradientStyle }}
         >
-          <motion.span
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6, type: 'spring' }}
-          >
-            {project.emoji}
-          </motion.span>
+          {project.image ? (
+            <motion.img
+              initial={{ scale: 1.1, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <motion.span
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.6, type: 'spring' }}
+              className="text-8xl"
+            >
+              {project.emoji}
+            </motion.span>
+          )}
         </motion.div>
 
         {/* Header */}

@@ -14,15 +14,21 @@ export default function ProjectCard({ project, index }) {
       className="project-card group glass rounded-3xl overflow-hidden cursor-none"
       data-hover
     >
-      {/* Thumbnail */}
       <div className="relative h-52 overflow-hidden">
-        <div
-          className="w-full h-full flex items-center justify-center text-6xl transition-transform duration-700 group-hover:scale-110"
-          style={{ background: project.gradientStyle }}
-        >
-          {project.emoji}
-          
-        </div>
+        {project.image ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+        ) : (
+          <div
+            className="w-full h-full flex items-center justify-center text-6xl transition-transform duration-700 group-hover:scale-110"
+            style={{ background: project.gradientStyle }}
+          >
+            {project.emoji}
+          </div>
+        )}
         {/* Overlay on hover */}
         <div className="absolute inset-0 bg-bg/85 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <a

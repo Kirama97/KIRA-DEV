@@ -35,6 +35,7 @@ Que vous soyez à la recherche de calme, de luxe discret ou d’une escapade aut
     year: '2024',
     role: 'Fullstack Developer',
     duration: '3 mois',
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop',
     visible: true,
   },
   {
@@ -66,6 +67,7 @@ Le panel admin offre une gestion complète du catalogue, des stocks, des command
     year: '2024',
     role: 'Frontend Developer',
     duration: '2 mois',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop',
     visible: true,
   },
   {
@@ -97,6 +99,7 @@ L'expérience mobile-first garantit une fluidité parfaite sur tous les appareil
     year: '2023',
     role: 'Mobile Developer',
     duration: '4 mois',
+    image: 'https://images.unsplash.com/photo-1611746872915-64382b5c76da?q=80&w=2070&auto=format&fit=crop',
     visible: true,
   },
   {
@@ -128,6 +131,7 @@ La bibliothèque d'assets intégrée propose des milliers d'icônes, illustratio
     year: '2023',
     role: 'Frontend Developer',
     duration: '5 mois',
+    image: 'https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=2071&auto=format&fit=crop',
     visible: true,
   },
   {
@@ -159,6 +163,7 @@ Les quiz intelligents utilisent l'IA pour générer des questions calibrées à 
     year: '2024',
     role: 'Fullstack Developer',
     duration: '6 mois',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
     visible: true,
   },
   {
@@ -190,6 +195,7 @@ L'export est optimisé pour chaque plateforme : H.264 pour YouTube, HEVC pour le
     year: '2024',
     role: 'Frontend Developer',
     duration: '4 mois',
+    image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2070&auto=format&fit=crop',
     visible: true,
   },
 ]
