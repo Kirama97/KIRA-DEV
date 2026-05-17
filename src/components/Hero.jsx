@@ -128,7 +128,7 @@ export default function Hero() {
             <motion.div variants={item} className="flex gap-8 mt-12 pt-10 border-t border-text/10">
               {[
                 { n: '3+', l: "ans d'expérience" },
-                { n: '20+', l: 'projets livrés' },
+                { n: '5+', l: 'projets livrés' },
                 { n: '100%', l: 'clients satisfaits' },
               ].map((s) => (
                 <div key={s.l}>
