@@ -22,7 +22,7 @@ Que vous soyez à la recherche de calme, de luxe discret ou d’une escapade aut
       'Calendrier qui adaptative',
       'Alertes intelligentes par email',
       'un dashboard remplie et comprehensive'
-      
+
     ],
     tags: ['wordpresse'],
     tech: ['wordpress , wp-rental'],
@@ -30,18 +30,24 @@ Que vous soyez à la recherche de calme, de luxe discret ou d’une escapade aut
     gradient: 'from-[#0d0d20] to-[#1a0535]',
     gradientStyle: 'linear-gradient(135deg, #0d0d20, #1a0535)',
     accentColor: '#6C63FF',
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    // github: 'https://github.com',
+    demo: 'https://villa-petitbaobab.com/',
     year: '2024',
     role: 'Fullstack Developer',
     duration: '3 mois',
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop',
+    image: '/villa_petit_baobab_1.png',
+    gallery: [
+      '/villa_petit_baobab_1.png',
+      '/villa_petit_baobab_2.png',
+      '/villa_petit_baobab_3.png',
+      '/villa_petit_baobab_4.png'
+    ],
     visible: true,
   },
   {
     id: 2,
     slug: 'luxe-commerce',
-    title: 'Luxe Commerce',
+    title: 'Perso My Style',
     shortDesc: 'Plateforme e-commerce premium avec animations 3D, panier temps réel et Stripe.',
     fullDesc: `Luxe Commerce redéfinit l'expérience d'achat en ligne en mettant l'esthétique au cœur de chaque interaction. Chaque produit bénéficie d'une présentation 3D interactive, permettant aux clients de l'examiner sous tous les angles.
 
@@ -56,18 +62,24 @@ Le panel admin offre une gestion complète du catalogue, des stocks, des command
       'Gestion des stocks automatique',
       'Analytics ventes en temps réel',
     ],
-    tags: ['Next.js', 'Stripe', 'Three.js'],
-    tech: ['Next.js 14', 'Three.js', 'Stripe', 'Prisma', 'PostgreSQL', 'Tailwind', 'Vercel'],
+    tags: ['React', 'MongoDB', 'Node js'],
+    tech: ['react js 14', 'Node js', 'mongodb', 'tailwind css'],
     emoji: '💎',
     gradient: 'from-[#001a0d] to-[#003320]',
     gradientStyle: 'linear-gradient(135deg, #001a0d, #003320)',
     accentColor: '#00D4FF',
     github: 'https://github.com',
-    demo: 'https://example.com',
-    year: '2024',
+    demo: 'https://front-tache212.vercel.app/accueil',
+    year: '2026',
     role: 'Frontend Developer',
     duration: '2 mois',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop',
+    image: '/tache_21_1.png',
+    gallery: [
+      '/tache_21_2.png',
+      '/tache_21_3.png',
+      '/tache_21_4.png',
+      '/tache_21_1.png'
+    ],
     visible: true,
   },
   {
@@ -100,6 +112,12 @@ L'expérience mobile-first garantit une fluidité parfaite sur tous les appareil
     role: 'Mobile Developer',
     duration: '4 mois',
     image: 'https://images.unsplash.com/photo-1611746872915-64382b5c76da?q=80&w=2070&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1611746872915-64382b5c76da?q=80&w=2070&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop'
+    ],
     visible: true,
   },
   {
@@ -132,6 +150,12 @@ La bibliothèque d'assets intégrée propose des milliers d'icônes, illustratio
     role: 'Frontend Developer',
     duration: '5 mois',
     image: 'https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=2071&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=2071&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1541462608141-ad601970260c?q=80&w=2070&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2070&auto=format&fit=crop'
+    ],
     visible: true,
   },
   {
@@ -164,6 +188,12 @@ Les quiz intelligents utilisent l'IA pour générer des questions calibrées à 
     role: 'Fullstack Developer',
     duration: '6 mois',
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1507146426996-ef05306b995a?q=80&w=2070&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1531746790731-6c087fecd05a?q=80&w=2070&auto=format&fit=crop'
+    ],
     visible: true,
   },
   {
@@ -196,6 +226,12 @@ L'export est optimisé pour chaque plateforme : H.264 pour YouTube, HEVC pour le
     role: 'Frontend Developer',
     duration: '4 mois',
     image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2070&auto=format&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2070&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2070&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=2070&auto=format&fit=crop'
+    ],
     visible: true,
   },
 ]

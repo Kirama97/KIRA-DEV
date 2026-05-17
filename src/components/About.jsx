@@ -26,7 +26,7 @@ function SkillCard({ skill, index }) {
           <Icon />
         </div>
       </div>
-      <div className="text-xs text-muted group-hover:text-white transition-colors duration-300 font-medium">
+      <div className="text-xs text-muted group-hover:text-accent transition-colors duration-300 font-medium">
         {skill.name}
       </div>
       <div className="text-[10px] text-muted/50 mt-0.5">{skill.category}</div>
@@ -57,10 +57,10 @@ export default function About() {
 
               {/* Avatar */}
               <div
-                className="relative w-56 h-56 rounded-[2.5rem] flex items-center justify-center z-10 border border-white/10"
+                className="relative w-56 h-56 rounded-[2.5rem] flex items-center justify-center z-10 border border-text/10"
                 style={{
-                  background: 'linear-gradient(135deg, #131320, #0d0d15)',
-                  boxShadow: '0 40px 80px rgba(0,0,0,0.6), 0 0 60px rgba(108,99,255,0.2)',
+                  background: 'linear-gradient(135deg, var(--color-surface2), var(--color-surface))',
+                  boxShadow: '0 40px 80px rgba(0,0,0,0.2), 0 0 60px rgba(108,99,255,0.1)',
                 }}
               >
                 <span className="font-display font-black text-7xl text-accent">DT</span>
@@ -121,7 +121,7 @@ export default function About() {
               <span className="gradient-text">créatif dans l'âme</span>
             </h2>
             <p className="text-muted leading-relaxed mb-4">
-              Bonjour ! Je suis <strong className="text-white">Diene Thiam</strong>, développeur
+              Bonjour ! Je suis <strong className="text-text">Diene Thiam</strong>, développeur
               Frontend & Fullstack basé à Thiés. Depuis 3 ans, je conçois des expériences
               digitales qui allient performance technique et excellence esthétique.
             </p>

@@ -1,23 +1,25 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 export default function ProjectDetail({ projects }) {
   const { slug } = useParams()
   const navigate = useNavigate()
   const project = projects.find((p) => p.slug === slug)
+  const [activeImage, setActiveImage] = useState(null)
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [slug])
+    if (project) setActiveImage(project.image)
+  }, [slug, project])
 
   if (!project) {
     return (
       <div className="min-h-screen flex items-center justify-center relative z-10">
         <div className="text-center">
           <div className="text-6xl mb-6">🔍</div>
-          <h1 className="font-display font-black text-3xl mb-4">Projet introuvable</h1>
-          <p className="text-muted mb-8">Ce projet n'existe pas ou a été supprimé.</p>
+          <h1 className="font-display font-black text-3xl mb-4 text-text">Projet introuvable</h1>
+          <p className="text-muted mb-8 text-text/60">Ce projet n'existe pas ou a été supprimé.</p>
           <button
             onClick={() => navigate('/')}
             className="px-6 py-3 bg-accent rounded-full text-sm font-medium text-white"
@@ -45,34 +47,52 @@ export default function ProjectDetail({ projects }) {
           Retour aux projets
         </motion.button>
 
-        {/* Hero thumb */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="w-full h-72 md:h-[450px] rounded-3xl flex items-center justify-center mb-10 border border-white/[0.07] overflow-hidden relative group"
-          style={{ background: project.gradientStyle }}
-        >
-          {project.image ? (
-            <motion.img
-              initial={{ scale: 1.1, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <motion.span
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.6, type: 'spring' }}
-              className="text-8xl"
+        {/* Hero / Main Image */}
+        <div className="mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="w-full h-72 md:h-[500px] rounded-3xl flex items-center justify-center mb-6 border border-white/[0.07] overflow-hidden relative group shadow-2xl"
+            style={{ background: project.gradientStyle }}
+          >
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={activeImage}
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                src={activeImage}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
+            </AnimatePresence>
+          </motion.div>
+
+          {/* Thumbnails Gallery */}
+          {project.gallery && project.gallery.length > 1 && (
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide"
             >
-              {project.emoji}
-            </motion.span>
+              {project.gallery.map((img, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveImage(img)}
+                  className={`relative flex-shrink-0 w-24 h-16 md:w-32 md:h-20 rounded-xl overflow-hidden border-2 transition-all ${
+                    activeImage === img ? 'border-accent scale-105 shadow-lg' : 'border-transparent opacity-60 hover:opacity-100'
+                  }`}
+                  data-hover
+                >
+                  <img src={img} alt="" className="w-full h-full object-cover" />
+                </button>
+              ))}
+            </motion.div>
           )}
-        </motion.div>
+        </div>
 
         {/* Header */}
         <motion.div
@@ -96,13 +116,13 @@ export default function ProjectDetail({ projects }) {
           </h1>
           <div className="flex flex-wrap gap-6 text-sm text-muted mb-6">
             <span>
-              Année : <span className="text-white font-medium">{project.year}</span>
+              Année : <span className="text-text font-medium">{project.year}</span>
             </span>
             <span>
-              Rôle : <span className="text-white font-medium">{project.role}</span>
+              Rôle : <span className="text-text font-medium">{project.role}</span>
             </span>
             <span>
-              Durée : <span className="text-white font-medium">{project.duration}</span>
+              Durée : <span className="text-text font-medium">{project.duration}</span>
             </span>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -116,15 +136,17 @@ export default function ProjectDetail({ projects }) {
             >
               Voir la démo ↗
             </a>
-            <a
+             {
+               project.github ? ( <a
               href={project.github}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 px-6 py-3 border border-white/10 hover:border-accent/40 rounded-full text-sm font-medium text-white/80 hover:text-white transition-all hover:-translate-y-0.5"
+              className="flex items-center gap-2 px-6 py-3 border border-text/10 hover:border-accent/40 rounded-full text-sm font-medium text-text/80 hover:text-text transition-all hover:-translate-y-0.5"
               data-hover
             >
               Code source
-            </a>
+            </a>) : ''
+             }
           </div>
         </motion.div>
 
@@ -138,7 +160,7 @@ export default function ProjectDetail({ projects }) {
           {/* Main description — 2 cols */}
           <div className="lg:col-span-2 space-y-6">
             <div>
-              <h2 className="font-display font-bold text-xl mb-4 text-white/90">
+              <h2 className="font-display font-bold text-xl mb-4 text-text/90">
                 À propos du projet
               </h2>
               <div className="space-y-4">
@@ -151,7 +173,7 @@ export default function ProjectDetail({ projects }) {
             </div>
 
             <div>
-              <h2 className="font-display font-bold text-xl mb-4 text-white/90">
+              <h2 className="font-display font-bold text-xl mb-4 text-text/90">
                 Fonctionnalités clés
               </h2>
               <div className="grid sm:grid-cols-2 gap-3">
@@ -204,7 +226,7 @@ export default function ProjectDetail({ projects }) {
                   <div className="text-[11px] text-muted uppercase tracking-wider mb-0.5">
                     {m.label}
                   </div>
-                  <div className="text-sm font-medium text-white">{m.value}</div>
+                  <div className="text-sm font-medium text-text">{m.value}</div>
                 </div>
               ))}
             </div>

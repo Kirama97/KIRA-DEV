@@ -70,7 +70,7 @@ export default function Contact() {
 
             <div>
               <div className="text-xs text-muted uppercase tracking-widest mb-3">Localisation</div>
-              <div className="flex items-center gap-2 text-white">
+              <div className="flex items-center gap-2 text-text">
                 <span>🇸🇳</span>
                 <span className="font-medium">Thiés, Sénégal</span>
               </div>
@@ -86,14 +86,14 @@ export default function Contact() {
                     href={s.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-3 glass p-3 rounded-xl text-muted hover:text-white hover:border-accent/30 hover:bg-accent/[0.04] transition-all duration-300 group"
+                    className="flex items-center gap-3 glass p-3 rounded-xl text-muted hover:text-accent hover:border-accent/30 hover:bg-accent/[0.04] transition-all duration-300 group"
                     data-hover
                   >
                     <span className="text-xl">
                       <s.icon />
                     </span>
                     <div className="flex-1 min-w-0">
-                      <div className="text-sm font-medium text-white/80 group-hover:text-white transition-colors">
+                      <div className="text-sm font-medium text-text/80 group-hover:text-text transition-colors">
                         {s.name}
                       </div>
                       <div className="text-xs text-muted truncate">{s.handle}</div>
@@ -133,7 +133,7 @@ export default function Contact() {
                     value={form.name}
                     onChange={handle}
                     placeholder="Jean Dupont"
-                    className="form-input bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-white text-sm placeholder-muted/50 focus:border-accent transition-all"
+                    className="form-input bg-text/[0.03] border border-text/[0.08] rounded-xl px-4 py-3 text-text text-sm placeholder-muted/50 focus:border-accent transition-all"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
@@ -145,7 +145,7 @@ export default function Contact() {
                     value={form.email}
                     onChange={handle}
                     placeholder="jean@example.com"
-                    className="form-input bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-white text-sm placeholder-muted/50 focus:border-accent transition-all"
+                    className="form-input bg-text/[0.03] border border-text/[0.08] rounded-xl px-4 py-3 text-text text-sm placeholder-muted/50 focus:border-accent transition-all"
                   />
                 </div>
               </div>
@@ -157,7 +157,7 @@ export default function Contact() {
                   value={form.subject}
                   onChange={handle}
                   placeholder="Mission freelance, collaboration, recrutement…"
-                  className="form-input bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-white text-sm placeholder-muted/50 focus:border-accent transition-all"
+                  className="form-input bg-text/[0.03] border border-text/[0.08] rounded-xl px-4 py-3 text-text text-sm placeholder-muted/50 focus:border-accent transition-all"
                 />
               </div>
 
@@ -170,7 +170,7 @@ export default function Contact() {
                   value={form.message}
                   onChange={handle}
                   placeholder="Décrivez votre projet, vos besoins, votre timeline…"
-                  className="form-textarea bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3 text-white text-sm placeholder-muted/50 focus:border-accent transition-all resize-none"
+                  className="form-textarea bg-text/[0.03] border border-text/[0.08] rounded-xl px-4 py-3 text-text text-sm placeholder-muted/50 focus:border-accent transition-all resize-none"
                 />
               </div>
 

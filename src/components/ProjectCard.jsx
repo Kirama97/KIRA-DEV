@@ -41,16 +41,18 @@ export default function ProjectCard({ project, index }) {
           >
             Demo ↗
           </a>
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="px-4 py-2 border border-white/20 rounded-full text-xs font-medium text-white hover:border-white/50 transition-colors"
-            data-hover
-          >
-            Code
-          </a>
+           {
+            project.github ? ( <a
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="px-4 py-2 border border-text/20 rounded-full text-xs font-medium text-text hover:border-text/50 transition-colors"
+              data-hover
+            >
+              Code
+            </a>) : ''
+           }
         </div>
       </div>
 

@@ -88,7 +88,7 @@ export default function Hero() {
             {/* Rotating specialty */}
             <motion.div
               variants={item}
-              className="font-display font-bold text-2xl md:text-3xl text-white/40 mb-6 h-10 overflow-hidden"
+              className="font-display font-bold text-2xl md:text-3xl text-text/40 mb-6 h-10 overflow-hidden"
             >
               <AnimatePresence mode="wait">
                 <RotatingSpecialty />
@@ -117,7 +117,7 @@ export default function Hero() {
               </button>
               <button
                 onClick={() => scrollTo('contact')}
-                className="px-7 py-3.5 border border-white/10 rounded-full font-medium text-sm text-white/80 hover:border-accent/50 hover:text-white hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm"
+                className="px-7 py-3.5 border border-text/10 rounded-full font-medium text-sm text-text/80 hover:border-accent/50 hover:text-text hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm"
                 data-hover
               >
                 Me contacter
@@ -125,7 +125,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Stats */}
-            <motion.div variants={item} className="flex gap-8 mt-12 pt-10 border-t border-white/[0.06]">
+            <motion.div variants={item} className="flex gap-8 mt-12 pt-10 border-t border-text/10">
               {[
                 { n: '3+', l: "ans d'expérience" },
                 { n: '20+', l: 'projets livrés' },
