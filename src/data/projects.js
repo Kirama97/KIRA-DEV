@@ -167,44 +167,7 @@ L'interface utilisateur intuitive permet de personnaliser facilement chaque CV, 
     ],
     visible: true,
   },
-  {
-    id: 4,
-    slug: 'artflow-studio',
-    title: 'ArtFlow Studio',
-    shortDesc: 'Outil de création visuelle collaborative avec canvas infini, calques vectoriels et sync cloud.',
-    fullDesc: `ArtFlow Studio transforme la création visuelle collaborative en une expérience fluide et intuitive. Le canvas infini permet de travailler à n'importe quelle échelle, des wireframes rapides aux illustrations détaillées.
 
-La collaboration en temps réel permet à plusieurs personnes de travailler simultanément, avec des curseurs visibles et des modifications synchronisées instantanément. Le système de calques inspiré de Figma offre un contrôle total sur la composition.
-
-La bibliothèque d'assets intégrée propose des milliers d'icônes, illustrations et templates prêts à l'emploi.`,
-    features: [
-      'Canvas infini avec zoom fluide',
-      'Collaboration temps réel multi-curseurs',
-      'Système de calques vectoriels',
-      'Export SVG / PNG / PDF',
-      'Bibliothèque de 5000+ assets',
-      'Historique d\'actions illimité',
-    ],
-    tags: ['Vue.js', 'Canvas API', 'WebRTC'],
-    tech: ['Vue 3', 'Pinia', 'Canvas API', 'WebRTC', 'Firebase', 'Vite', 'GSAP'],
-    emoji: '🎨',
-    gradient: 'from-[#1a0a0a] to-[#300a20]',
-    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
-    accentColor: '#6C63FF',
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    year: '2023',
-    role: 'Frontend Developer',
-    duration: '5 mois',
-    image: 'https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=2071&auto=format&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=2071&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1541462608141-ad601970260c?q=80&w=2070&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2070&auto=format&fit=crop'
-    ],
-    visible: true,
-  },
  
  
 ]
