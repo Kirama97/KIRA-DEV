@@ -132,6 +132,43 @@ Le projet inclut également des fonctionnalités avancées telles que la gestion
   },
   {
     id: 4,
+    slug: 'Sunu cv',
+    title: 'Sunu cv',
+    shortDesc: 'Plateforme de création de CV en ligne avec des modèles professionnels.',
+    fullDesc: `Sunu cv est une plateforme innovante de création de CV en ligne, conçue pour aider les professionnels à présenter leur parcours de manière efficace et attrayante.
+
+Les modèles professionnels offrent une présentation soignée et moderne, adaptée à différents secteurs d'activité.
+
+L'interface utilisateur intuitive permet de personnaliser facilement chaque CV, en ajoutant des informations sur l'expérience professionnelle, les compétences et les réalisations.`,
+    features: [
+      'Modèles professionnels et modernes',
+      'Édition en temps réel',
+      'Export PDF / Word',
+      'Partage facile via lien',
+      'Base de données d\'emplois',
+    ],
+    tags: ['React', 'Node.js', 'MongoDB'],
+    tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS'],
+    emoji: '📄',
+    gradient: 'from-[#0a1a1a] to-[#1a3030]',
+    gradientStyle: 'linear-gradient(135deg, #0a1a1a, #1a3030)',
+    accentColor: '#4CAF50',
+    github: 'https://github.com',
+    demo: 'https://sunu-web.vercel.app/',
+    year: '2023',
+    role: 'Developpeur Fullstack',
+    duration: '4 mois',
+    image: '/sunu_cv/sunu_cv_image1.png',
+    gallery: [
+      '/sunu_cv/sunu_cv_image1.png',
+      '/sunu_cv/sunu_cv_image2.png',
+      '/sunu_cv/sunu_cv_image3.png',
+      '/sunu_cv/sunu_cv_image4.png'
+    ],
+    visible: true,
+  },
+  {
+    id: 4,
     slug: 'artflow-studio',
     title: 'ArtFlow Studio',
     shortDesc: 'Outil de création visuelle collaborative avec canvas infini, calques vectoriels et sync cloud.',
