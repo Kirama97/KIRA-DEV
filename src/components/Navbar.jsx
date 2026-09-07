@@ -84,7 +84,7 @@ export default function Navbar() {
               data-hover
             >
               <span className="w-1.5 h-1.5 rounded-full bg-accent2 animate-blink" />
-              Disponible
+              indisponible
             </a>
             {/* Mobile menu toggle */}
             <button

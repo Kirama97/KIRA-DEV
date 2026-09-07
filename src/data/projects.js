@@ -35,12 +35,12 @@ Que vous soyez à la recherche de calme, de luxe discret ou d’une escapade aut
     year: '2024',
     role: 'Fullstack Developer',
     duration: '3 mois',
-    image: '/villa_petit_baobab_1.png',
+    image: '/villa_petit_baobab/villa_petit_baobab_1.png',
     gallery: [
-      '/villa_petit_baobab_1.png',
-      '/villa_petit_baobab_2.png',
-      '/villa_petit_baobab_3.png',
-      '/villa_petit_baobab_4.png'
+      '/villa_petit_baobab/villa_petit_baobab_1.png',
+      '/villa_petit_baobab/villa_petit_baobab_2.png',
+      '/villa_petit_baobab/villa_petit_baobab_3.png',
+      '/villa_petit_baobab/villa_petit_baobab_4.png'
     ],
     visible: true,
   },
@@ -73,50 +73,60 @@ Le panel admin offre une gestion complète du catalogue, des stocks, des command
     year: '2026',
     role: 'Frontend Developer',
     duration: '2 mois',
-    image: '/tache_21_1.png',
+    image: '/perso_my_style/tache_21_1.png',
     gallery: [
-      '/tache_21_2.png',
-      '/tache_21_3.png',
-      '/tache_21_4.png',
-      '/tache_21_1.png'
+      '/perso_my_style/tache_21_2.png',
+      '/perso_my_style/tache_21_3.png',
+      '/perso_my_style/tache_21_4.png',
+      '/perso_my_style/tache_21_1.png'
     ],
     visible: true,
   },
   {
     id: 3,
-    slug: 'pulse-chat',
-    title: 'PulseChat',
-    shortDesc: 'Messagerie temps réel avec chiffrement E2E, rooms thématiques et partage de fichiers.',
-    fullDesc: `PulseChat est une application de messagerie d'entreprise qui prend la sécurité au sérieux. Chaque message est chiffré de bout en bout, garantissant que seuls les destinataires légitimes peuvent lire les conversations.
+    slug: 'sbci',
+    title: 'sbci',
+    shortDesc: 'SBCI un site e-commerce dédiée à la vente de produits électroniques et de mobilier de bureau, avec une interface moderne, intuitive et des fonctionnalités avancées pour optimiser l’expérience utilisateur.',
+    fullDesc: `SBCI — Plateforme e-commerce
 
-L'architecture microservices permet une scalabilité horizontale : chaque composant (auth, messages, fichiers, notifications) est indépendant et peut être mis à l'échelle séparément selon la charge.
+SBCI est une plateforme e-commerce moderne conçue pour digitaliser la vente de "produits électroniques, informatiques et de mobilier de bureau". Le projet a été pensé autour d’une interface moderne, intuitive et responsive, permettant aux utilisateurs de parcourir facilement le catalogue, consulter les caractéristiques des produits et effectuer leurs achats en ligne.
 
-L'expérience mobile-first garantit une fluidité parfaite sur tous les appareils, avec des notifications push natives et un mode hors-ligne complet.`,
+La plateforme propose une organisation claire des produits par "catégories et sous-catégories", avec un système de recherche et de filtrage permettant de retrouver rapidement les articles recherchés. Chaque produit dispose d’une page dédiée présentant ses informations essentielles, ses images, son prix et sa disponibilité.
+
+L’expérience utilisateur a été particulièrement prise en compte avec une navigation fluide. La plateforme intègre également un système d’"authentification et de gestion des comptes utilisateurs", garantissant un accès sécurisé aux fonctionnalités personnelles.
+
+Sur le plan technique, le projet repose sur une architecture "frontend/backend" permettant de séparer l’interface utilisateur de la logique métier et de la gestion des données. Une attention particulière a été portée à la "performance, la sécurité, la responsivité et la maintenabilité du code" afin de garantir une expérience optimale sur ordinateur, tablette et mobile.
+
+Le projet inclut également des fonctionnalités avancées telles que la gestion des produits, des catégories, des utilisateurs, des commandes et des contenus, ainsi que l’intégration de services externes pour la "gestion des images et l’envoi de notifications par e-mail".
+
+"Objectif du projet :" proposer à SBCI (Senegal Business computers and Informatics) une solution digitale moderne permettant de présenter ses produits en ligne, d'améliorer l’expérience d’achat des clients et de faciliter la gestion du catalogue et des commandes.
+`,
     features: [
-      'Chiffrement E2E sur tous les messages',
-      'Rooms publiques et privées',
-      'Partage de fichiers jusqu\'à 1GB',
-      'Notifications push natives',
-      'Mode hors-ligne complet',
-      'Historique de recherche illimité',
+      'Authentification sécurisée avec JWT',
+      'Espace produit electronique et mobilier de bureau',
+      'Commande directe sur Whatsapp',
+      'Interface moderne et intuitive',
+      'Dashboard admin pour la gestion des produits et des commandes',
     ],
-    tags: ['React Native', 'Socket.io', 'Node.js'],
-    tech: ['React Native', 'Expo', 'Socket.io', 'Node.js', 'Redis', 'MongoDB', 'JWT', 'AES-256'],
+    tags: ['React Vite', 'MongoDB', 'Node.js'],
+    tech: ['React Vite', 'MongoDB', 'Node.js', 'Express', 'Tailwind CSS', 'Socket.IO', 'JWT'],
     emoji: '⚡',
     gradient: 'from-[#0a0a1a] to-[#1a1a35]',
     gradientStyle: 'linear-gradient(135deg, #0a0a1a, #1a1a35)',
     accentColor: '#FF6B9D',
     github: 'https://github.com',
-    demo: 'https://example.com',
+    demo: 'https://front-t-sbci.vercel.app/accueil',
     year: '2023',
-    role: 'Mobile Developer',
+    role: 'Developpeur Fullstack',
     duration: '4 mois',
-    image: 'https://images.unsplash.com/photo-1611746872915-64382b5c76da?q=80&w=2070&auto=format&fit=crop',
+    image: '/sbci/sbci_image1.png',
     gallery: [
-      'https://images.unsplash.com/photo-1611746872915-64382b5c76da?q=80&w=2070&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop'
+      '/sbci/sbci_image2.png',
+      '/sbci/sbci_image3.png',
+      '/sbci/sbci_image4.png',
+      '/sbci/sbci_image5.png',
+      '/sbci/sbci_image6.png',
+      '/sbci/sbci_image1.png'
     ],
     visible: true,
   },
@@ -158,82 +168,8 @@ La bibliothèque d'assets intégrée propose des milliers d'icônes, illustratio
     ],
     visible: true,
   },
-  {
-    id: 5,
-    slug: 'trailmind-ai',
-    title: 'TrailMind AI',
-    shortDesc: 'Plateforme d\'apprentissage adaptatif IA avec parcours personnalisés et quiz intelligents.',
-    fullDesc: `TrailMind AI révolutionne l'apprentissage en ligne en utilisant l'intelligence artificielle pour personnaliser chaque aspect du parcours éducatif. L'algorithme analyse les performances, identifie les lacunes et adapte le contenu en temps réel.
-
-Contrairement aux plateformes traditionnelles, TrailMind ne propose pas des cours linéaires mais des arbres de compétences dynamiques qui s'adaptent à votre rythme et style d'apprentissage.
-
-Les quiz intelligents utilisent l'IA pour générer des questions calibrées à votre niveau actuel, maximisant la rétention à long terme grâce à la répétition espacée.`,
-    features: [
-      'Algorithme d\'IA adaptatif',
-      'Parcours de compétences dynamiques',
-      'Quiz générés par IA',
-      'Répétition espacée intelligente',
-      'Analytics progrès détaillés',
-      'Certificats vérifiables on-chain',
-    ],
-    tags: ['Python', 'FastAPI', 'React'],
-    tech: ['React 18', 'Python', 'FastAPI', 'OpenAI API', 'PostgreSQL', 'Redis', 'Celery', 'Docker'],
-    emoji: '🧠',
-    gradient: 'from-[#0a1a1a] to-[#0a2030]',
-    gradientStyle: 'linear-gradient(135deg, #0a1a1a, #0a2030)',
-    accentColor: '#00D4FF',
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    year: '2024',
-    role: 'Fullstack Developer',
-    duration: '6 mois',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1507146426996-ef05306b995a?q=80&w=2070&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1531746790731-6c087fecd05a?q=80&w=2070&auto=format&fit=crop'
-    ],
-    visible: true,
-  },
-  {
-    id: 6,
-    slug: 'cinecraft-edit',
-    title: 'CineCraft Edit',
-    shortDesc: 'Éditeur vidéo web professionnel avec transitions ciné, color grading et export multi-format.',
-    fullDesc: `CineCraft Edit apporte la puissance du montage professionnel directement dans le navigateur. Aucun logiciel à installer, un lien à partager et l'équipe peut collaborer sur le même projet en temps réel.
-
-La bibliothèque de transitions cinématographiques a été conçue par des monteurs professionnels pour donner un rendu digne des productions Hollywood. Le color grading intégré offre des outils LUT, courbes et corrections colorimétriques avancées.
-
-L'export est optimisé pour chaque plateforme : H.264 pour YouTube, HEVC pour les mobiles, ProRes pour les diffusions broadcast.`,
-    features: [
-      'Timeline multi-pistes drag & drop',
-      '200+ transitions cinématographiques',
-      'Color grading avec LUTs',
-      'Collaboration temps réel',
-      'Export multi-format optimisé',
-      'Bibliothèque de musiques libres',
-    ],
-    tags: ['React', 'WebGL', 'FFmpeg.wasm'],
-    tech: ['React 18', 'WebGL', 'FFmpeg.wasm', 'Web Workers', 'Canvas API', 'Node.js', 'AWS S3'],
-    emoji: '🎬',
-    gradient: 'from-[#0a0a0a] to-[#1a1020]',
-    gradientStyle: 'linear-gradient(135deg, #0a0a0a, #1a1020)',
-    accentColor: '#FF6B9D',
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    year: '2024',
-    role: 'Frontend Developer',
-    duration: '4 mois',
-    image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2070&auto=format&fit=crop',
-    gallery: [
-      'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2070&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2070&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=2070&auto=format&fit=crop'
-    ],
-    visible: true,
-  },
+ 
+ 
 ]
 
 export const getProjectBySlug = (slug) => projects.find((p) => p.slug === slug)
