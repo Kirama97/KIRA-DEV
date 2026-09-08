@@ -17,10 +17,10 @@ const item = {
 }
 
 const specialties = [
-  'Frontend Developer',
-  'Fullstack Engineer',
-  'Mobile Developer',
-  'Motion Designer',
+  'Ingénieur Logiciel',
+  'Développeur Full-stack',
+  'Direction Technique',
+  'Intelligence Artificielle',
   'Visual Creator',
 ]
 
@@ -71,7 +71,7 @@ export default function Hero() {
             <motion.div variants={item} className="inline-flex items-center gap-2 bg-accent/10 border border-accent/25 rounded-full px-4 py-2 mb-8">
               <span className="w-2 h-2 rounded-full bg-accent2 animate-blink" />
               <span className="text-accent2 text-xs font-medium tracking-widest uppercase">
-                Près a travaillé — Disponible
+                Prêt à travailler — Disponible
               </span>
             </motion.div>
 
@@ -127,9 +127,9 @@ export default function Hero() {
             {/* Stats */}
             <motion.div variants={item} className="flex gap-8 mt-12 pt-10 border-t border-text/10">
               {[
-                { n: '3+', l: "ans d'expérience" },
-                { n: '5+', l: 'projets livrés' },
-                { n: '100%', l: 'clients satisfaits' },
+                { n: '6+', l: "ans d'expérience tech" },
+                { n: '50+', l: 'projets & formations' },
+                { n: '100%', l: 'engagement' },
               ].map((s) => (
                 <div key={s.l}>
                   <div className="font-display font-black text-2xl gradient-text">{s.n}</div>

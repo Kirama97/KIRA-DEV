@@ -32,7 +32,7 @@ Que vous soyez à la recherche de calme, de luxe discret ou d’une escapade aut
     accentColor: '#6C63FF',
     // github: 'https://github.com',
     demo: 'https://villa-petitbaobab.com/',
-    year: '2024',
+    year: '2025',
     role: 'Fullstack Developer',
     duration: '3 mois',
     image: '/villa_petit_baobab/villa_petit_baobab_1.png',
@@ -72,7 +72,7 @@ Le panel admin offre une gestion complète du catalogue, des stocks, des command
     demo: 'https://front-tache212.vercel.app/accueil',
     year: '2026',
     role: 'Frontend Developer',
-    duration: '2 mois',
+    duration: '4 mois',
     image: '/perso_my_style/tache_21_1.png',
     gallery: [
       '/perso_my_style/tache_21_2.png',
@@ -85,8 +85,8 @@ Le panel admin offre une gestion complète du catalogue, des stocks, des command
   {
     id: 3,
     slug: 'sbci',
-    title: 'sbci',
-    shortDesc: 'SBCI un site e-commerce dédiée à la vente de produits électroniques et de mobilier de bureau, avec une interface moderne, intuitive et des fonctionnalités avancées pour optimiser l’expérience utilisateur.',
+    title: 'SBCI',
+    shortDesc: 'SBCI (Senegal Business Computers and Informatics) un site e-commerce dédiée à la vente de produits électroniques et de mobilier de bureau, avec une interface moderne, intuitive et des fonctionnalités avancées pour optimiser l’expérience utilisateur.',
     fullDesc: `SBCI — Plateforme e-commerce
 
 SBCI est une plateforme e-commerce moderne conçue pour digitaliser la vente de "produits électroniques, informatiques et de mobilier de bureau". Le projet a été pensé autour d’une interface moderne, intuitive et responsive, permettant aux utilisateurs de parcourir facilement le catalogue, consulter les caractéristiques des produits et effectuer leurs achats en ligne.
@@ -116,9 +116,9 @@ Le projet inclut également des fonctionnalités avancées telles que la gestion
     accentColor: '#FF6B9D',
     github: 'https://github.com',
     demo: 'https://front-t-sbci.vercel.app/accueil',
-    year: '2023',
+    year: '2026',
     role: 'Developpeur Fullstack',
-    duration: '4 mois',
+    duration: '5 mois',
     image: '/sbci/sbci_image1.png',
     gallery: [
       '/sbci/sbci_image2.png',
@@ -132,38 +132,90 @@ Le projet inclut également des fonctionnalités avancées telles que la gestion
   },
   {
     id: 4,
-    slug: 'Sunu cv',
-    title: 'Sunu cv',
-    shortDesc: 'Plateforme de création de CV en ligne avec des modèles professionnels.',
-    fullDesc: `Sunu cv est une plateforme innovante de création de CV en ligne, conçue pour aider les professionnels à présenter leur parcours de manière efficace et attrayante.
+    slug: 'Cours_js',
+    title: 'Apprendre javascript',
+    shortDesc: 'une plateforme complete pour apprendre le langage javascript.',
+    fullDesc: `J'ai conçu la plateforme cour_js qui est ue plateformeinteractive et intuitive dédiée à l'apprentissage de JavaScript, spécialement pensée pour accompagner les débutants du premier script jusqu'à la manipulation avancée.
 
-Les modèles professionnels offrent une présentation soignée et moderne, adaptée à différents secteurs d'activité.
+Parcours complet et structuré : De la déclaration des variables aux notions fondamentales (tableaux, objets, fonctions), jusqu'à l'interaction avec l'utilisateur via le DOM et la gestion des événements.
 
-L'interface utilisateur intuitive permet de personnaliser facilement chaque CV, en ajoutant des informations sur l'expérience professionnelle, les compétences et les réalisations.`,
+Pratique immédiate : Un éditeur avec console d'exécution intégrée pour tester son code en temps réel et visualiser instantanément les résultats.
+
+Validation des acquis : Des quiz ciblés à chaque étape pour ancrer les connaissances théoriques et s'auto-évaluer.
+
+Soutien communautaire : Un module de don simple et direct via Wave, permettant à la communauté de soutenir le développement et l'hébergement continu du projet.`,
     features: [
-      'Modèles professionnels et modernes',
-      'Édition en temps réel',
-      'Export PDF / Word',
-      'Partage facile via lien',
-      'Base de données d\'emplois',
+      'Apprentissage interactif avec éditeur intégré',
+      'Quiz et exercices pratiques',
+      'Suivi des progrès et statistiques personnalisées',
+      'partage de code ',
+      'Communauté et soutien via Wave',
+      'Interface responsive et accessible sur tous les appareils',
     ],
-    tags: ['React', 'Node.js', 'MongoDB'],
-    tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS'],
-    emoji: '📄',
-    gradient: 'from-[#0a1a1a] to-[#1a3030]',
-    gradientStyle: 'linear-gradient(135deg, #0a1a1a, #1a3030)',
-    accentColor: '#4CAF50',
+    tags: ['JavaScript', 'React js', 'Tailwind'],
+    tech: ['react', 'tailwin  css', 'Canvas API', 'local storage', 'Vite'],
+    emoji: '🎨',
+    gradient: 'from-[#1a0a0a] to-[#300a50]',
+    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a50)',
+    accentColor: '#6C63FF',
     github: 'https://github.com',
-    demo: 'https://sunu-web.vercel.app/',
-    year: '2023',
-    role: 'Developpeur Fullstack',
-    duration: '4 mois',
-    image: '/sunu_cv/sunu_cv_image1.png',
+    demo: 'https://coursjs.vercel.app/',
+    year: '2025',
+    role: 'Frontend Developer',
+    duration: '1 mois',
+    image: '/cour_js/cour_js.png',
     gallery: [
-      '/sunu_cv/sunu_cv_image1.png',
-      '/sunu_cv/sunu_cv_image2.png',
-      '/sunu_cv/sunu_cv_image3.png',
-      '/sunu_cv/sunu_cv_image4.png'
+      '/cour_js/cour_js_image2.png',
+      '/cour_js/cour_js_image3.png',
+      '/cour_js/cour_js_image4.png',
+      '/cour_js/cour_js_image5.png',
+      '/cour_js/cour_js_image1.png'
+    ],
+    visible: true,
+  },
+  {
+    id: 5,
+    slug: 'ndeye_diagne',
+    title: 'Ndeye Diagne',
+    shortDesc: 'Ndeye Diagne une entrepreneuse dans le domaine du bien etre et du soin ',
+    fullDesc: `Le site ndeye-diagne.fr est une plateforme personnelle et commerciale dédiée au marketing de réseau (MLM), à l'entrepreneuriat à domicile et à la vente de produits de bien-être/beauté, animée par Ndèye Diagne sous la marque Team Power. 
+    
+     Axes principaux du site
+Opportunité d'affaires & Recrutement (Business Team Power) :
+Ndèye Diagne met en avant son statut de " Présidente LR France " avec plus de 8 ans d'expérience. Le site sert d'entonnoir pour recruter et former des partenaires indépendants souhaitant générer des revenus depuis chez eux, sans gestion de stock ni investissement lourd.
+
+Boutique & Produits Bien-être :
+Mise en avant et distribution des gammes de la marque partenaire (LR Health & Beauty), notamment des compléments pour l'énergie (Mind Master Gold), la gestion du poids (Body Mission) et la beauté (Élixir 5-en-1).
+
+Coaching & Événements :
+Offre d'accompagnement étape par étape, formations en ligne, e-books et événements d'équipe pour guider les nouveaux membres vers l'indépendance financière.
+
+Canaux de contact :
+Prise de contact ciblée orientée vers la France et le Sénégal (intégration directe avec WhatsApp).`,
+    features: [
+      'Opportunité d\'affaires & Recrutement (Business Team Power)',
+      'Boutique & Produits Bien-être',
+      'Coaching & Événements',
+      'Canaux de contact',
+    ],
+    tags: ['Wordpress', 'PHP', 'HTML', 'CSS', 'JavaScript'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'wordpress ', 'hostiguer ' , 'php mailer' ,'responsive design'],
+    emoji: '🎨', 
+    gradient: 'from-[#1a0a0a] to-[#300a20]',
+    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
+    accentColor: '#eb4f1bff',
+    github: '',
+    demo: 'https://ndeyediagne.com/',
+    year: '2025',
+    role: 'Concepteur et Developpeur web',
+    duration: '2 mois', 
+    image: '/ndeye_diagne/ndeye_diagne_image3.png',
+    gallery: [
+      '/ndeye_diagne/ndeye_diagne_image2.png',
+      '/ndeye_diagne/ndeye_diagne_image3.png',
+      '/ndeye_diagne/ndeye_diagne_image4.png',
+      '/ndeye_diagne/ndeye_diagne_image5.png',
+      '/ndeye_diagne/ndeye_diagne_image1.png'
     ],
     visible: true,
   },

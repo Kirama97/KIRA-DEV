@@ -39,20 +39,9 @@ export default function ProjectCard({ project, index }) {
             className="px-4 py-2 text-xs font-medium text-white transition-colors rounded-full bg-accent hover:bg-accent/90"
             data-hover
           >
-            Demo ↗
+            Visiter ↗
           </a>
-           {
-            project.github ? ( <a
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="px-4 py-2 text-xs font-medium transition-colors border rounded-full border-text/20 text-text hover:border-text/50"
-              data-hover
-            >
-              Code
-            </a>) : ''
-           }
+       
         </div>
       </div>
 
