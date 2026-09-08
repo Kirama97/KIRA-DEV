@@ -132,6 +132,45 @@ Le projet inclut également des fonctionnalités avancées telles que la gestion
   },
   {
     id: 4,
+    slug: 'Cours_js',
+    title: 'Cours javascript',
+    shortDesc: 'Un cours complet pour apprendre le langage javascript.',
+    fullDesc: `Ce cours vous permettra d'apprendre les bases du langage javascript et de progresser vers des concepts plus avancés.
+
+La collaboration en temps réel permet à plusieurs personnes de travailler simultanément, avec des curseurs visibles et des modifications synchronisées instantanément. Le système de calques inspiré de Figma offre un contrôle total sur la composition.
+
+La bibliothèque d'assets intégrée propose des milliers d'icônes, illustrations et templates prêts à l'emploi.`,
+    features: [
+      'Canvas infini avec zoom fluide',
+      'Collaboration temps réel multi-curseurs',
+      'Système de calques vectoriels',
+      'Export SVG / PNG / PDF',
+      'Bibliothèque de 5000+ assets',
+      'Historique d\'actions illimité',
+    ],
+    tags: ['Vue.js', 'Canvas API', 'WebRTC'],
+    tech: ['Vue 3', 'Pinia', 'Canvas API', 'WebRTC', 'Firebase', 'Vite', 'GSAP'],
+    emoji: '🎨',
+    gradient: 'from-[#1a0a0a] to-[#300a20]',
+    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
+    accentColor: '#6C63FF',
+    github: 'https://github.com',
+    demo: 'https://coursjs.vercel.app/',
+    year: '2023',
+    role: 'Frontend Developer',
+    duration: '5 mois',
+    image: '/cour_js/cour_js.png',
+    gallery: [
+      '/cour_js/cour_js_image2.png',
+      '/cour_js/cour_js_image3.png',
+      '/cour_js/cour_js_image4.png',
+      '/cour_js/cour_js_image5.png',
+      '/cour_js/cour_js_image1.png'
+    ],
+    visible: true,
+  },
+  {
+    id: 4,
     slug: 'artflow-studio',
     title: 'ArtFlow Studio',
     shortDesc: 'Outil de création visuelle collaborative avec canvas infini, calques vectoriels et sync cloud.',

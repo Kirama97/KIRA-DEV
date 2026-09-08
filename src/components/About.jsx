@@ -116,19 +116,19 @@ export default function About() {
               // À propos
             </div>
             <h2 className="font-display font-black text-4xl md:text-5xl leading-[1.05] tracking-tight mb-6">
-              Dev passionné,
+              Ingénieur Logiciel,
               <br />
               <span className="gradient-text">créatif dans l'âme</span>
             </h2>
             <p className="text-muted leading-relaxed mb-4">
-              Bonjour ! Je suis <strong className="text-text">Diene Thiam</strong>, développeur
-              Frontend & Fullstack basé à Thiés. Depuis 3 ans, je conçois des expériences
-              digitales qui allient performance technique et excellence esthétique.
+              Bonjour ! Je suis <strong className="text-text">Diene Thiam</strong>, Ingénieur Logiciel & Technicien Supérieur en Informatique
+              basé à Dakar, Sénégal. Avec une solide expertise en développement web full-stack, administration système/réseau
+              et intégration d'IA, je conçois des solutions innovantes.
             </p>
             <p className="text-muted leading-relaxed mb-8">
               Ma singularité : je maîtrise autant le code que l'image. Du développement
-              web et mobile au montage vidéo et à la création visuelle — je peux porter
-              un projet de A à Z, seul ou en équipe.
+              web et architecture technique au montage vidéo assisté par l'IA — je suis capable de diriger
+              des projets complexes (CTO) et de former les futurs talents de la tech.
             </p>
 
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
