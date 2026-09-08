@@ -15,14 +15,14 @@ export default function ProjectDetail({ projects }) {
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center relative z-10">
+      <div className="relative z-10 flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <div className="text-6xl mb-6">🔍</div>
-          <h1 className="font-display font-black text-3xl mb-4 text-text">Projet introuvable</h1>
-          <p className="text-muted mb-8 text-text/60">Ce projet n'existe pas ou a été supprimé.</p>
+          <div className="mb-6 text-6xl">🔍</div>
+          <h1 className="mb-4 text-3xl font-black font-display text-text">Projet introuvable</h1>
+          <p className="mb-8 text-muted text-text/60">Ce projet n'existe pas ou a été supprimé.</p>
           <button
             onClick={() => navigate('/')}
-            className="px-6 py-3 bg-accent rounded-full text-sm font-medium text-white"
+            className="px-6 py-3 text-sm font-medium text-white rounded-full bg-accent"
             data-hover
           >
             ← Retour à l'accueil
@@ -33,17 +33,17 @@ export default function ProjectDetail({ projects }) {
   }
 
   return (
-    <div className="min-h-screen pt-24 pb-20 relative z-10">
-      <div className="container-custom max-w-5xl">
+    <div className="relative z-10 min-h-screen pt-24 pb-20">
+      <div className="max-w-5xl container-custom">
         {/* Back */}
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={() => navigate('/')}
-          className="flex items-center gap-2 text-muted hover:text-accent text-sm mb-10 transition-colors group"
+          className="flex items-center gap-2 mb-10 text-sm transition-colors text-muted hover:text-accent group"
           data-hover
         >
-          <span className="group-hover:-translate-x-1 transition-transform">←</span>
+          <span className="transition-transform group-hover:-translate-x-1">←</span>
           Retour aux projets
         </motion.button>
 
@@ -53,7 +53,7 @@ export default function ProjectDetail({ projects }) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full h-72 md:h-[500px] rounded-3xl flex items-center justify-center mb-6 border border-white/[0.07] overflow-hidden relative group shadow-2xl"
+            className="w-full h-72 md:h-[500px] rounded-sm flex items-center justify-center mb-6 overflow-hidden relative group shadow-2xl"
             style={{ background: project.gradientStyle }}
           >
             <AnimatePresence mode="wait">
@@ -65,7 +65,7 @@ export default function ProjectDetail({ projects }) {
                 transition={{ duration: 0.4, ease: "easeOut" }}
                 src={activeImage}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                className="object-cover w-full h-full"
               />
             </AnimatePresence>
           </motion.div>
@@ -76,18 +76,18 @@ export default function ProjectDetail({ projects }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide"
+              className="flex gap-4 pb-2 overflow-x-auto scrollbar-hide"
             >
               {project.gallery.map((img, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveImage(img)}
-                  className={`relative flex-shrink-0 w-24 h-16 md:w-32 md:h-20 rounded-xl overflow-hidden border-2 transition-all ${
-                    activeImage === img ? 'border-accent scale-105 shadow-lg' : 'border-transparent opacity-60 hover:opacity-100'
+                  className={`relative flex-shrink-0 w-24 h-16 md:w-32 md:h-20 rounded-md overflow-hidden border-1 transition-all ${
+                    activeImage === img ? 'border-accent scale-105 shadow-lg ' : 'border-transparent opacity-40 hover:opacity-100'
                   }`}
                   data-hover
                 >
-                  <img src={img} alt="" className="w-full h-full object-cover" />
+                  <img src={img} alt="" className="object-cover w-full h-full" />
                 </button>
               ))}
             </motion.div>
@@ -105,24 +105,24 @@ export default function ProjectDetail({ projects }) {
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-3 py-1 rounded-full bg-accent/10 border border-accent/25 text-accent font-medium"
+                className="px-3 py-1 text-xs font-medium border rounded-full bg-accent/10 border-accent/25 text-accent"
               >
                 {tag}
               </span>
             ))}
           </div>
-          <h1 className="font-display font-black text-4xl md:text-5xl tracking-tight mb-4">
+          <h1 className="mb-4 text-4xl font-black tracking-tight font-display md:text-5xl">
             {project.title}
           </h1>
-          <div className="flex flex-wrap gap-6 text-sm text-muted mb-6">
+          <div className="flex flex-wrap gap-6 mb-6 text-sm text-muted">
             <span>
-              Année : <span className="text-text font-medium">{project.year}</span>
+              Année : <span className="font-medium text-text">{project.year}</span>
             </span>
             <span>
-              Rôle : <span className="text-text font-medium">{project.role}</span>
+              Rôle : <span className="font-medium text-text">{project.role}</span>
             </span>
             <span>
-              Durée : <span className="text-text font-medium">{project.duration}</span>
+              Durée : <span className="font-medium text-text">{project.duration}</span>
             </span>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -134,9 +134,9 @@ export default function ProjectDetail({ projects }) {
               style={{ boxShadow: '0 0 30px rgba(108,99,255,0.3)' }}
               data-hover
             >
-              Voir la démo ↗
+              Visiter le site ↗
             </a>
-             {
+             {/* {
                project.github ? ( <a
               href={project.github}
               target="_blank"
@@ -146,7 +146,7 @@ export default function ProjectDetail({ projects }) {
             >
               Code source
             </a>) : ''
-             }
+             } */}
           </div>
         </motion.div>
 
@@ -155,17 +155,17 @@ export default function ProjectDetail({ projects }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="grid lg:grid-cols-3 gap-8"
+          className="grid gap-8 lg:grid-cols-3"
         >
           {/* Main description — 2 cols */}
-          <div className="lg:col-span-2 space-y-6">
+          <div className="space-y-6 lg:col-span-2">
             <div>
-              <h2 className="font-display font-bold text-xl mb-4 text-text/90">
+              <h2 className="mb-4 text-xl font-bold font-display text-text/90">
                 À propos du projet
               </h2>
               <div className="space-y-4">
                 {project.fullDesc.split('\n\n').map((para, i) => (
-                  <p key={i} className="text-muted leading-relaxed">
+                  <p key={i} className="leading-relaxed text-muted">
                     {para}
                   </p>
                 ))}
@@ -173,20 +173,20 @@ export default function ProjectDetail({ projects }) {
             </div>
 
             <div>
-              <h2 className="font-display font-bold text-xl mb-4 text-text/90">
+              <h2 className="mb-4 text-xl font-bold font-display text-text/90">
                 Fonctionnalités clés
               </h2>
-              <div className="grid sm:grid-cols-2 gap-3">
+              <div className="grid gap-3 sm:grid-cols-2">
                 {project.features.map((feat, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.5 + i * 0.06 }}
-                    className="flex items-start gap-3 glass p-3 rounded-xl"
+                    className="flex items-start gap-3 p-3 glass rounded-xl"
                   >
                     <span className="text-accent mt-0.5 text-sm">✓</span>
-                    <span className="text-sm text-muted leading-relaxed">{feat}</span>
+                    <span className="text-sm leading-relaxed text-muted">{feat}</span>
                   </motion.div>
                 ))}
               </div>
@@ -196,8 +196,8 @@ export default function ProjectDetail({ projects }) {
           {/* Sidebar — 1 col */}
           <div className="space-y-5">
             {/* Stack */}
-            <div className="glass p-5 rounded-2xl">
-              <h4 className="text-xs uppercase tracking-widest text-muted mb-4 font-medium">
+            <div className="p-5 glass rounded-2xl">
+              <h4 className="mb-4 text-xs font-medium tracking-widest uppercase text-muted">
                 Stack technique
               </h4>
               <div className="flex flex-wrap gap-2">
@@ -213,8 +213,8 @@ export default function ProjectDetail({ projects }) {
             </div>
 
             {/* Meta */}
-            <div className="glass p-5 rounded-2xl space-y-4">
-              <h4 className="text-xs uppercase tracking-widest text-muted font-medium">
+            <div className="p-5 space-y-4 glass rounded-2xl">
+              <h4 className="text-xs font-medium tracking-widest uppercase text-muted">
                 Informations
               </h4>
               {[
@@ -232,27 +232,27 @@ export default function ProjectDetail({ projects }) {
             </div>
 
             {/* Links */}
-            <div className="glass p-5 rounded-2xl space-y-3">
-              <h4 className="text-xs uppercase tracking-widest text-muted font-medium">Liens</h4>
+            <div className="p-5 space-y-3 glass rounded-2xl">
+              <h4 className="text-xs font-medium tracking-widest uppercase text-muted">Liens</h4>
               <a
                 href={project.demo}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-between text-sm text-muted hover:text-accent transition-colors group"
+                className="flex items-center justify-between text-sm transition-colors text-muted hover:text-accent group"
                 data-hover
               >
-                <span>Démo live</span>
-                <span className="group-hover:translate-x-1 transition-transform">↗</span>
+                <span>Visiter le site</span>
+                <span className="transition-transform group-hover:translate-x-1">↗</span>
               </a>
               <a
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-between text-sm text-muted hover:text-accent transition-colors group"
+                className="flex items-center justify-between text-sm transition-colors text-muted hover:text-accent group"
                 data-hover
               >
                 <span>GitHub</span>
-                <span className="group-hover:translate-x-1 transition-transform">↗</span>
+                <span className="transition-transform group-hover:translate-x-1">↗</span>
               </a>
             </div>
           </div>

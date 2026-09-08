@@ -32,7 +32,7 @@ Que vous soyez à la recherche de calme, de luxe discret ou d’une escapade aut
     accentColor: '#6C63FF',
     // github: 'https://github.com',
     demo: 'https://villa-petitbaobab.com/',
-    year: '2024',
+    year: '2025',
     role: 'Fullstack Developer',
     duration: '3 mois',
     image: '/villa_petit_baobab/villa_petit_baobab_1.png',
@@ -72,7 +72,7 @@ Le panel admin offre une gestion complète du catalogue, des stocks, des command
     demo: 'https://front-tache212.vercel.app/accueil',
     year: '2026',
     role: 'Frontend Developer',
-    duration: '2 mois',
+    duration: '4 mois',
     image: '/perso_my_style/tache_21_1.png',
     gallery: [
       '/perso_my_style/tache_21_2.png',
@@ -85,8 +85,8 @@ Le panel admin offre une gestion complète du catalogue, des stocks, des command
   {
     id: 3,
     slug: 'sbci',
-    title: 'sbci',
-    shortDesc: 'SBCI un site e-commerce dédiée à la vente de produits électroniques et de mobilier de bureau, avec une interface moderne, intuitive et des fonctionnalités avancées pour optimiser l’expérience utilisateur.',
+    title: 'SBCI',
+    shortDesc: 'SBCI (Senegal Business Computers and Informatics) un site e-commerce dédiée à la vente de produits électroniques et de mobilier de bureau, avec une interface moderne, intuitive et des fonctionnalités avancées pour optimiser l’expérience utilisateur.',
     fullDesc: `SBCI — Plateforme e-commerce
 
 SBCI est une plateforme e-commerce moderne conçue pour digitaliser la vente de "produits électroniques, informatiques et de mobilier de bureau". Le projet a été pensé autour d’une interface moderne, intuitive et responsive, permettant aux utilisateurs de parcourir facilement le catalogue, consulter les caractéristiques des produits et effectuer leurs achats en ligne.
@@ -116,9 +116,9 @@ Le projet inclut également des fonctionnalités avancées telles que la gestion
     accentColor: '#FF6B9D',
     github: 'https://github.com',
     demo: 'https://front-t-sbci.vercel.app/accueil',
-    year: '2023',
+    year: '2026',
     role: 'Developpeur Fullstack',
-    duration: '4 mois',
+    duration: '5 mois',
     image: '/sbci/sbci_image1.png',
     gallery: [
       '/sbci/sbci_image2.png',
@@ -133,32 +133,36 @@ Le projet inclut également des fonctionnalités avancées telles que la gestion
   {
     id: 4,
     slug: 'Cours_js',
-    title: 'Cours javascript',
-    shortDesc: 'Un cours complet pour apprendre le langage javascript.',
-    fullDesc: `Ce cours vous permettra d'apprendre les bases du langage javascript et de progresser vers des concepts plus avancés.
+    title: 'Apprendre javascript',
+    shortDesc: 'une plateforme complete pour apprendre le langage javascript.',
+    fullDesc: `J'ai conçu la plateforme cour_js qui est ue plateformeinteractive et intuitive dédiée à l'apprentissage de JavaScript, spécialement pensée pour accompagner les débutants du premier script jusqu'à la manipulation avancée.
 
-La collaboration en temps réel permet à plusieurs personnes de travailler simultanément, avec des curseurs visibles et des modifications synchronisées instantanément. Le système de calques inspiré de Figma offre un contrôle total sur la composition.
+Parcours complet et structuré : De la déclaration des variables aux notions fondamentales (tableaux, objets, fonctions), jusqu'à l'interaction avec l'utilisateur via le DOM et la gestion des événements.
 
-La bibliothèque d'assets intégrée propose des milliers d'icônes, illustrations et templates prêts à l'emploi.`,
+Pratique immédiate : Un éditeur avec console d'exécution intégrée pour tester son code en temps réel et visualiser instantanément les résultats.
+
+Validation des acquis : Des quiz ciblés à chaque étape pour ancrer les connaissances théoriques et s'auto-évaluer.
+
+Soutien communautaire : Un module de don simple et direct via Wave, permettant à la communauté de soutenir le développement et l'hébergement continu du projet.`,
     features: [
-      'Canvas infini avec zoom fluide',
-      'Collaboration temps réel multi-curseurs',
-      'Système de calques vectoriels',
-      'Export SVG / PNG / PDF',
-      'Bibliothèque de 5000+ assets',
-      'Historique d\'actions illimité',
+      'Apprentissage interactif avec éditeur intégré',
+      'Quiz et exercices pratiques',
+      'Suivi des progrès et statistiques personnalisées',
+      'partage de code ',
+      'Communauté et soutien via Wave',
+      'Interface responsive et accessible sur tous les appareils',
     ],
-    tags: ['Vue.js', 'Canvas API', 'WebRTC'],
-    tech: ['Vue 3', 'Pinia', 'Canvas API', 'WebRTC', 'Firebase', 'Vite', 'GSAP'],
+    tags: ['JavaScript', 'React js', 'Tailwind'],
+    tech: ['react', 'tailwin  css', 'Canvas API', 'local storage', 'Vite'],
     emoji: '🎨',
-    gradient: 'from-[#1a0a0a] to-[#300a20]',
-    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
+    gradient: 'from-[#1a0a0a] to-[#300a50]',
+    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a50)',
     accentColor: '#6C63FF',
     github: 'https://github.com',
     demo: 'https://coursjs.vercel.app/',
-    year: '2023',
+    year: '2025',
     role: 'Frontend Developer',
-    duration: '5 mois',
+    duration: '1 mois',
     image: '/cour_js/cour_js.png',
     gallery: [
       '/cour_js/cour_js_image2.png',
@@ -170,40 +174,48 @@ La bibliothèque d'assets intégrée propose des milliers d'icônes, illustratio
     visible: true,
   },
   {
-    id: 4,
-    slug: 'artflow-studio',
-    title: 'ArtFlow Studio',
-    shortDesc: 'Outil de création visuelle collaborative avec canvas infini, calques vectoriels et sync cloud.',
-    fullDesc: `ArtFlow Studio transforme la création visuelle collaborative en une expérience fluide et intuitive. Le canvas infini permet de travailler à n'importe quelle échelle, des wireframes rapides aux illustrations détaillées.
+    id: 5,
+    slug: 'ndeye_diagne',
+    title: 'Ndeye Diagne',
+    shortDesc: 'Ndeye Diagne une entrepreneuse dans le domaine du bien etre et du soin ',
+    fullDesc: `Le site ndeye-diagne.fr est une plateforme personnelle et commerciale dédiée au marketing de réseau (MLM), à l'entrepreneuriat à domicile et à la vente de produits de bien-être/beauté, animée par Ndèye Diagne sous la marque Team Power. 
+    
+     Axes principaux du site
+Opportunité d'affaires & Recrutement (Business Team Power) :
+Ndèye Diagne met en avant son statut de " Présidente LR France " avec plus de 8 ans d'expérience. Le site sert d'entonnoir pour recruter et former des partenaires indépendants souhaitant générer des revenus depuis chez eux, sans gestion de stock ni investissement lourd.
 
-La collaboration en temps réel permet à plusieurs personnes de travailler simultanément, avec des curseurs visibles et des modifications synchronisées instantanément. Le système de calques inspiré de Figma offre un contrôle total sur la composition.
+Boutique & Produits Bien-être :
+Mise en avant et distribution des gammes de la marque partenaire (LR Health & Beauty), notamment des compléments pour l'énergie (Mind Master Gold), la gestion du poids (Body Mission) et la beauté (Élixir 5-en-1).
 
-La bibliothèque d'assets intégrée propose des milliers d'icônes, illustrations et templates prêts à l'emploi.`,
+Coaching & Événements :
+Offre d'accompagnement étape par étape, formations en ligne, e-books et événements d'équipe pour guider les nouveaux membres vers l'indépendance financière.
+
+Canaux de contact :
+Prise de contact ciblée orientée vers la France et le Sénégal (intégration directe avec WhatsApp).`,
     features: [
-      'Canvas infini avec zoom fluide',
-      'Collaboration temps réel multi-curseurs',
-      'Système de calques vectoriels',
-      'Export SVG / PNG / PDF',
-      'Bibliothèque de 5000+ assets',
-      'Historique d\'actions illimité',
+      'Opportunité d\'affaires & Recrutement (Business Team Power)',
+      'Boutique & Produits Bien-être',
+      'Coaching & Événements',
+      'Canaux de contact',
     ],
-    tags: ['Vue.js', 'Canvas API', 'WebRTC'],
-    tech: ['Vue 3', 'Pinia', 'Canvas API', 'WebRTC', 'Firebase', 'Vite', 'GSAP'],
-    emoji: '🎨',
+    tags: ['Wordpress', 'PHP', 'HTML', 'CSS', 'JavaScript'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'wordpress ', 'hostiguer ' , 'php mailer' ,'responsive design'],
+    emoji: '🎨', 
     gradient: 'from-[#1a0a0a] to-[#300a20]',
     gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
-    accentColor: '#6C63FF',
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    year: '2023',
-    role: 'Frontend Developer',
-    duration: '5 mois',
-    image: 'https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=2071&auto=format&fit=crop',
+    accentColor: '#eb4f1bff',
+    github: '',
+    demo: 'https://ndeyediagne.com/',
+    year: '2025',
+    role: 'Concepteur et Developpeur web',
+    duration: '2 mois', 
+    image: '/ndeye_diagne/ndeye_diagne_image3.png',
     gallery: [
-      'https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=2071&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2071&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1541462608141-ad601970260c?q=80&w=2070&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2070&auto=format&fit=crop'
+      '/ndeye_diagne/ndeye_diagne_image2.png',
+      '/ndeye_diagne/ndeye_diagne_image3.png',
+      '/ndeye_diagne/ndeye_diagne_image4.png',
+      '/ndeye_diagne/ndeye_diagne_image5.png',
+      '/ndeye_diagne/ndeye_diagne_image1.png'
     ],
     visible: true,
   },

@@ -6,8 +6,8 @@ const designs = [
     id: 1,
     title: 'Clip vidéo IA - Abdou Guitte Seck',
     category: 'Vidéo & IA',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop', // Placeholder for AI video cover
-    link: '#', // Link to don de soi
+    image: '/visuel/don_de_soi.png', // Placeholder for AI video cover
+    link: 'https://www.youtube.com/watch?v=GTcR5ZhiNSg', // Link to don de soi
   },
   {
     id: 2,
@@ -16,20 +16,20 @@ const designs = [
     image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2664&auto=format&fit=crop', // Placeholder
     link: '#',
   },
-  {
-    id: 3,
-    title: 'Collab & Branding',
-    category: 'Collab',
-    image: 'https://images.unsplash.com/photo-1542744094-24638ea095b5?q=80&w=2670&auto=format&fit=crop', // Placeholder
-    link: '#',
-  },
-  {
-    id: 4,
-    title: 'Montage Vidéo Promotionnel',
-    category: 'Vidéo',
-    image: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2662&auto=format&fit=crop', // Placeholder
-    link: '#',
-  },
+  // {
+  //   id: 3,
+  //   title: 'Collab & Branding',
+  //   category: 'Collab',
+  //   image: 'https://images.unsplash.com/photo-1542744094-24638ea095b5?q=80&w=2670&auto=format&fit=crop', // Placeholder
+  //   link: '#',
+  // },
+  // {
+  //   id: 4,
+  //   title: 'Montage Vidéo Promotionnel',
+  //   category: 'Vidéo',
+  //   image: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2662&auto=format&fit=crop', // Placeholder
+  //   link: '#',
+  // },
 ]
 
 const categories = ['Tous', 'Vidéo & IA', 'Design & Affiche', 'Collab', 'Vidéo']
@@ -69,11 +69,10 @@ export default function VisualDesigns() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-full text-xs font-medium transition-all duration-300 ${
-                activeCategory === cat
+              className={`px-5 py-2 rounded-full text-xs font-medium transition-all duration-300 ${activeCategory === cat
                   ? 'bg-accent text-white shadow-lg shadow-accent/25'
                   : 'glass text-muted hover:text-text hover:bg-white/[0.04]'
-              }`}
+                }`}
               data-hover
             >
               {cat}
@@ -106,7 +105,7 @@ export default function VisualDesigns() {
                 <div className="text-accent2 text-xs font-medium mb-1">{design.category}</div>
                 <h3 className="text-white font-bold text-lg leading-tight">{design.title}</h3>
                 {design.link !== '#' && (
-                  <a href={design.link} className="inline-block mt-3 text-sm text-accent hover:text-accent2 transition-colors">
+                  <a href={design.link} target='_blank' rel='noreferrer' className="inline-block mt-3 text-sm text-orange-500 hover:text-accent2 transition-colors">
                     Voir le projet →
                   </a>
                 )}

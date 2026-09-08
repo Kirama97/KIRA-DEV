@@ -20,13 +20,13 @@ function SkillCard({ skill, index }) {
     >
       <div className="flex justify-center mb-1.5">
         <div 
-          className="text-xl group-hover:scale-110 transition-transform duration-300"
+          className="text-xl transition-transform duration-300 group-hover:scale-110"
           style={{ color: skill.color || 'var(--accent)' }}
         >
           <Icon />
         </div>
       </div>
-      <div className="text-xs text-muted group-hover:text-accent transition-colors duration-300 font-medium">
+      <div className="text-xs font-medium transition-colors duration-300 text-muted group-hover:text-accent">
         {skill.name}
       </div>
       <div className="text-[10px] text-muted/50 mt-0.5">{skill.category}</div>
@@ -39,9 +39,9 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="about" className="section-padding relative z-10">
+    <section id="about" className="relative z-10 section-padding">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+        <div className="grid items-center gap-16 lg:grid-cols-2 xl:gap-24">
           {/* Visual */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -52,8 +52,8 @@ export default function About() {
           >
             <div className="relative flex items-center justify-center">
               {/* Decorative rings */}
-              <div className="absolute w-80 h-80 rounded-full border border-accent/10 animate-spin-slow" />
-              <div className="absolute w-64 h-64 rounded-full border border-accent2/08 animate-spin-slower" />
+              <div className="absolute border rounded-full w-80 h-80 border-accent/10 animate-spin-slow" />
+              <div className="absolute w-64 h-64 border rounded-full border-accent2/08 animate-spin-slower" />
 
               {/* Avatar */}
               <div
@@ -63,16 +63,16 @@ export default function About() {
                   boxShadow: '0 40px 80px rgba(0,0,0,0.2), 0 0 60px rgba(108,99,255,0.1)',
                 }}
               >
-                <span className="font-display font-black text-7xl text-accent">DT</span>
+                <span className="font-black font-display text-7xl text-accent">DT</span>
               </div>
 
               {/* Floating badge */}
               <motion.div
                 animate={{ y: [-6, 6, -6] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-4 -right-4 glass px-4 py-3 rounded-2xl z-20"
+                className="absolute z-20 px-4 py-3 -top-4 -right-4 glass rounded-2xl"
               >
-                <div className="font-display font-black text-xl text-accent2">3+</div>
+                <div className="text-xl font-black font-display text-accent2">3+</div>
                 <div className="text-muted text-[10px] uppercase tracking-wider">ans d'exp.</div>
               </motion.div>
 
@@ -95,9 +95,9 @@ export default function About() {
               <motion.div
                 animate={{ x: [-4, 4, -4] }}
                 transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-                className="absolute top-1/2 -right-10 glass px-3 py-2 rounded-xl z-20"
+                className="absolute z-20 px-3 py-2 top-1/2 -right-10 glass rounded-xl"
               >
-                <div className="text-xs text-accent font-medium">100%</div>
+                <div className="text-xs font-medium text-accent">100%</div>
                 <div className="text-[10px] text-muted">Satisfaction</div>
               </motion.div>
             </div>
@@ -120,19 +120,19 @@ export default function About() {
               <br />
               <span className="gradient-text">créatif dans l'âme</span>
             </h2>
-            <p className="text-muted leading-relaxed mb-4">
+            <p className="mb-4 leading-relaxed text-muted">
               Bonjour ! Je suis <strong className="text-text">Diene Thiam</strong>, Ingénieur Logiciel & Technicien Supérieur en Informatique
-              basé à Dakar, Sénégal. Avec une solide expertise en développement web full-stack, administration système/réseau
+              basé à Thiés, Sénégal. Avec une solide expertise en développement web full-stack, administration système/réseau
               et intégration d'IA, je conçois des solutions innovantes.
             </p>
-            <p className="text-muted leading-relaxed mb-8">
+            <p className="mb-8 leading-relaxed text-muted">
               Ma singularité : je maîtrise autant le code que l'image. Du développement
               web et architecture technique au montage vidéo assisté par l'IA — je suis capable de diriger
               des projets complexes (CTO) et de former les futurs talents de la tech.
             </p>
 
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
-              {skills.map((skill, i) => (
+            <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
+              {skills.map((skill, i) => ( 
                 <SkillCard key={skill.name} skill={skill} index={i} />
               ))}
             </div>
