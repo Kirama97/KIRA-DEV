@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaTwitter, FaDribbble } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter, FaDribbble, FaInstagram, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
 
 const socials = [
-  { icon: FaGithub, name: 'GitHub', handle: '@kirama97', url: 'https://github.com' },
-  { icon: FaLinkedin, name: 'LinkedIn', handle: 'Diene Thiam', url: 'https://linkedin.com' },
-  { icon: FaTwitter, name: 'Twitter / X', handle: '@dienethiam', url: 'https://twitter.com' },
-  { icon: FaDribbble, name: 'Dribbble', handle: 'dienethiam', url: 'https://dribbble.com' },
+  { icon: FaPhoneAlt, name: 'Téléphone', handle: '+221 78 5815782', url: 'tel:+221785815782' },
+  { icon: FaWhatsapp, name: 'Whatsapp', handle: '+221 78 5815782', url: 'https://wa.me/221785815782' },
+  { icon: FaGithub, name: 'GitHub', handle: '@kirama97', url: 'https://github.com/Kirama97' },
+  { icon: FaLinkedin, name: 'LinkedIn', handle: 'Diene Thiam', url: 'https://www.linkedin.com/in/di%C3%A9ne-thiam-971096247/' },
+  { icon: FaInstagram, name: 'Instagram ', handle: '@fou2tech', url: 'https://instagram.com/fou2tech' },
+
 ]
 
 export default function Contact() {
@@ -19,7 +21,7 @@ export default function Contact() {
   const submit = async (e) => {
     e.preventDefault()
     setLoading(true)
-    await new Promise((r) => setTimeout(r, 1000)) 
+    await new Promise((r) => setTimeout(r, 1000))
     setSent(true)
     setLoading(false)
     setForm({ name: '', email: '', subject: '', message: '' })
@@ -132,7 +134,7 @@ export default function Contact() {
                     required
                     value={form.name}
                     onChange={handle}
-                    placeholder="Jean Dupont"
+                    placeholder="votre nom"
                     className="form-input bg-text/[0.03] border border-text/[0.08] rounded-xl px-4 py-3 text-text text-sm placeholder-muted/50 focus:border-accent transition-all"
                   />
                 </div>
@@ -144,7 +146,7 @@ export default function Contact() {
                     required
                     value={form.email}
                     onChange={handle}
-                    placeholder="jean@example.com"
+                    placeholder="..............@example.com"
                     className="form-input bg-text/[0.03] border border-text/[0.08] rounded-xl px-4 py-3 text-text text-sm placeholder-muted/50 focus:border-accent transition-all"
                   />
                 </div>
