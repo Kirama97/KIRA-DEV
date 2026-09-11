@@ -11,40 +11,37 @@ export default function ProjectCard({ project, index }) {
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
       onClick={() => navigate(`/project/${project.slug}`)}
-      className="project-card group glass rounded-3xl overflow-hidden cursor-none"
+      className="overflow-hidden rounded-lg project-card group glass cursor-none"
       data-hover
     >
-      {/* Thumbnail */}
-      <div className="relative h-52 overflow-hidden">
-        <div
-          className="w-full h-full flex items-center justify-center text-6xl transition-transform duration-700 group-hover:scale-110"
-          style={{ background: project.gradientStyle }}
-        >
-          {project.emoji}
-          
-        </div>
+      <div className="relative overflow-hidden h-52">
+        {project.image ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
+          />
+        ) : (
+          <div
+            className="flex items-center justify-center w-full h-full text-6xl transition-transform duration-700 group-hover:scale-110"
+            style={{ background: project.gradientStyle }}
+          >
+            {project.emoji}
+          </div>
+        )}
         {/* Overlay on hover */}
-        <div className="absolute inset-0 bg-bg/85 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 flex items-center justify-center gap-3 transition-opacity duration-300 opacity-0 bg-bg/85 group-hover:opacity-100">
           <a
             href={project.demo}
             target="_blank"
             rel="noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="px-4 py-2 bg-accent rounded-full text-xs font-medium text-white hover:bg-accent/90 transition-colors"
+            className="px-4 py-2 text-xs font-medium text-white transition-colors rounded-full bg-accent hover:bg-accent/90"
             data-hover
           >
-            Demo ↗
+            Visiter 
           </a>
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="px-4 py-2 border border-white/20 rounded-full text-xs font-medium text-white hover:border-white/50 transition-colors"
-            data-hover
-          >
-            Code
-          </a>
+       
         </div>
       </div>
 
@@ -60,10 +57,10 @@ export default function ProjectCard({ project, index }) {
             </span>
           ))}
         </div>
-        <h3 className="font-display font-bold text-lg mb-2 group-hover:text-accent transition-colors duration-300">
+        <h3 className="mb-2 text-lg font-bold transition-colors duration-300 font-display group-hover:text-accent">
           {project.title}
         </h3>
-        <p className="text-muted text-sm leading-relaxed line-clamp-2">{project.shortDesc}</p>
+        <p className="text-sm leading-relaxed text-muted line-clamp-2">{project.shortDesc}</p>
 
         <div className="mt-4 flex items-center gap-1.5 text-accent text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           Voir le détail <span>→</span>

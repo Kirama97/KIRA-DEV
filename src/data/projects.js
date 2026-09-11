@@ -22,7 +22,7 @@ Que vous soyez à la recherche de calme, de luxe discret ou d’une escapade aut
       'Calendrier qui adaptative',
       'Alertes intelligentes par email',
       'un dashboard remplie et comprehensive'
-      
+
     ],
     tags: ['wordpresse'],
     tech: ['wordpress , wp-rental'],
@@ -30,17 +30,24 @@ Que vous soyez à la recherche de calme, de luxe discret ou d’une escapade aut
     gradient: 'from-[#0d0d20] to-[#1a0535]',
     gradientStyle: 'linear-gradient(135deg, #0d0d20, #1a0535)',
     accentColor: '#6C63FF',
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    year: '2024',
+    // github: 'https://github.com',
+    demo: 'https://villa-petitbaobab.com/',
+    year: '2025',
     role: 'Fullstack Developer',
     duration: '3 mois',
+    image: '/villa_petit_baobab/villa_petit_baobab_1.png',
+    gallery: [
+      '/villa_petit_baobab/villa_petit_baobab_1.png',
+      '/villa_petit_baobab/villa_petit_baobab_2.png',
+      '/villa_petit_baobab/villa_petit_baobab_3.png',
+      '/villa_petit_baobab/villa_petit_baobab_4.png'
+    ],
     visible: true,
   },
   {
     id: 2,
     slug: 'luxe-commerce',
-    title: 'Luxe Commerce',
+    title: 'Perso My Style',
     shortDesc: 'Plateforme e-commerce premium avec animations 3D, panier temps réel et Stripe.',
     fullDesc: `Luxe Commerce redéfinit l'expérience d'achat en ligne en mettant l'esthétique au cœur de chaque interaction. Chaque produit bénéficie d'une présentation 3D interactive, permettant aux clients de l'examiner sous tous les angles.
 
@@ -55,143 +62,214 @@ Le panel admin offre une gestion complète du catalogue, des stocks, des command
       'Gestion des stocks automatique',
       'Analytics ventes en temps réel',
     ],
-    tags: ['Next.js', 'Stripe', 'Three.js'],
-    tech: ['Next.js 14', 'Three.js', 'Stripe', 'Prisma', 'PostgreSQL', 'Tailwind', 'Vercel'],
+    tags: ['React', 'MongoDB', 'Node js'],
+    tech: ['react js 14', 'Node js', 'mongodb', 'tailwind css'],
     emoji: '💎',
     gradient: 'from-[#001a0d] to-[#003320]',
     gradientStyle: 'linear-gradient(135deg, #001a0d, #003320)',
     accentColor: '#00D4FF',
     github: 'https://github.com',
-    demo: 'https://example.com',
-    year: '2024',
+    demo: 'https://front-tache212.vercel.app/accueil',
+    year: '2026',
     role: 'Frontend Developer',
-    duration: '2 mois',
+    duration: '4 mois',
+    image: '/perso_my_style/tache_21_1.png',
+    gallery: [
+      '/perso_my_style/tache_21_2.png',
+      '/perso_my_style/tache_21_3.png',
+      '/perso_my_style/tache_21_4.png',
+      '/perso_my_style/tache_21_1.png'
+    ],
     visible: true,
   },
   {
     id: 3,
-    slug: 'pulse-chat',
-    title: 'PulseChat',
-    shortDesc: 'Messagerie temps réel avec chiffrement E2E, rooms thématiques et partage de fichiers.',
-    fullDesc: `PulseChat est une application de messagerie d'entreprise qui prend la sécurité au sérieux. Chaque message est chiffré de bout en bout, garantissant que seuls les destinataires légitimes peuvent lire les conversations.
+    slug: 'sbci',
+    title: 'SBCI',
+    shortDesc: 'SBCI (Senegal Business Computers and Informatics) un site e-commerce dédiée à la vente de produits électroniques et de mobilier de bureau, avec une interface moderne, intuitive et des fonctionnalités avancées pour optimiser l’expérience utilisateur.',
+    fullDesc: `SBCI — Plateforme e-commerce
 
-L'architecture microservices permet une scalabilité horizontale : chaque composant (auth, messages, fichiers, notifications) est indépendant et peut être mis à l'échelle séparément selon la charge.
+SBCI est une plateforme e-commerce moderne conçue pour digitaliser la vente de "produits électroniques, informatiques et de mobilier de bureau". Le projet a été pensé autour d’une interface moderne, intuitive et responsive, permettant aux utilisateurs de parcourir facilement le catalogue, consulter les caractéristiques des produits et effectuer leurs achats en ligne.
 
-L'expérience mobile-first garantit une fluidité parfaite sur tous les appareils, avec des notifications push natives et un mode hors-ligne complet.`,
+La plateforme propose une organisation claire des produits par "catégories et sous-catégories", avec un système de recherche et de filtrage permettant de retrouver rapidement les articles recherchés. Chaque produit dispose d’une page dédiée présentant ses informations essentielles, ses images, son prix et sa disponibilité.
+
+L’expérience utilisateur a été particulièrement prise en compte avec une navigation fluide. La plateforme intègre également un système d’"authentification et de gestion des comptes utilisateurs", garantissant un accès sécurisé aux fonctionnalités personnelles.
+
+Sur le plan technique, le projet repose sur une architecture "frontend/backend" permettant de séparer l’interface utilisateur de la logique métier et de la gestion des données. Une attention particulière a été portée à la "performance, la sécurité, la responsivité et la maintenabilité du code" afin de garantir une expérience optimale sur ordinateur, tablette et mobile.
+
+Le projet inclut également des fonctionnalités avancées telles que la gestion des produits, des catégories, des utilisateurs, des commandes et des contenus, ainsi que l’intégration de services externes pour la "gestion des images et l’envoi de notifications par e-mail".
+
+"Objectif du projet :" proposer à SBCI (Senegal Business computers and Informatics) une solution digitale moderne permettant de présenter ses produits en ligne, d'améliorer l’expérience d’achat des clients et de faciliter la gestion du catalogue et des commandes.
+`,
     features: [
-      'Chiffrement E2E sur tous les messages',
-      'Rooms publiques et privées',
-      'Partage de fichiers jusqu\'à 1GB',
-      'Notifications push natives',
-      'Mode hors-ligne complet',
-      'Historique de recherche illimité',
+      'Authentification sécurisée avec JWT',
+      'Espace produit electronique et mobilier de bureau',
+      'Commande directe sur Whatsapp',
+      'Interface moderne et intuitive',
+      'Dashboard admin pour la gestion des produits et des commandes',
     ],
-    tags: ['React Native', 'Socket.io', 'Node.js'],
-    tech: ['React Native', 'Expo', 'Socket.io', 'Node.js', 'Redis', 'MongoDB', 'JWT', 'AES-256'],
+    tags: ['React Vite', 'MongoDB', 'Node.js'],
+    tech: ['React Vite', 'MongoDB', 'Node.js', 'Express', 'Tailwind CSS', 'Socket.IO', 'JWT'],
     emoji: '⚡',
     gradient: 'from-[#0a0a1a] to-[#1a1a35]',
     gradientStyle: 'linear-gradient(135deg, #0a0a1a, #1a1a35)',
     accentColor: '#FF6B9D',
     github: 'https://github.com',
-    demo: 'https://example.com',
-    year: '2023',
-    role: 'Mobile Developer',
-    duration: '4 mois',
+    demo: 'https://front-t-sbci.vercel.app/accueil',
+    year: '2026',
+    role: 'Developpeur Fullstack',
+    duration: '5 mois',
+    image: '/sbci/sbci_image1.png',
+    gallery: [
+      '/sbci/sbci_image2.png',
+      '/sbci/sbci_image3.png',
+      '/sbci/sbci_image4.png',
+      '/sbci/sbci_image5.png',
+      '/sbci/sbci_image6.png',
+      '/sbci/sbci_image1.png'
+    ],
     visible: true,
   },
   {
     id: 4,
-    slug: 'artflow-studio',
-    title: 'ArtFlow Studio',
-    shortDesc: 'Outil de création visuelle collaborative avec canvas infini, calques vectoriels et sync cloud.',
-    fullDesc: `ArtFlow Studio transforme la création visuelle collaborative en une expérience fluide et intuitive. Le canvas infini permet de travailler à n'importe quelle échelle, des wireframes rapides aux illustrations détaillées.
+    slug: 'Cours_js',
+    title: 'Apprendre javascript',
+    shortDesc: 'une plateforme complete pour apprendre le langage javascript.',
+    fullDesc: `J'ai conçu la plateforme cour_js qui est ue plateformeinteractive et intuitive dédiée à l'apprentissage de JavaScript, spécialement pensée pour accompagner les débutants du premier script jusqu'à la manipulation avancée.
 
-La collaboration en temps réel permet à plusieurs personnes de travailler simultanément, avec des curseurs visibles et des modifications synchronisées instantanément. Le système de calques inspiré de Figma offre un contrôle total sur la composition.
+Parcours complet et structuré : De la déclaration des variables aux notions fondamentales (tableaux, objets, fonctions), jusqu'à l'interaction avec l'utilisateur via le DOM et la gestion des événements.
 
-La bibliothèque d'assets intégrée propose des milliers d'icônes, illustrations et templates prêts à l'emploi.`,
+Pratique immédiate : Un éditeur avec console d'exécution intégrée pour tester son code en temps réel et visualiser instantanément les résultats.
+
+Validation des acquis : Des quiz ciblés à chaque étape pour ancrer les connaissances théoriques et s'auto-évaluer.
+
+Soutien communautaire : Un module de don simple et direct via Wave, permettant à la communauté de soutenir le développement et l'hébergement continu du projet.`,
     features: [
-      'Canvas infini avec zoom fluide',
-      'Collaboration temps réel multi-curseurs',
-      'Système de calques vectoriels',
-      'Export SVG / PNG / PDF',
-      'Bibliothèque de 5000+ assets',
-      'Historique d\'actions illimité',
+      'Apprentissage interactif avec éditeur intégré',
+      'Quiz et exercices pratiques',
+      'Suivi des progrès et statistiques personnalisées',
+      'partage de code ',
+      'Communauté et soutien via Wave',
+      'Interface responsive et accessible sur tous les appareils',
     ],
-    tags: ['Vue.js', 'Canvas API', 'WebRTC'],
-    tech: ['Vue 3', 'Pinia', 'Canvas API', 'WebRTC', 'Firebase', 'Vite', 'GSAP'],
+    tags: ['JavaScript', 'React js', 'Tailwind'],
+    tech: ['react', 'tailwin  css', 'Canvas API', 'local storage', 'Vite'],
     emoji: '🎨',
-    gradient: 'from-[#1a0a0a] to-[#300a20]',
-    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
+    gradient: 'from-[#1a0a0a] to-[#300a50]',
+    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a50)',
     accentColor: '#6C63FF',
     github: 'https://github.com',
-    demo: 'https://example.com',
-    year: '2023',
+    demo: 'https://coursjs.vercel.app/',
+    year: '2025',
     role: 'Frontend Developer',
-    duration: '5 mois',
+    duration: '1 mois',
+    image: '/cour_js/cour_js.png',
+    gallery: [
+      '/cour_js/cour_js_image2.png',
+      '/cour_js/cour_js_image3.png',
+      '/cour_js/cour_js_image4.png',
+      '/cour_js/cour_js_image5.png',
+      '/cour_js/cour_js_image1.png'
+    ],
     visible: true,
   },
   {
     id: 5,
-    slug: 'trailmind-ai',
-    title: 'TrailMind AI',
-    shortDesc: 'Plateforme d\'apprentissage adaptatif IA avec parcours personnalisés et quiz intelligents.',
-    fullDesc: `TrailMind AI révolutionne l'apprentissage en ligne en utilisant l'intelligence artificielle pour personnaliser chaque aspect du parcours éducatif. L'algorithme analyse les performances, identifie les lacunes et adapte le contenu en temps réel.
+    slug: 'J2C',
+    title: 'Job Construction & Conception',
+    shortDesc: 'une entreprise spécialisée dans la construction et la conception de maisons ',
+    fullDesc: `Le site ndeye-diagne.fr est une plateforme personnelle et commerciale dédiée au marketing de réseau (MLM), à l'entrepreneuriat à domicile et à la vente de produits de bien-être/beauté, animée par Ndèye Diagne sous la marque Team Power. 
+    
+     Axes principaux du site
+Opportunité d'affaires & Recrutement (Business Team Power) :
+Ndèye Diagne met en avant son statut de " Présidente LR France " avec plus de 8 ans d'expérience. Le site sert d'entonnoir pour recruter et former des partenaires indépendants souhaitant générer des revenus depuis chez eux, sans gestion de stock ni investissement lourd.
 
-Contrairement aux plateformes traditionnelles, TrailMind ne propose pas des cours linéaires mais des arbres de compétences dynamiques qui s'adaptent à votre rythme et style d'apprentissage.
+Boutique & Produits Bien-être :
+Mise en avant et distribution des gammes de la marque partenaire (LR Health & Beauty), notamment des compléments pour l'énergie (Mind Master Gold), la gestion du poids (Body Mission) et la beauté (Élixir 5-en-1).
 
-Les quiz intelligents utilisent l'IA pour générer des questions calibrées à votre niveau actuel, maximisant la rétention à long terme grâce à la répétition espacée.`,
+Coaching & Événements :
+Offre d'accompagnement étape par étape, formations en ligne, e-books et événements d'équipe pour guider les nouveaux membres vers l'indépendance financière.
+
+Canaux de contact :
+Prise de contact ciblée orientée vers la France et le Sénégal (intégration directe avec WhatsApp).`,
     features: [
-      'Algorithme d\'IA adaptatif',
-      'Parcours de compétences dynamiques',
-      'Quiz générés par IA',
-      'Répétition espacée intelligente',
-      'Analytics progrès détaillés',
-      'Certificats vérifiables on-chain',
+      'Opportunité d\'affaires & Recrutement (Business Team Power)',
+      'Boutique & Produits Bien-être',
+      'Coaching & Événements',
+      'Canaux de contact',
     ],
-    tags: ['Python', 'FastAPI', 'React'],
-    tech: ['React 18', 'Python', 'FastAPI', 'OpenAI API', 'PostgreSQL', 'Redis', 'Celery', 'Docker'],
-    emoji: '🧠',
-    gradient: 'from-[#0a1a1a] to-[#0a2030]',
-    gradientStyle: 'linear-gradient(135deg, #0a1a1a, #0a2030)',
-    accentColor: '#00D4FF',
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    year: '2024',
-    role: 'Fullstack Developer',
-    duration: '6 mois',
+    tags: ['React Vite', 'Tailwind css', 'HTML', 'CSS', 'JavaScript'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'Tailwind css', 'hostiguer ' ,'responsive design'],
+    emoji: '', 
+    gradient: 'from-[#1a0a0a] to-[#300a20]',
+    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
+    accentColor: '#eb4f1bff',
+    github: '',
+    demo: 'https://j2c-five.vercel.app/',
+    year: '2025',
+    role: 'Concepteur et Developpeur web',
+    duration: '2 mois', 
+    image: '/j2c/j2C_image1.png',
+    gallery: [
+      '/j2c/j2C_image2.png',
+      '/j2c/j2C_image3.png',
+      '/j2c/j2C_image4.png',
+      '/j2c/j2C_image5.png',
+      '/j2c/j2C_image6.png',
+    
+      
+    ],
     visible: true,
   },
   {
-    id: 6,
-    slug: 'cinecraft-edit',
-    title: 'CineCraft Edit',
-    shortDesc: 'Éditeur vidéo web professionnel avec transitions ciné, color grading et export multi-format.',
-    fullDesc: `CineCraft Edit apporte la puissance du montage professionnel directement dans le navigateur. Aucun logiciel à installer, un lien à partager et l'équipe peut collaborer sur le même projet en temps réel.
+    id: 5,
+    slug: 'ndeye_diagne',
+    title: 'Ndeye Diagne',
+    shortDesc: 'Ndeye Diagne une entrepreneuse dans le domaine du bien etre et du soin ',
+    fullDesc: `Le site ndeye-diagne.fr est une plateforme personnelle et commerciale dédiée au marketing de réseau (MLM), à l'entrepreneuriat à domicile et à la vente de produits de bien-être/beauté, animée par Ndèye Diagne sous la marque Team Power. 
+    
+     Axes principaux du site
+Opportunité d'affaires & Recrutement (Business Team Power) :
+Ndèye Diagne met en avant son statut de " Présidente LR France " avec plus de 8 ans d'expérience. Le site sert d'entonnoir pour recruter et former des partenaires indépendants souhaitant générer des revenus depuis chez eux, sans gestion de stock ni investissement lourd.
 
-La bibliothèque de transitions cinématographiques a été conçue par des monteurs professionnels pour donner un rendu digne des productions Hollywood. Le color grading intégré offre des outils LUT, courbes et corrections colorimétriques avancées.
+Boutique & Produits Bien-être :
+Mise en avant et distribution des gammes de la marque partenaire (LR Health & Beauty), notamment des compléments pour l'énergie (Mind Master Gold), la gestion du poids (Body Mission) et la beauté (Élixir 5-en-1).
 
-L'export est optimisé pour chaque plateforme : H.264 pour YouTube, HEVC pour les mobiles, ProRes pour les diffusions broadcast.`,
+Coaching & Événements :
+Offre d'accompagnement étape par étape, formations en ligne, e-books et événements d'équipe pour guider les nouveaux membres vers l'indépendance financière.
+
+Canaux de contact :
+Prise de contact ciblée orientée vers la France et le Sénégal (intégration directe avec WhatsApp).`,
     features: [
-      'Timeline multi-pistes drag & drop',
-      '200+ transitions cinématographiques',
-      'Color grading avec LUTs',
-      'Collaboration temps réel',
-      'Export multi-format optimisé',
-      'Bibliothèque de musiques libres',
+      'Opportunité d\'affaires & Recrutement (Business Team Power)',
+      'Boutique & Produits Bien-être',
+      'Coaching & Événements',
+      'Canaux de contact',
     ],
-    tags: ['React', 'WebGL', 'FFmpeg.wasm'],
-    tech: ['React 18', 'WebGL', 'FFmpeg.wasm', 'Web Workers', 'Canvas API', 'Node.js', 'AWS S3'],
-    emoji: '🎬',
-    gradient: 'from-[#0a0a0a] to-[#1a1020]',
-    gradientStyle: 'linear-gradient(135deg, #0a0a0a, #1a1020)',
-    accentColor: '#FF6B9D',
-    github: 'https://github.com',
-    demo: 'https://example.com',
-    year: '2024',
-    role: 'Frontend Developer',
-    duration: '4 mois',
+    tags: ['Wordpress', 'PHP', 'HTML', 'CSS', 'JavaScript'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'wordpress ', 'hostiguer ' , 'php mailer' ,'responsive design'],
+    emoji: '🎨', 
+    gradient: 'from-[#1a0a0a] to-[#300a20]',
+    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
+    accentColor: '#eb4f1bff',
+    github: '',
+    demo: 'https://ndeyediagne.com/',
+    year: '2025',
+    role: 'Concepteur et Developpeur web',
+    duration: '2 mois', 
+    image: '/ndeye_diagne/ndeye_diagne_image3.png',
+    gallery: [
+      '/ndeye_diagne/ndeye_diagne_image2.png',
+      '/ndeye_diagne/ndeye_diagne_image3.png',
+      '/ndeye_diagne/ndeye_diagne_image4.png',
+      '/ndeye_diagne/ndeye_diagne_image5.png',
+      '/ndeye_diagne/ndeye_diagne_image1.png'
+    ],
     visible: true,
   },
+
+ 
+ 
 ]
 
 export const getProjectBySlug = (slug) => projects.find((p) => p.slug === slug)

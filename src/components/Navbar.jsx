@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import ThemeToggle from './ThemeToggle'
 
 const navLinks = [
   { label: 'À propos', href: '#about' },
   { label: 'Projets', href: '#projects' },
+  { label: 'Design Visuel', href: '#designs' },
   { label: 'Expérience', href: '#experience' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -64,7 +66,7 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   onClick={(e) => scrollTo(e, link.href)}
-                  className="text-muted hover:text-white text-sm font-body tracking-wide transition-colors duration-300"
+                  className="text-muted hover:text-text text-sm font-body tracking-wide transition-colors duration-300"
                   data-hover
                 >
                   {link.label}
@@ -75,6 +77,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="flex items-center gap-3">
+            <ThemeToggle />
             <a
               href="#contact"
               onClick={(e) => scrollTo(e, '#contact')}
@@ -82,7 +85,7 @@ export default function Navbar() {
               data-hover
             >
               <span className="w-1.5 h-1.5 rounded-full bg-accent2 animate-blink" />
-              Disponible
+              indisponible
             </a>
             {/* Mobile menu toggle */}
             <button
@@ -91,17 +94,17 @@ export default function Navbar() {
               data-hover
             >
               <span
-                className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
+                className={`block h-0.5 w-6 bg-text transition-all duration-300 ${
                   menuOpen ? 'rotate-45 translate-y-2' : ''
                 }`}
               />
               <span
-                className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
+                className={`block h-0.5 w-6 bg-text transition-all duration-300 ${
                   menuOpen ? 'opacity-0' : ''
                 }`}
               />
               <span
-                className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
+                className={`block h-0.5 w-6 bg-text transition-all duration-300 ${
                   menuOpen ? '-rotate-45 -translate-y-2' : ''
                 }`}
               />
@@ -125,7 +128,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => scrollTo(e, link.href)}
-                  className="text-muted hover:text-white text-base font-body py-2 transition-colors"
+                  className="text-muted hover:text-text text-base font-body py-2 transition-colors"
                   data-hover
                 >
                   {link.label}

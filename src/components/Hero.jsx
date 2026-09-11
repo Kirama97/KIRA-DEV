@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import { SiReact, SiFlutter } from 'react-icons/si'
+import { HiOutlineVideoCamera } from 'react-icons/hi2'
 import profil from '../assets/profil.png'
 
 const container = {
@@ -15,10 +17,10 @@ const item = {
 }
 
 const specialties = [
-  'Frontend Developer',
-  'Fullstack Engineer',
-  'Mobile Developer',
-  'Motion Designer',
+  'Ingénieur Logiciel',
+  'Développeur Full-stack',
+  'Direction Technique',
+  'Intelligence Artificielle',
   'Visual Creator',
 ]
 
@@ -69,7 +71,7 @@ export default function Hero() {
             <motion.div variants={item} className="inline-flex items-center gap-2 bg-accent/10 border border-accent/25 rounded-full px-4 py-2 mb-8">
               <span className="w-2 h-2 rounded-full bg-accent2 animate-blink" />
               <span className="text-accent2 text-xs font-medium tracking-widest uppercase">
-                Près a travaillé — Disponible
+                Prêt à travailler — Disponible
               </span>
             </motion.div>
 
@@ -86,7 +88,7 @@ export default function Hero() {
             {/* Rotating specialty */}
             <motion.div
               variants={item}
-              className="font-display font-bold text-2xl md:text-3xl text-white/40 mb-6 h-10 overflow-hidden"
+              className="font-display font-bold text-2xl md:text-3xl text-text/40 mb-6 h-10 overflow-hidden"
             >
               <AnimatePresence mode="wait">
                 <RotatingSpecialty />
@@ -115,7 +117,7 @@ export default function Hero() {
               </button>
               <button
                 onClick={() => scrollTo('contact')}
-                className="px-7 py-3.5 border border-white/10 rounded-full font-medium text-sm text-white/80 hover:border-accent/50 hover:text-white hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm"
+                className="px-7 py-3.5 border border-text/10 rounded-full font-medium text-sm text-text/80 hover:border-accent/50 hover:text-text hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm"
                 data-hover
               >
                 Me contacter
@@ -123,11 +125,11 @@ export default function Hero() {
             </motion.div>
 
             {/* Stats */}
-            <motion.div variants={item} className="flex gap-8 mt-12 pt-10 border-t border-white/[0.06]">
+            <motion.div variants={item} className="flex gap-8 mt-12 pt-10 border-t border-text/10">
               {[
-                { n: '3+', l: "ans d'expérience" },
-                { n: '20+', l: 'projets livrés' },
-                { n: '100%', l: 'clients satisfaits' },
+                { n: '6+', l: "ans d'expérience tech" },
+                { n: '50+', l: 'projets & formations' },
+                { n: '100%', l: 'engagement' },
               ].map((s) => (
                 <div key={s.l}>
                   <div className="font-display font-black text-2xl gradient-text">{s.n}</div>
@@ -184,7 +186,11 @@ export default function Hero() {
                 className="absolute -bottom-4 -left-6 glass px-4 py-3 rounded-2xl"
               >
                 <div className="text-xs text-muted mb-1">Stack</div>
-                <div className="flex gap-1.5 text-base">⚛️ 📱 🎬</div>
+                <div className="flex gap-2 text-base text-accent">
+                  <SiReact title="React" />
+                  <SiFlutter title="Flutter" />
+                  <HiOutlineVideoCamera title="Motion" />
+                </div>
               </motion.div>
             </div>
           </motion.div>
@@ -196,7 +202,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted"
+        className="absolute -bottom-14 sm:-bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted"
       >
         <div className="w-px h-12 bg-gradient-to-b from-accent to-transparent animate-float" />
         <span className="text-[10px] uppercase tracking-[0.2em]">scroll</span>
