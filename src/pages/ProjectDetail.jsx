@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import SEO from '../components/SEO'
 
 export default function ProjectDetail({ projects }) {
   const { slug } = useParams()
@@ -16,6 +17,7 @@ export default function ProjectDetail({ projects }) {
   if (!project) {
     return (
       <div className="relative z-10 flex items-center justify-center min-h-screen">
+        <SEO title="Projet introuvable" />
         <div className="text-center">
           <div className="mb-6 text-6xl">🔍</div>
           <h1 className="mb-4 text-3xl font-black font-display text-text">Projet introuvable</h1>
@@ -34,6 +36,11 @@ export default function ProjectDetail({ projects }) {
 
   return (
     <div className="relative z-10 min-h-screen pt-24 pb-20">
+      <SEO 
+        title={`${project.title} - Projet`} 
+        description={project.shortDesc}
+        image={project.image}
+      />
       <div className="max-w-5xl container-custom">
         {/* Back */}
         <motion.button
