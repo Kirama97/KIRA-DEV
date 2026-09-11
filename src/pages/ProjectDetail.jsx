@@ -242,7 +242,7 @@ export default function ProjectDetail({ projects }) {
                 data-hover
               >
                 <span>Visiter le site</span>
-                <span className="transition-transform group-hover:translate-x-1">↗</span>
+                <span className="transition-transform group-hover:translate-x-1"></span>
               </a>
               <a
                 href={project.github}
@@ -252,7 +252,7 @@ export default function ProjectDetail({ projects }) {
                 data-hover
               >
                 <span>GitHub</span>
-                <span className="transition-transform group-hover:translate-x-1">↗</span>
+                <span className="transition-transform group-hover:translate-x-1"></span>
               </a>
             </div>
           </div>

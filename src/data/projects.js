@@ -175,6 +175,54 @@ Soutien communautaire : Un module de don simple et direct via Wave, permettant �
   },
   {
     id: 5,
+    slug: 'J2C',
+    title: 'Job Construction & Conception',
+    shortDesc: 'une entreprise spécialisée dans la construction et la conception de maisons ',
+    fullDesc: `Le site ndeye-diagne.fr est une plateforme personnelle et commerciale dédiée au marketing de réseau (MLM), à l'entrepreneuriat à domicile et à la vente de produits de bien-être/beauté, animée par Ndèye Diagne sous la marque Team Power. 
+    
+     Axes principaux du site
+Opportunité d'affaires & Recrutement (Business Team Power) :
+Ndèye Diagne met en avant son statut de " Présidente LR France " avec plus de 8 ans d'expérience. Le site sert d'entonnoir pour recruter et former des partenaires indépendants souhaitant générer des revenus depuis chez eux, sans gestion de stock ni investissement lourd.
+
+Boutique & Produits Bien-être :
+Mise en avant et distribution des gammes de la marque partenaire (LR Health & Beauty), notamment des compléments pour l'énergie (Mind Master Gold), la gestion du poids (Body Mission) et la beauté (Élixir 5-en-1).
+
+Coaching & Événements :
+Offre d'accompagnement étape par étape, formations en ligne, e-books et événements d'équipe pour guider les nouveaux membres vers l'indépendance financière.
+
+Canaux de contact :
+Prise de contact ciblée orientée vers la France et le Sénégal (intégration directe avec WhatsApp).`,
+    features: [
+      'Opportunité d\'affaires & Recrutement (Business Team Power)',
+      'Boutique & Produits Bien-être',
+      'Coaching & Événements',
+      'Canaux de contact',
+    ],
+    tags: ['React Vite', 'Tailwind css', 'HTML', 'CSS', 'JavaScript'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'Tailwind css', 'hostiguer ' ,'responsive design'],
+    emoji: '', 
+    gradient: 'from-[#1a0a0a] to-[#300a20]',
+    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
+    accentColor: '#eb4f1bff',
+    github: '',
+    demo: 'https://j2c-five.vercel.app/',
+    year: '2025',
+    role: 'Concepteur et Developpeur web',
+    duration: '2 mois', 
+    image: '/j2c/j2C_image1.png',
+    gallery: [
+      '/j2c/j2C_image2.png',
+      '/j2c/j2C_image3.png',
+      '/j2c/j2C_image4.png',
+      '/j2c/j2C_image5.png',
+      '/j2c/j2C_image6.png',
+    
+      
+    ],
+    visible: true,
+  },
+  {
+    id: 5,
     slug: 'ndeye_diagne',
     title: 'Ndeye Diagne',
     shortDesc: 'Ndeye Diagne une entrepreneuse dans le domaine du bien etre et du soin ',

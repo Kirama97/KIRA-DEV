@@ -39,7 +39,7 @@ export default function ProjectCard({ project, index }) {
             className="px-4 py-2 text-xs font-medium text-white transition-colors rounded-full bg-accent hover:bg-accent/90"
             data-hover
           >
-            Visiter ↗
+            Visiter 
           </a>
        
         </div>

@@ -14,23 +14,23 @@ const designs = [
     id: 2,
     title: 'Affiche Bouteille',
     category: 'Design & Affiche',
-    image: '/visuel/affiche_bouteille.png', // Placeholder
+    image: '/visuel/affiche_bouteille.png', 
     link: '#',
   },
-  // {
-  //   id: 3,
-  //   title: 'Collab & Branding',
-  //   category: 'Collab',
-  //   image: 'https://images.unsplash.com/photo-1542744094-24638ea095b5?q=80&w=2670&auto=format&fit=crop', // Placeholder
-  //   link: '#',
-  // },
-  // {
-  //   id: 4,
-  //   title: 'Montage Vidéo Promotionnel',
-  //   category: 'Vidéo',
-  //   image: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2662&auto=format&fit=crop', // Placeholder
-  //   link: '#',
-  // },
+  {
+    id: 3,
+    title: 'Tuto Villa Petit Baobab',
+    category: 'vidéo',
+    image: '/visuel/petit_baobab.png', // Placeholder
+    link: 'https://www.youtube.com/watch?v=d1jO82tUdwY',
+  },
+  {
+    id: 4,
+    title: 'Affiche pour J2C',
+    category: 'Design & Affiche',
+    image: '/visuel/j2c.png', // Placeholder
+    link: '#',
+  },
 ]
 
 const categories = ['Tous', 'Vidéo & IA', 'Design & Affiche', 'Collab', 'Vidéo']
@@ -100,10 +100,10 @@ export default function VisualDesigns() {
                 <img
                   src={design.image}
                   alt={design.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 "
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-bg/90 via-bg/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t bg-neutral-900/50 from-bg/90 via-bg/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <div className="text-accent2 text-xs font-medium mb-1">{design.category}</div>
                 <h3 className="text-white font-bold text-lg leading-tight">{design.title}</h3>
