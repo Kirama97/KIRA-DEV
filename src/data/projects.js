@@ -116,10 +116,10 @@ Le projet inclut également des fonctionnalités avancées telles que la gestion
     gradientStyle: 'linear-gradient(135deg, #0a0a1a, #1a1a35)',
     accentColor: '#FF6B9D',
     github: 'https://github.com',
-    demo: 'https://front-t-sbci.vercel.app/accueil',
+    demo: 'https://v2-votrenom.vercel.app',
     year: '2026',
     role: 'Developpeur Fullstack',
-    duration: '5 mois',
+    duration: '5 mois', 
     image: '/sbci/sbci_image1.png',
     gallery: [
       '/sbci/sbci_image2.png',
@@ -200,8 +200,8 @@ Prise de contact ciblée orientée vers la France et le Sénégal (intégration 
       'Canaux de contact',
     ],
     tags: ['React Vite', 'Tailwind css', 'HTML', 'CSS', 'JavaScript'],
-    tech: ['HTML', 'CSS', 'JavaScript', 'Tailwind css', 'hostiguer ' ,'responsive design'],
-    emoji: '', 
+    tech: ['HTML', 'CSS', 'JavaScript', 'Tailwind css', 'hostiguer ', 'responsive design'],
+    emoji: '',
     gradient: 'from-[#1a0a0a] to-[#300a20]',
     gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
     accentColor: '#eb4f1bff',
@@ -209,7 +209,7 @@ Prise de contact ciblée orientée vers la France et le Sénégal (intégration 
     demo: 'https://j2c-five.vercel.app/',
     year: '2025',
     role: 'Concepteur et Developpeur web',
-    duration: '2 mois', 
+    duration: '2 mois',
     image: '/j2c/j2C_image1.png',
     gallery: [
       '/j2c/j2C_image2.png',
@@ -217,8 +217,8 @@ Prise de contact ciblée orientée vers la France et le Sénégal (intégration 
       '/j2c/j2C_image4.png',
       '/j2c/j2C_image5.png',
       '/j2c/j2C_image6.png',
-    
-      
+
+
     ],
     visible: true,
   },
@@ -248,8 +248,8 @@ Prise de contact ciblée orientée vers la France et le Sénégal (intégration 
       'Canaux de contact',
     ],
     tags: ['Wordpress', 'PHP', 'HTML', 'CSS', 'JavaScript'],
-    tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'wordpress ', 'hostiguer ' , 'php mailer' ,'responsive design'],
-    emoji: '🎨', 
+    tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'wordpress ', 'hostiguer ', 'php mailer', 'responsive design'],
+    emoji: '🎨',
     gradient: 'from-[#1a0a0a] to-[#300a20]',
     gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
     accentColor: '#eb4f1bff',
@@ -257,7 +257,7 @@ Prise de contact ciblée orientée vers la France et le Sénégal (intégration 
     demo: 'https://ndeyediagne.com/',
     year: '2026',
     role: 'Concepteur et Developpeur web',
-    duration: '2 mois', 
+    duration: '2 mois',
     image: '/ndeye_diagne/ndeye_diagne_image3.png',
     gallery: [
       '/ndeye_diagne/ndeye_diagne_image2.png',
@@ -269,8 +269,8 @@ Prise de contact ciblée orientée vers la France et le Sénégal (intégration 
     visible: true,
   },
 
- 
- 
+
+
 ]
 
 export const getProjectBySlug = (slug) => projects.find((p) => p.slug === slug)
