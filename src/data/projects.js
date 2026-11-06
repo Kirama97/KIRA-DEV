@@ -20,7 +20,7 @@ Sur le plan technique, l'application Full-Stack a été développée avec React 
     ],
     tags: ['React Vite', 'Node.js', 'MongoDB', 'Cloudinary'],
     tech: ['React Vite', 'Tailwind CSS', 'Node.js', 'MongoDB', 'NodeMailer', 'Cloudinary', 'Wave & Orange Money'],
-    demo: '#',
+    demo: 'https://client-six-tawny-16.vercel.app',
     github: '',
     year: 'Oct. 2026 — Actuel',
     role: 'Développeur Full-Stack',

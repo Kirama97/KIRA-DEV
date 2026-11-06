@@ -13,8 +13,8 @@ export default function About() {
           </h2>
           <div className="space-y-4 text-muted text-base leading-relaxed">
             <p>
-              Basé à <strong className="text-text font-medium">Dakar (Sénégal)</strong>, je suis 
-              Développeur Front-End / Full-Stack et Technicien en Informatique polyvalent, fort d’une 
+              Basé à <strong className="text-text font-medium">Thies (Sénégal)</strong>, je suis 
+              Développeur Front-End et Technicien en Informatique polyvalent, fort d’une 
               solide expertise en développement web, infographie et maintenance informatique. J’interviens 
               sur la gestion complète du cycle de vie des applications : conception, développement, 
               déploiement CI/CD, maintenance et support technique.
