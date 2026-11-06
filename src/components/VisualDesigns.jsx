@@ -1,7 +1,12 @@
 import { motion, AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { HiOutlineArrowUpRight, HiOutlineArrowsPointingOut, HiOutlineXMark, HiOutlinePlay } from 'react-icons/hi2'
+import {
+  HiOutlineArrowUpRight,
+  HiOutlineArrowsPointingOut,
+  HiOutlineXMark,
+  HiOutlinePlay,
+} from 'react-icons/hi2'
 
 const designs = [
   {
@@ -56,14 +61,50 @@ const designs = [
 
 const categories = ['Tous', 'Vidéo & IA', 'Design & Affiche', 'Collab & Média']
 
+// Helper to determine YouTube embed URL or direct video
+function getYouTubeEmbedUrl(url) {
+  if (!url) return null
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/
+  const match = url.match(regExp)
+  if (match && match[2].length === 11) {
+    return `https://www.youtube-nocookie.com/embed/${match[2]}?autoplay=1&rel=0&modestbranding=1`
+  }
+  return null
+}
+
+function isDirectVideo(url) {
+  if (!url) return false
+  return url.endsWith('.mp4') || url.includes('/video/upload/') || url.endsWith('.webm')
+}
+
 export default function VisualDesigns() {
   const [activeCategory, setActiveCategory] = useState('Tous')
   const [selectedItem, setSelectedItem] = useState(null)
+
+  // Close modal on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setSelectedItem(null)
+    }
+    if (selectedItem) {
+      window.addEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = 'unset'
+    }
+  }, [selectedItem])
 
   const filteredDesigns =
     activeCategory === 'Tous'
       ? designs
       : designs.filter((d) => d.category === activeCategory)
+
+  const ytEmbed = selectedItem?.link ? getYouTubeEmbedUrl(selectedItem.link) : null
+  const directVideo = selectedItem?.link && isDirectVideo(selectedItem.link)
 
   return (
     <section id="designs" className="section-padding border-b border-border relative z-10">
@@ -79,7 +120,7 @@ export default function VisualDesigns() {
 
           <p className="text-muted text-sm max-w-md leading-relaxed">
             Réalisations audiovisuelles assistées par IA, montage vidéo, affiches publicitaires
-            et collaborations créatives réalisées pour des artistes et entreprises.
+            et collaborations créatives. Cliquez sur un projet pour le visionner directement sur le site.
           </p>
         </div>
 
@@ -91,10 +132,11 @@ export default function VisualDesigns() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-lg text-xs font-mono transition-colors duration-150 ${isActive
+                className={`px-4 py-2 rounded-lg text-xs font-mono transition-colors duration-150 ${
+                  isActive
                     ? 'bg-text text-bg font-medium'
                     : 'bg-surface border border-border text-muted hover:text-text hover:border-text/30'
-                  }`}
+                }`}
               >
                 {cat}
               </button>
@@ -104,89 +146,121 @@ export default function VisualDesigns() {
 
         {/* Gallery Grid */}
         <div className="grid md:grid-cols-2 gap-6">
-          {filteredDesigns.map((item, index) => (
-            <motion.article
-              key={item.id}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.06, duration: 0.4 }}
-              className="card-surface-interactive overflow-hidden flex flex-col group"
-            >
-              {/* Top Meta Header */}
-              <div className="px-5 py-3 border-b border-border bg-surface2/50 flex items-center justify-between text-xs font-mono text-muted">
-                <span>{item.category}</span>
-                <span>{item.client} · {item.year}</span>
-              </div>
+          {filteredDesigns.map((item, index) => {
+            const isVideo = item.type === 'video'
 
-              {/* Visual Container */}
-              <div
-                onClick={() => setSelectedItem(item)}
-                className="relative aspect-[16/10] w-full overflow-hidden bg-surface2 border-b border-border cursor-pointer"
+            return (
+              <motion.article
+                key={item.id}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.06, duration: 0.4 }}
+                className="card-surface-interactive overflow-hidden flex flex-col group"
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                />
-                <div className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-bg/90 border border-border text-text text-xs font-mono">
-                  <HiOutlineArrowsPointingOut className="w-3.5 h-3.5" />
-                  Aperçu
-                </div>
-              </div>
-
-              {/* Details Footer */}
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <div className="flex flex-wrap gap-1.5 mb-3">
-                    {item.tools.map((tool) => (
-                      <span
-                        key={tool}
-                        className="font-mono text-[11px] px-2.5 py-0.5 rounded bg-surface2 border border-border text-muted"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-
-                  <h3 className="font-display font-bold text-lg text-text mb-2">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-sm text-muted leading-relaxed">
-                    {item.desc}
-                  </p>
+                {/* Top Meta Header */}
+                <div className="px-5 py-3 border-b border-border bg-surface2/50 flex items-center justify-between text-xs font-mono text-muted">
+                  <span className="flex items-center gap-1.5">
+                    {isVideo && <span className="w-2 h-2 rounded-full bg-blue-500" />}
+                    {item.category}
+                  </span>
+                  <span>{item.client} · {item.year}</span>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-border flex items-center justify-between gap-4">
-                  <button
-                    onClick={() => setSelectedItem(item)}
-                    className="text-xs font-medium text-text hover:underline underline-offset-4 inline-flex items-center gap-1.5"
-                  >
-                    <HiOutlineArrowsPointingOut className="w-3.5 h-3.5" />
-                    Agrandir le visuel
-                  </button>
+                {/* Visual Container */}
+                <div
+                  onClick={() => setSelectedItem(item)}
+                  className="relative aspect-[16/10] w-full overflow-hidden bg-surface2 border-b border-border cursor-pointer"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
 
-                  {item.link && item.link !== '#' && (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md bg-text text-bg text-xs font-medium hover:opacity-90 transition-opacity"
-                    >
-                      <HiOutlinePlay className="w-3.5 h-3.5" />
-                      Regarder la vidéo
-                      <HiOutlineArrowUpRight className="w-3.5 h-3.5" />
-                    </a>
+                  {/* Play badge / Aperçu overlay */}
+                  {isVideo ? (
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity">
+                      {/* Central High-Contrast Play Button */}
+                      <div className="w-14 h-14 rounded-full bg-neutral-950/90 border-2 border-white text-white flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-neutral-950 transition-all">
+                        <HiOutlinePlay className="w-6 h-6 ml-0.5 text-white fill-white/20" />
+                      </div>
+                      {/* Bottom-Right High-Contrast Badge */}
+                      <div className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-neutral-950/90 border border-white/30 text-white text-xs font-mono font-medium shadow-lg backdrop-blur-sm">
+                        <HiOutlinePlay className="w-3.5 h-3.5 text-white" />
+                        Lire la vidéo
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-neutral-950/90 border border-white/30 text-white text-xs font-mono font-medium shadow-lg backdrop-blur-sm">
+                      <HiOutlineArrowsPointingOut className="w-3.5 h-3.5 text-white" />
+                      Aperçu affiche
+                    </div>
                   )}
                 </div>
-              </div>
-            </motion.article>
-          ))}
+
+                {/* Details Footer */}
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="flex flex-wrap gap-1.5 mb-3">
+                      {item.tools.map((tool) => (
+                        <span
+                          key={tool}
+                          className="font-mono text-[11px] px-2.5 py-0.5 rounded bg-surface2 border border-border text-muted"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+
+                    <h3 className="font-display font-bold text-lg text-text mb-2">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-sm text-muted leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-border flex items-center justify-between gap-4">
+                    {isVideo ? (
+                      <button
+                        onClick={() => setSelectedItem(item)}
+                        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-text text-bg hover:opacity-90 border border-text text-xs font-medium transition-all shadow-sm"
+                      >
+                        <HiOutlinePlay className="w-4 h-4" />
+                        Visionner la vidéo
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => setSelectedItem(item)}
+                        className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg border border-border hover:border-text bg-surface hover:bg-surface2 text-text text-xs font-medium transition-all"
+                      >
+                        <HiOutlineArrowsPointingOut className="w-3.5 h-3.5" />
+                        Agrandir l’affiche
+                      </button>
+                    )}
+
+                    {item.link && item.link.includes('youtube.com') && (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-xs text-muted hover:text-text transition-colors inline-flex items-center gap-1 font-mono"
+                      >
+                        YouTube
+                        <HiOutlineArrowUpRight className="w-3 h-3" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </motion.article>
+            )
+          })}
         </div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Interactive Pop-Up / Modal (Vidéo & Affiche) */}
       {createPortal(
         <AnimatePresence>
           {selectedItem && (
@@ -195,18 +269,18 @@ export default function VisualDesigns() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedItem(null)}
-              className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm"
+              className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md"
             >
               <motion.div
-                initial={{ scale: 0.96, opacity: 0 }}
+                initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.96, opacity: 0 }}
+                exit={{ scale: 0.95, opacity: 0 }}
                 transition={{ duration: 0.2 }}
                 onClick={(e) => e.stopPropagation()}
-                className="w-full max-w-4xl rounded-xl bg-surface border border-border overflow-hidden shadow-2xl"
+                className="w-full max-w-4xl rounded-2xl bg-surface border border-border overflow-hidden shadow-2xl flex flex-col"
               >
                 {/* Modal Header */}
-                <div className="px-6 py-4 border-b border-border flex items-center justify-between gap-4">
+                <div className="px-5 sm:px-6 py-4 border-b border-border flex items-center justify-between gap-4 bg-surface2/40">
                   <div>
                     <div className="font-mono text-xs text-muted">
                       {selectedItem.category} · {selectedItem.client}
@@ -217,36 +291,60 @@ export default function VisualDesigns() {
                   </div>
                   <button
                     onClick={() => setSelectedItem(null)}
-                    className="p-2 rounded-lg border border-border bg-surface2 text-muted hover:text-text transition-colors"
+                    className="p-2 rounded-lg border border-border hover:border-text bg-surface text-text hover:bg-surface2 transition-colors"
                     aria-label="Fermer"
                   >
-                    <HiOutlineXMark className="w-5 h-5" />
+                    <HiOutlineXMark className="w-5 h-5 text-text" />
                   </button>
                 </div>
 
-                {/* Modal Image */}
-                <div className="bg-surface2 flex items-center justify-center max-h-[70vh] overflow-auto p-4">
-                  <img
-                    src={selectedItem.image}
-                    alt={selectedItem.title}
-                    className="max-h-[65vh] w-auto object-contain rounded-lg"
-                  />
+                {/* Modal Body: Player Vidéo ou Affiche */}
+                <div className="bg-black flex items-center justify-center overflow-hidden">
+                  {selectedItem.type === 'video' && ytEmbed ? (
+                    <div className="w-full aspect-video">
+                      <iframe
+                        src={ytEmbed}
+                        title={selectedItem.title}
+                        className="w-full h-full border-0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  ) : selectedItem.type === 'video' && directVideo ? (
+                    <div className="w-full aspect-video bg-black flex items-center justify-center">
+                      <video
+                        src={selectedItem.link}
+                        controls
+                        autoPlay
+                        className="w-full h-full max-h-[70vh] object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div className="p-4 flex items-center justify-center max-h-[70vh] bg-surface2 w-full">
+                      <img
+                        src={selectedItem.image}
+                        alt={selectedItem.title}
+                        className="max-h-[65vh] w-auto object-contain rounded-lg"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 {/* Modal Footer */}
-                <div className="px-6 py-4 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="px-5 sm:px-6 py-4 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-surface">
                   <p className="text-xs sm:text-sm text-muted max-w-2xl">
                     {selectedItem.desc}
                   </p>
-                  {selectedItem.link && selectedItem.link !== '#' && (
+
+                  {selectedItem.link && selectedItem.link.includes('youtube.com') && (
                     <a
                       href={selectedItem.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="btn-primary shrink-0 text-xs py-2.5 px-4"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-border bg-surface2 hover:bg-surface text-xs font-mono text-muted hover:text-text transition-colors shrink-0"
                     >
-                      Voir la vidéo sur YouTube
-                      <HiOutlineArrowUpRight className="w-4 h-4" />
+                      Ouvrir sur YouTube
+                      <HiOutlineArrowUpRight className="w-3.5 h-3.5" />
                     </a>
                   )}
                 </div>

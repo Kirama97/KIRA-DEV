@@ -24,7 +24,7 @@ Sur le plan technique, l'application Full-Stack a été développée avec React 
     github: '',
     year: 'Oct. 2026 — Actuel',
     role: 'Développeur Full-Stack',
-    duration: 'En production',
+    duration: 'Pas defini',
     image: '/sunu_cv/sunu_cv_image1.png',
     gallery: [
       '/sunu_cv/sunu_cv_image1.png',
