@@ -49,8 +49,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Brand Identity */}
           <Link to="/" className="flex items-center gap-3 group">
-            <span className="w-8 h-8 rounded-lg bg-text text-bg font-mono font-semibold text-xs flex items-center justify-center tracking-tighter">
-              DT
+            <span className="w-20 h-8 rounded-lg bg-text text-bg font-mono font-semibold text-xs flex items-center justify-center tracking-tighter">
+              KIRA/DEV
             </span>
             <div className="flex flex-col">
               <span className="font-display font-bold text-sm tracking-tight text-text leading-none">
