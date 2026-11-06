@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaTwitter, FaDribbble, FaInstagram, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
+import { HiOutlineArrowUpRight, HiOutlineEnvelope, HiOutlineMapPin } from 'react-icons/hi2'
 
 const socials = [
-  { icon: FaPhoneAlt, name: 'Téléphone', handle: '+221 78 5815782', url: 'tel:+221785815782' },
-  { icon: FaWhatsapp, name: 'Whatsapp', handle: '+221 78 5815782', url: 'https://wa.me/221785815782' },
-  { icon: FaGithub, name: 'GitHub', handle: '@kirama97', url: 'https://github.com/Kirama97' },
-  { icon: FaLinkedin, name: 'LinkedIn', handle: 'Diene Thiam', url: 'https://www.linkedin.com/in/di%C3%A9ne-thiam-971096247/' },
-  { icon: FaInstagram, name: 'Instagram ', handle: '@fou2tech', url: 'https://instagram.com/fou2tech' },
-
+  { icon: FaPhoneAlt, name: 'Téléphone principal', handle: '+221 78 581 57 82', url: 'tel:+221785815782' },
+  { icon: FaWhatsapp, name: 'WhatsApp Direct', handle: '+221 78 581 57 82 / 76 344 82 06', url: 'https://wa.me/221785815782' },
+  { icon: FaLinkedin, name: 'LinkedIn', handle: 'in/diene-thiam', url: 'https://www.linkedin.com/in/di%C3%A9ne-thiam-971096247/' },
+  { icon: FaGithub, name: 'GitHub', handle: '@Kirama97', url: 'https://github.com/Kirama97' },
+  { icon: FaInstagram, name: 'Instagram', handle: '@fou2tech', url: 'https://instagram.com/fou2tech' },
 ]
 
 export default function Contact() {
@@ -21,7 +20,7 @@ export default function Contact() {
   const submit = async (e) => {
     e.preventDefault()
     setLoading(true)
-    await new Promise((r) => setTimeout(r, 1000))
+    await new Promise((r) => setTimeout(r, 800))
     setSent(true)
     setLoading(false)
     setForm({ name: '', email: '', subject: '', message: '' })
@@ -32,172 +31,159 @@ export default function Contact() {
     <section id="contact" className="section-padding relative z-10">
       <div className="container-custom">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
-        >
-          <div className="text-accent text-xs uppercase tracking-[0.2em] mb-3 font-medium">
-            // Contact
-          </div>
-          <h2 className="font-display font-black text-4xl md:text-5xl leading-tight tracking-tight mb-4">
-            Travaillons <span className="gradient-text">ensemble.</span>
+        <div className="max-w-2xl mb-14">
+          <span className="section-label">05 — Contact & Collaboration</span>
+          <h2 className="font-display font-bold text-3xl sm:text-4xl text-text tracking-tight mb-4">
+            Discutons de votre prochain projet.
           </h2>
-          <p className="text-muted max-w-md mx-auto leading-relaxed">
-            Disponible pour missions freelance, postes full-time ou collaborations sur des projets ambitieux.
+          <p className="text-muted text-sm sm:text-base leading-relaxed">
+            Disponible pour des missions de développement full-stack, de direction technique (CTO), 
+            de formation ou de réalisation visuelle et audiovisuelle.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 xl:gap-16">
-          {/* Left info — 2 cols */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="lg:col-span-2 flex flex-col gap-6"
-          >
-            <div>
-              <div className="text-xs text-muted uppercase tracking-widest mb-2">Email direct</div>
-              <a
-                href="mailto:officialthiam97@gmail.com"
-                className="font-display font-bold text-lg text-accent hover:text-accent2 transition-colors"
-                data-hover
-              >
-                officialthiam97@gmail.com
-              </a>
-            </div>
-
-            <div>
-              <div className="text-xs text-muted uppercase tracking-widest mb-3">Localisation</div>
-              <div className="flex items-center gap-2 text-text">
-                <span>🇸🇳</span>
-                <span className="font-medium">Thiés, Sénégal</span>
+        <div className="grid lg:grid-cols-12 gap-10 xl:gap-14">
+          {/* Left Column — Direct Coordinates (5 cols) */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="card-surface p-6 space-y-5">
+              <div>
+                <div className="font-mono text-xs text-muted uppercase tracking-wider mb-1.5">
+                  Courriel professionnel
+                </div>
+                <a
+                  href="mailto:Officialthiam97@gmail.com"
+                  className="inline-flex items-center gap-2 font-display font-bold text-base sm:text-lg text-text hover:underline underline-offset-4"
+                >
+                  <HiOutlineEnvelope className="w-5 h-5 text-muted" />
+                  Officialthiam97@gmail.com
+                </a>
               </div>
-              <div className="text-muted text-sm mt-1">Remote · Disponible worldwide</div>
+
+              <div className="pt-4 border-t border-border">
+                <div className="font-mono text-xs text-muted uppercase tracking-wider mb-1.5">
+                  Localisation
+                </div>
+                <div className="flex items-center gap-2 text-text text-sm font-medium">
+                  <HiOutlineMapPin className="w-4 h-4 text-muted" />
+                  <span>Dakar & Thiès, Sénégal</span>
+                </div>
+                <div className="text-muted text-xs mt-1">
+                  Disponible sur site et en télétravail (Remote)
+                </div>
+              </div>
             </div>
 
-            <div>
-              <div className="text-xs text-muted uppercase tracking-widest mb-4">Réseaux sociaux</div>
-              <div className="flex flex-col gap-2">
-                {socials.map((s) => (
-                  <a
-                    key={s.name}
-                    href={s.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-3 glass p-3 rounded-xl text-muted hover:text-accent hover:border-accent/30 hover:bg-accent/[0.04] transition-all duration-300 group"
-                    data-hover
-                  >
-                    <span className="text-xl">
-                      <s.icon />
-                    </span>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-sm font-medium text-text/80 group-hover:text-text transition-colors">
-                        {s.name}
-                      </div>
-                      <div className="text-xs text-muted truncate">{s.handle}</div>
+            <div className="space-y-2.5">
+              <div className="font-mono text-xs text-muted uppercase tracking-wider mb-3">
+                Canaux directs & Réseaux
+              </div>
+              {socials.map((s) => (
+                <a
+                  key={s.name}
+                  href={s.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-3.5 card-surface-interactive p-3.5 group"
+                >
+                  <span className="w-8 h-8 rounded-lg bg-surface2 border border-border flex items-center justify-center text-text text-sm shrink-0">
+                    <s.icon />
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-xs font-semibold text-text">
+                      {s.name}
                     </div>
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity text-accent text-xs">↗</span>
-                  </a>
-                ))}
-              </div>
+                    <div className="font-mono text-xs text-muted truncate">
+                      {s.handle}
+                    </div>
+                  </div>
+                  <HiOutlineArrowUpRight className="w-4 h-4 text-muted group-hover:text-text transition-colors" />
+                </a>
+              ))}
             </div>
-          </motion.div>
+          </div>
 
-          {/* Right form — 3 cols */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="lg:col-span-3"
-          >
-            {sent && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mb-6 p-4 rounded-2xl bg-accent/10 border border-accent/25 text-accent text-sm"
-              >
-                ✓ Message envoyé avec succès ! Je vous réponds sous 24h.
-              </motion.div>
-            )}
+          {/* Right Column — Contact Form (7 cols) */}
+          <div className="lg:col-span-7">
+            <div className="card-surface p-6 sm:p-8">
+              <h3 className="font-display font-bold text-lg text-text mb-6 pb-4 border-b border-border">
+                Envoyer un message direct
+              </h3>
 
-            <form onSubmit={submit} className="flex flex-col gap-5">
-              <div className="grid sm:grid-cols-2 gap-5">
+              {sent && (
+                <div className="mb-6 p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 text-sm font-medium">
+                  ✓ Votre message a bien été transmis. Je vous répondrai sous 24 heures.
+                </div>
+              )}
+
+              <form onSubmit={submit} className="space-y-5">
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-xs text-muted">
+                      Nom complet *
+                    </label>
+                    <input
+                      name="name"
+                      required
+                      value={form.name}
+                      onChange={handle}
+                      placeholder="Ex: Amadou Diop"
+                      className="form-input bg-surface2 border border-border rounded-lg px-4 py-3 text-text text-sm placeholder-muted/50 transition-colors"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label className="font-mono text-xs text-muted">
+                      Adresse e-mail *
+                    </label>
+                    <input
+                      name="email"
+                      type="email"
+                      required
+                      value={form.email}
+                      onChange={handle}
+                      placeholder="nom@entreprise.com"
+                      className="form-input bg-surface2 border border-border rounded-lg px-4 py-3 text-text text-sm placeholder-muted/50 transition-colors"
+                    />
+                  </div>
+                </div>
+
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs uppercase tracking-widest text-muted">Nom *</label>
+                  <label className="font-mono text-xs text-muted">
+                    Objet de la demande
+                  </label>
                   <input
-                    name="name"
-                    required
-                    value={form.name}
+                    name="subject"
+                    value={form.subject}
                     onChange={handle}
-                    placeholder="votre nom"
-                    className="form-input bg-text/[0.03] border border-text/[0.08] rounded-xl px-4 py-3 text-text text-sm placeholder-muted/50 focus:border-accent transition-all"
+                    placeholder="Développement web, Direction technique, Design visuel, Formation…"
+                    className="form-input bg-surface2 border border-border rounded-lg px-4 py-3 text-text text-sm placeholder-muted/50 transition-colors"
                   />
                 </div>
+
                 <div className="flex flex-col gap-2">
-                  <label className="text-xs uppercase tracking-widest text-muted">Email *</label>
-                  <input
-                    name="email"
-                    type="email"
+                  <label className="font-mono text-xs text-muted">
+                    Détails du projet *
+                  </label>
+                  <textarea
+                    name="message"
                     required
-                    value={form.email}
+                    rows={5}
+                    value={form.message}
                     onChange={handle}
-                    placeholder="..............@example.com"
-                    className="form-input bg-text/[0.03] border border-text/[0.08] rounded-xl px-4 py-3 text-text text-sm placeholder-muted/50 focus:border-accent transition-all"
+                    placeholder="Décrivez votre besoin, vos objectifs et vos délais…"
+                    className="form-textarea bg-surface2 border border-border rounded-lg px-4 py-3 text-text text-sm placeholder-muted/50 transition-colors resize-none"
                   />
                 </div>
-              </div>
 
-              <div className="flex flex-col gap-2">
-                <label className="text-xs uppercase tracking-widest text-muted">Sujet</label>
-                <input
-                  name="subject"
-                  value={form.subject}
-                  onChange={handle}
-                  placeholder="Mission freelance, collaboration, recrutement…"
-                  className="form-input bg-text/[0.03] border border-text/[0.08] rounded-xl px-4 py-3 text-text text-sm placeholder-muted/50 focus:border-accent transition-all"
-                />
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-xs uppercase tracking-widest text-muted">Message *</label>
-                <textarea
-                  name="message"
-                  required
-                  rows={5}
-                  value={form.message}
-                  onChange={handle}
-                  placeholder="Décrivez votre projet, vos besoins, votre timeline…"
-                  className="form-textarea bg-text/[0.03] border border-text/[0.08] rounded-xl px-4 py-3 text-text text-sm placeholder-muted/50 focus:border-accent transition-all resize-none"
-                />
-              </div>
-
-              <motion.button
-                type="submit"
-                disabled={loading}
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                className="self-start flex items-center gap-2 bg-accent hover:bg-accent/90 text-white px-8 py-3.5 rounded-full text-sm font-medium transition-all duration-300 disabled:opacity-60"
-                style={{ boxShadow: '0 0 40px rgba(108,99,255,0.3)' }}
-                data-hover
-              >
-                {loading ? (
-                  <>
-                    <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" strokeDasharray="30 70" />
-                    </svg>
-                    Envoi en cours…
-                  </>
-                ) : (
-                  'Envoyer le message →'
-                )}
-              </motion.button>
-            </form>
-          </motion.div>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="btn-primary disabled:opacity-60"
+                >
+                  {loading ? 'Envoi en cours…' : 'Envoyer le message →'}
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </section>

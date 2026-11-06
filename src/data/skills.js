@@ -1,122 +1,200 @@
 import {
   SiReact,
-  SiTypescript,
   SiTailwindcss,
   SiNodedotjs,
-  SiPostgresql,
   SiMongodb,
   SiFigma,
   SiGit,
-  SiGitlab,
   SiHtml5,
   SiCss,
   SiWondersharefilmora,
   SiCanva,
-  SiNotion,
   SiJavascript,
-  SiIonic,
+  SiWordpress,
+  SiPhp,
+  SiExpress,
+  SiVite,
 } from 'react-icons/si'
 
 import {
-  HiOutlineComputerDesktop,
-  HiOutlineDevicePhoneMobile,
-  HiOutlinePaintBrush,
+  HiOutlineCommandLine,
+  HiOutlineServerStack,
+  HiOutlineAcademicCap,
   HiOutlineVideoCamera,
   HiOutlineSparkles,
-  HiOutlineBolt,
+  HiOutlineCpuChip,
+  HiOutlineSwatch,
+  HiOutlineWrenchScrewdriver,
 } from 'react-icons/hi2'
 
-export const skills = [
-  { name: 'React.js', icon: SiReact, category: 'Frontend', color: '#61DAFB' },
-  { name: 'HTML5', icon: SiHtml5, category: 'Frontend', color: '#E34F26' },
-  { name: 'CSS3', icon: SiCss, category: 'Frontend', color: '#1572B6' },
-  { name: 'JavaScript', icon: SiJavascript, category: 'Frontend', color: '#F7DF1E' },
-  { name: 'Tailwind CSS', icon: SiTailwindcss, category: 'Frontend', color: '#06B6D4' },
-  { name: 'Node.js', icon: SiNodedotjs, category: 'Backend', color: '#339933' },
-  { name: 'WordPress', icon: SiReact, category: 'Backend', color: '#21759B' },
-  { name: 'Filmora', icon: SiWondersharefilmora, category: 'Créatif', color: '#00D1FF' },
-  { name: 'Capcut', icon: SiWondersharefilmora, category: 'Créatif', color: '#000000' },
-  { name: 'VN', icon: SiWondersharefilmora, category: 'Créatif', color: '#FFE600' },
-  { name: 'Canva', icon: SiCanva, category: 'Créatif', color: '#00C4CC' },
-  { name: 'Figma', icon: SiFigma, category: 'Design', color: '#F24E1E' },
-  { name: 'IA Audiovisuel', icon: SiNotion, category: 'Créatif', color: '#ffffff' },
-  { name: 'Git', icon: SiGit, category: 'DevOps', color: '#F05032' },
+export const skillGroups = [
+  {
+    title: 'Ingénierie Web & Full-Stack',
+    subtitle: 'Conception, développement et déploiement d’applications web',
+    items: [
+      { name: 'JavaScript (ES6+)', icon: SiJavascript },
+      { name: 'React.js', icon: SiReact },
+      { name: 'Node.js', icon: SiNodedotjs },
+      { name: 'Express.js', icon: SiExpress },
+      { name: 'HTML5', icon: SiHtml5 },
+      { name: 'CSS3', icon: SiCss },
+      { name: 'Tailwind CSS', icon: SiTailwindcss },
+      { name: 'MongoDB', icon: SiMongodb },
+      { name: 'WordPress & CMS', icon: SiWordpress },
+      { name: 'PHP', icon: SiPhp },
+      { name: 'Vite', icon: SiVite },
+    ],
+  },
+  {
+    title: 'Design Visuel & Audiovisuel IA',
+    subtitle: 'Direction artistique, montage vidéo et workflows créatifs assistés par IA',
+    items: [
+      { name: 'Figma (UI/UX)', icon: SiFigma },
+      { name: 'Canva Pro', icon: SiCanva },
+      { name: 'Wondershare Filmora', icon: SiWondersharefilmora },
+      { name: 'CapCut & VN Editor', icon: HiOutlineVideoCamera },
+      { name: 'Production Audiovisuelle IA', icon: HiOutlineSparkles },
+      { name: 'Affiches & Identité Visuelle', icon: HiOutlineSwatch },
+    ],
+  },
+  {
+    title: 'Infrastructure, DevOps & Leadership',
+    subtitle: 'Direction technique (CTO), administration système/réseau et pédagogie',
+    items: [
+      { name: 'Git & Versioning', icon: SiGit },
+      { name: 'Déploiement & CI/CD', icon: HiOutlineServerStack },
+      { name: 'Direction Technique (CTO)', icon: HiOutlineCommandLine },
+      { name: 'Formation & Mentorat', icon: HiOutlineAcademicCap },
+      { name: 'Réseaux & Maintenance IT', icon: HiOutlineWrenchScrewdriver },
+      { name: 'Intégration d’Outils IA', icon: HiOutlineCpuChip },
+    ],
+  },
 ]
+
+export const skills = skillGroups.flatMap((group) =>
+  group.items.map((item) => ({ ...item, category: group.title }))
+)
 
 export const experiences = [
   {
     period: 'Juin 2025 — Présent',
     role: 'Coach Formateur en Informatique',
     company: 'Bakeli School of Technology',
-    desc: "Conception et animation de modules de formation axés sur le développement web, l'ingénierie logicielle et les technologies numériques. Encadrement, mentorat et évaluation d'apprenants dans la réalisation de projets informatiques professionnels.",
-    tags: ['Formation', 'Ingénierie Logicielle'],
+    location: 'Sénégal',
+    desc: "Conception et animation de modules de formation axés sur le développement web, l'ingénierie logicielle et les technologies numériques. Encadrement, mentorat et évaluation d'apprenants dans la réalisation de projets professionnels.",
+    tags: ['Ingénierie Logicielle', 'Développement Web', 'Pédagogie', 'Mentorat'],
   },
   {
     period: 'Février 2025 — Présent',
-    role: 'Co-fondateur & Directeur Technique',
+    role: 'Co-fondateur & Directeur Technique (CTO)',
     company: 'Studio Amed Njie',
-    desc: "Intégration d'outils et workflows IA pour la production et l'automatisation du contenu multimédia. Création et pilotage d'un studio innovant de réalisation audiovisuelle assistée par l'intelligence artificielle.",
-    tags: ['IA', 'Audiovisuel', 'CTO'],
+    location: 'Sénégal',
+    desc: "Création et pilotage d'un studio de réalisation audiovisuelle assistée par l'intelligence artificielle. Intégration d'outils et de workflows IA pour la production multimédia, dont la réalisation du clip officiel « Don de soi » pour l'artiste Abdou Guité Seck.",
+    tags: ['Direction Technique', 'Workflows IA', 'Production Audiovisuelle', 'VFX'],
   },
   {
     period: 'Novembre 2024 — Présent',
     role: 'Chief Technology Officer (CTO)',
     company: 'OnlineClass',
-    desc: "Animation de formations en programmation et accompagnement des apprenants dans l’apprentissage des fondamentaux du développement web. Conception de contenus pédagogiques et promotionnels.",
-    tags: ['CTO', 'Développement Web'],
+    location: 'Sénégal',
+    desc: "Direction technique, animation de formations en programmation et webinaires techniques. Conception de contenus pédagogiques et visuels multi-plateformes (YouTube, LinkedIn, Instagram, TikTok) et pilotage de la stratégie digitale.",
+    tags: ['CTO', 'Architecture Web', 'Contenus Pédagogiques', 'Stratégie Digitale'],
   },
   {
     period: 'Janvier 2025 — Avril 2025',
-    role: 'Stagiaire Développeur / Formateur',
+    role: 'Développeur Web & Formateur (Stage)',
     company: 'Bakeli School of Technology',
-    desc: "Participation active à la création de projets web internes (site vitrine WordPress, site e-commerce WordPress). Assistance aux sessions de formation et accompagnement technique des étudiants.",
-    tags: ['WordPress', 'Web', 'Formation'],
+    location: 'Sénégal',
+    desc: "Réalisation de plateformes web internes et clientes (sites vitrines, plateformes e-commerce WordPress, intégration de plugins sur mesure). Assistance aux sessions de formation et accompagnement technique des étudiants.",
+    tags: ['WordPress', 'E-commerce', 'Développement Web', 'Support'],
   },
   {
     period: 'Depuis 2022',
     role: 'Tuteur en Programmation',
     company: 'OnlineClass',
-    desc: "Accompagnement personnalisé d'étudiants en algorithmique, structure de données et développement logiciel. Animation de séances de soutien technique.",
-    tags: ['Algorithmique', 'Mentorat'],
+    location: 'Sénégal',
+    desc: "Accompagnement personnalisé d'étudiants en algorithmique, structures de données et développement logiciel. Animation de séances de soutien technique et résolution de problèmes de code.",
+    tags: ['Algorithmique', 'Structures de données', 'JavaScript'],
   },
   {
     period: 'Depuis 2018',
-    role: 'Technicien de Maintenance',
+    role: 'Technicien Supérieur en Maintenance & Réseaux',
     company: 'Indépendant',
-    desc: "Diagnostic, réparation et assemblage de matériels et équipements informatiques. Conseil client, gestion de stock et recommandation d'architectures matérielles adaptées aux besoins.",
-    tags: ['Hardware', 'Réseau', 'IT'],
+    location: 'Thiès / Dakar',
+    desc: "Diagnostic, réparation, assemblage et maintenance de parcs informatiques. Conseil client, gestion de stock et recommandation d'architectures matérielles et logicielles adaptées aux besoins.",
+    tags: ['Administration Système', 'Réseaux', 'Maintenance Matérielle & Logicielle'],
+  },
+]
+
+export const education = [
+  {
+    period: '2024 — 2026',
+    degree: 'Master en Ingénierie Logicielle',
+    institution: 'UNCHK (Université Numérique Cheikh Hamidou Kane, ex-UVS)',
+    detail: 'Architecture logicielle, gestion de projets complexes et ingénierie des systèmes d’information.',
+  },
+  {
+    period: '2024 — 2025',
+    degree: 'Certificat de Compétence Professionnelle (CCP) — Création de Site Web',
+    institution: 'ISEP Thiès (Institut Supérieur d’Enseignement Professionnel)',
+    detail: 'Conception, développement et mise en production d’applications web professionnelles.',
+  },
+  {
+    period: '2020 — 2023',
+    degree: 'Licence en Informatique & Développement Web / Mobile',
+    institution: 'UNCHK (ex-UVS)',
+    detail: 'Fondamentaux de l’informatique, algorithmique, bases de données et développement d’applications.',
+  },
+  {
+    period: '2019 — 2020',
+    degree: 'Baccalauréat Scientifique (Série S2)',
+    institution: 'Lycée Valdiodio Ndiaye, Thiès',
+    detail: 'Sciences expérimentales et mathématiques.',
+  },
+]
+
+export const certifications = [
+  {
+    year: '2023',
+    title: 'Certification en Développement Web',
+    issuer: 'GOMYCODE',
+  },
+  {
+    year: '2023',
+    title: 'Certification Marketing & Commerce Digital',
+    issuer: 'Programme Force N',
   },
 ]
 
 export const services = [
   {
-    icon: HiOutlineComputerDesktop,
-    title: 'Web Development',
-    desc: 'Applications web modernes et scalables avec React, Next.js et les dernières technologies front-end.',
+    icon: HiOutlineCommandLine,
+    title: 'Ingénierie & Développement Web',
+    desc: 'Conception et développement d’applications web full-stack sur mesure (React, Node.js, WordPress) rapides, maintenables et sécurisées.',
   },
   {
-    icon: HiOutlineDevicePhoneMobile,
-    title: 'Mobile Apps',
-    desc: 'Applications cross-platform iOS & Android avec React Native et Flutter, publiées sur les stores.',
-  },
-  {
-    icon: HiOutlinePaintBrush,
-    title: 'UI/UX Design',
-    desc: 'Interfaces premium avec Figma, design systems cohérents et micro-interactions mémorables.',
+    icon: HiOutlineCpuChip,
+    title: 'Direction Technique & Workflows IA',
+    desc: 'Accompagnement CTO, choix d’architecture technique, déploiement continu et intégration de solutions d’intelligence artificielle.',
   },
   {
     icon: HiOutlineVideoCamera,
-    title: 'Montage Vidéo',
-    desc: 'Montage professionnel, motion graphics et color grading pour un rendu cinématographique.',
+    title: 'Production Vidéo & Réalisation IA',
+    desc: 'Montage vidéo professionnel, clips et capsules promotionnelles assistés par l’IA (Filmora, CapCut, VN, outils génératifs).',
   },
   {
-    icon: HiOutlineSparkles,
-    title: 'Création Visuelle',
-    desc: 'Identité visuelle, assets graphiques, templates et contenus visuels pour réseaux sociaux.',
+    icon: HiOutlineSwatch,
+    title: 'Design Graphique & Identité Visuelle',
+    desc: 'Création d’affiches publicitaires, supports de communication, maquettes UI/UX (Figma) et visuels pour réseaux sociaux.',
   },
   {
-    icon: HiOutlineBolt,
-    title: 'Performance Web',
-    desc: 'Optimisation Core Web Vitals, lazy loading, bundling et CDN pour des sites ultra rapides.',
+    icon: HiOutlineAcademicCap,
+    title: 'Formation & Coaching Tech',
+    desc: 'Conception de programmes pédagogiques, animation de formations en développement web et mentorat d’équipes ou d’étudiants.',
+  },
+  {
+    icon: HiOutlineWrenchScrewdriver,
+    title: 'Infrastructure & Maintenance IT',
+    desc: 'Administration système et réseau, diagnostic matériel/logiciel, support technique et conseil en équipement informatique.',
   },
 ]

@@ -1,276 +1,253 @@
 export const projects = [
   {
     id: 1,
-    slug: 'villa petit baobab',
-    title: 'Villa Petit Baobab',
-    shortDesc: 'le site villa petit baobab est un site de réservation situé à Warang Mbour.',
-    fullDesc: `La Villa Petit Baobab est une résidence d’exception nichée dans un cadre paisible et raffiné, pensée pour offrir une expérience unique alliant confort, élégance et sérénité. Située dans un environnement naturel privilégié, la villa incarne parfaitement le charme authentique et l’hospitalité chaleureuse du Sénégal.
+    slug: 'sbci',
+    title: 'SBCI — E-Commerce Informatique & Mobilier',
+    category: 'Application Full-Stack',
+    shortDesc:
+      'Plateforme e-commerce complète dédiée à la vente d’équipements informatiques, électroniques et de mobilier de bureau au Sénégal.',
+    fullDesc: `SBCI (Senegal Business Computers and Informatics) est une plateforme e-commerce conçue pour digitaliser la distribution de matériel informatique, électronique et de mobilier de bureau professionnel.
 
-Dès votre arrivée, vous serez séduit par son architecture harmonieuse mêlant modernité et touches traditionnelles. Les espaces de vie sont spacieux, lumineux et soigneusement aménagés pour garantir un séjour agréable, que ce soit en famille, entre amis ou pour un séjour professionnel.
+La plateforme structure un large catalogue par catégories et sous-catégories avec un moteur de recherche et de filtrage rapide. Chaque fiche produit présente les spécifications techniques détaillées, la disponibilité en temps réel et permet aussi bien la commande en ligne que la commande rapide assistée via WhatsApp.
 
-La villa propose des chambres confortables, décorées avec goût et équipées de toutes les commodités modernes. Chaque détail a été pensé pour offrir un cadre reposant et intime, propice à la détente et au bien-être.
-
-À l’extérieur, vous profiterez d’un espace convivial avec piscine, terrasse et coin détente, idéal pour savourer des moments inoubliables sous le soleil. Le jardin, agrémenté de végétation locale et dominé par le majestueux baobab, apporte une touche naturelle et apaisante à l’ensemble.
-
-La Villa Petit Baobab  se distingue également par la qualité de ses services : accueil personnalisé, entretien régulier, sécurité et accompagnement tout au long de votre séjour. Tout est mis en œuvre pour répondre aux attentes des visiteurs les plus exigeants.
-
-Que vous soyez à la recherche de calme, de luxe discret ou d’une escapade authentique, la Villa Petit Baobab est la destination idéale pour vivre une expérience unique et mémorable.
-`,
+Sur le plan architectural, l'application repose sur une séparation claire entre le client React (Vite + Tailwind CSS) et l'API REST Node.js / Express adossée à MongoDB. Elle intègre une authentification sécurisée par JWT, une gestion des rôles et un tableau de bord d'administration complet pour le suivi des stocks, des produits et des commandes.`,
     features: [
-      'Reservation instannée',
-      'interface intuitive ',
-      'Calendrier qui adaptative',
-      'Alertes intelligentes par email',
-      'un dashboard remplie et comprehensive'
-
+      'Architecture Full-Stack découplée (React Vite + Node.js / Express / MongoDB)',
+      'Catalogue structuré par catégories avec recherche et filtrage instantanés',
+      'Authentification sécurisée par JWT et gestion des comptes clients',
+      'Tunnel de commande hybride : panier classique et commande directe WhatsApp',
+      'Tableau de bord administrateur complet (produits, stocks, commandes)',
     ],
-    tags: ['wordpresse'],
-    tech: ['wordpress , wp-rental'],
-    emoji: '🚀',
-    gradient: 'from-[#0d0d20] to-[#1a0535]',
-    gradientStyle: 'linear-gradient(135deg, #0d0d20, #1a0535)',
-    accentColor: '#6C63FF',
-    // github: 'https://github.com',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
+    tech: ['React (Vite)', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'JWT', 'Socket.IO'],
+    demo: 'https://v2-votrenom.vercel.app',
+    github: '',
+    year: '2026',
+    role: 'Développeur Full-Stack',
+    duration: '5 mois',
+    image: '/sbci/sbci_image1.png',
+    gallery: [
+      '/sbci/sbci_image1.png',
+      '/sbci/sbci_image2.png',
+      '/sbci/sbci_image3.png',
+      '/sbci/sbci_image4.png',
+      '/sbci/sbci_image5.png',
+      '/sbci/sbci_image6.png',
+    ],
+    visible: true,
+  },
+  {
+    id: 2,
+    slug: 'sunu-cv',
+    title: 'Sunu CV — Générateur de CV assisté par IA',
+    category: 'Plateforme SaaS & IA',
+    shortDesc:
+      'Application web permettant de concevoir des CV professionnels optimisés pour les systèmes ATS grâce à l’intelligence artificielle.',
+    fullDesc: `Sunu CV est une plateforme SaaS pensée pour accompagner les candidats et professionnels dans la création de CV modernes, structurés et conformes aux standards ATS (Applicant Tracking Systems).
+
+L'application combine plus de 20 modèles de mise en page professionnels avec un assistant de rédaction par intelligence artificielle qui aide à formuler les expériences, synthétiser le profil et optimiser les mots-clés métiers.
+
+L'interface offre une prévisualisation en temps réel et permet un export immédiat au format PDF ou Word haute définition.`,
+    features: [
+      'Éditeur de CV interactif avec prévisualisation en temps réel',
+      'Assistance à la rédaction et optimisation ATS par intelligence artificielle',
+      'Catalogue de plus de 20 modèles professionnels personnalisables',
+      'Exportation instantanée aux formats PDF et Word',
+      'Interface fluide, responsive et centrée sur l’expérience utilisateur',
+    ],
+    tags: ['React', 'IA Générative', 'Tailwind CSS'],
+    tech: ['React.js', 'Tailwind CSS', 'Intégration API IA', 'Export PDF'],
+    demo: '#',
+    github: '',
+    year: '2026',
+    role: 'Concepteur & Développeur Full-Stack',
+    duration: '2 mois',
+    image: '/sunu_cv/sunu_cv_image1.png',
+    gallery: [
+      '/sunu_cv/sunu_cv_image1.png',
+      '/sunu_cv/sunu_cv_image2.png',
+      '/sunu_cv/sunu_cv_image3.png',
+      '/sunu_cv/sunu_cv_image4.png',
+    ],
+    visible: true,
+  },
+  {
+    id: 3,
+    slug: 'villa-petit-baobab',
+    title: 'Villa Petit Baobab — Réservation Hôtelière',
+    category: 'Système de Réservation',
+    shortDesc:
+      'Plateforme officielle de présentation et de réservation en ligne pour une résidence hôtelière située à Warang, Mbour.',
+    fullDesc: `La Villa Petit Baobab est une résidence d'exception située à Warang (Mbour, Sénégal). Ce projet consistait à concevoir sa présence digitale complète ainsi que son système de réservation directe en ligne.
+
+Le site met en valeur l'architecture et les espaces de la résidence (chambres, piscine, jardin, services) tout en intégrant un moteur de réservation avec calendrier de disponibilité en temps réel, calcul automatique des tarifs selon les saisons et notifications par e-mail pour les propriétaires comme pour les voyageurs.
+
+J'ai également réalisé les capsules vidéo tutoriels permettant aux clients de maîtriser le parcours de demande de réservation en quelques secondes.`,
+    features: [
+      'Système de réservation en ligne avec calendrier de disponibilité adaptatif',
+      'Alertes et confirmations automatisées par e-mail',
+      'Tableau de bord de gestion des réservations et des tarifs saisonniers',
+      'Galerie photographique optimisée et présentation détaillée des prestations',
+      'Production de capsules vidéo explicatives pour accompagner les clients',
+    ],
+    tags: ['WordPress', 'Booking System', 'PHP'],
+    tech: ['WordPress', 'WP Rentals', 'PHP', 'CSS3', 'Responsive Design'],
     demo: 'https://villa-petitbaobab.com/?bypass_code=ZemkLnitHVGfezkQ',
-    // demo: 'https://villa-petitbaobab.com/',
+    github: '',
     year: '2025',
-    role: 'Fullstack Developer',
+    role: 'Développeur Web & Créateur Média',
     duration: '3 mois',
     image: '/villa_petit_baobab/villa_petit_baobab_1.png',
     gallery: [
       '/villa_petit_baobab/villa_petit_baobab_1.png',
       '/villa_petit_baobab/villa_petit_baobab_2.png',
       '/villa_petit_baobab/villa_petit_baobab_3.png',
-      '/villa_petit_baobab/villa_petit_baobab_4.png'
-    ],
-    visible: true,
-  },
-  {
-    id: 2,
-    slug: 'luxe-commerce',
-    title: 'Perso My Style',
-    shortDesc: 'Plateforme e-commerce premium avec animations 3D, panier temps réel et Stripe.',
-    fullDesc: `Luxe Commerce redéfinit l'expérience d'achat en ligne en mettant l'esthétique au cœur de chaque interaction. Chaque produit bénéficie d'une présentation 3D interactive, permettant aux clients de l'examiner sous tous les angles.
-
-Le parcours d'achat a été optimisé pour maximiser la conversion : ajout au panier en un clic, checkout en 2 étapes, et confirmation instantanée. L'intégration Stripe garantit une sécurité maximale.
-
-Le panel admin offre une gestion complète du catalogue, des stocks, des commandes et des analytics ventes en temps réel.`,
-    features: [
-      'Viewer produit 3D interactif',
-      'Panier temps réel avec animations',
-      'Checkout Stripe optimisé',
-      'Panel admin complet',
-      'Gestion des stocks automatique',
-      'Analytics ventes en temps réel',
-    ],
-    tags: ['React', 'MongoDB', 'Node js'],
-    tech: ['react js 14', 'Node js', 'mongodb', 'tailwind css'],
-    emoji: '💎',
-    gradient: 'from-[#001a0d] to-[#003320]',
-    gradientStyle: 'linear-gradient(135deg, #001a0d, #003320)',
-    accentColor: '#00D4FF',
-    github: 'https://github.com',
-    demo: 'https://front-tache212.vercel.app/accueil',
-    year: '2026',
-    role: 'Frontend Developer',
-    duration: '4 mois',
-    image: '/perso_my_style/tache_21_1.png',
-    gallery: [
-      '/perso_my_style/tache_21_2.png',
-      '/perso_my_style/tache_21_3.png',
-      '/perso_my_style/tache_21_4.png',
-      '/perso_my_style/tache_21_1.png'
-    ],
-    visible: true,
-  },
-  {
-    id: 3,
-    slug: 'sbci',
-    title: 'SBCI',
-    shortDesc: 'SBCI (Senegal Business Computers and Informatics) un site e-commerce dédiée à la vente de produits électroniques et de mobilier de bureau, avec une interface moderne, intuitive et des fonctionnalités avancées pour optimiser l’expérience utilisateur.',
-    fullDesc: `SBCI — Plateforme e-commerce
-
-SBCI est une plateforme e-commerce moderne conçue pour digitaliser la vente de "produits électroniques, informatiques et de mobilier de bureau". Le projet a été pensé autour d’une interface moderne, intuitive et responsive, permettant aux utilisateurs de parcourir facilement le catalogue, consulter les caractéristiques des produits et effectuer leurs achats en ligne.
-
-La plateforme propose une organisation claire des produits par "catégories et sous-catégories", avec un système de recherche et de filtrage permettant de retrouver rapidement les articles recherchés. Chaque produit dispose d’une page dédiée présentant ses informations essentielles, ses images, son prix et sa disponibilité.
-
-L’expérience utilisateur a été particulièrement prise en compte avec une navigation fluide. La plateforme intègre également un système d’"authentification et de gestion des comptes utilisateurs", garantissant un accès sécurisé aux fonctionnalités personnelles.
-
-Sur le plan technique, le projet repose sur une architecture "frontend/backend" permettant de séparer l’interface utilisateur de la logique métier et de la gestion des données. Une attention particulière a été portée à la "performance, la sécurité, la responsivité et la maintenabilité du code" afin de garantir une expérience optimale sur ordinateur, tablette et mobile.
-
-Le projet inclut également des fonctionnalités avancées telles que la gestion des produits, des catégories, des utilisateurs, des commandes et des contenus, ainsi que l’intégration de services externes pour la "gestion des images et l’envoi de notifications par e-mail".
-
-"Objectif du projet :" proposer à SBCI (Senegal Business computers and Informatics) une solution digitale moderne permettant de présenter ses produits en ligne, d'améliorer l’expérience d’achat des clients et de faciliter la gestion du catalogue et des commandes.
-`,
-    features: [
-      'Authentification sécurisée avec JWT',
-      'Espace produit electronique et mobilier de bureau',
-      'Commande directe sur Whatsapp',
-      'Interface moderne et intuitive',
-      'Dashboard admin pour la gestion des produits et des commandes',
-    ],
-    tags: ['React Vite', 'MongoDB', 'Node.js'],
-    tech: ['React Vite', 'MongoDB', 'Node.js', 'Express', 'Tailwind CSS', 'Socket.IO', 'JWT'],
-    emoji: '⚡',
-    gradient: 'from-[#0a0a1a] to-[#1a1a35]',
-    gradientStyle: 'linear-gradient(135deg, #0a0a1a, #1a1a35)',
-    accentColor: '#FF6B9D',
-    github: 'https://github.com',
-    demo: 'https://v2-votrenom.vercel.app',
-    year: '2026',
-    role: 'Developpeur Fullstack',
-    duration: '5 mois', 
-    image: '/sbci/sbci_image1.png',
-    gallery: [
-      '/sbci/sbci_image2.png',
-      '/sbci/sbci_image3.png',
-      '/sbci/sbci_image4.png',
-      '/sbci/sbci_image5.png',
-      '/sbci/sbci_image6.png',
-      '/sbci/sbci_image1.png'
+      '/villa_petit_baobab/villa_petit_baobab_4.png',
     ],
     visible: true,
   },
   {
     id: 4,
-    slug: 'Cours_js',
-    title: 'Apprendre javascript',
-    shortDesc: 'une plateforme complete pour apprendre le langage javascript.',
-    fullDesc: `J'ai conçu la plateforme cour_js qui est ue plateformeinteractive et intuitive dédiée à l'apprentissage de JavaScript, spécialement pensée pour accompagner les débutants du premier script jusqu'à la manipulation avancée.
+    slug: 'luxe-commerce',
+    title: 'Perso My Style — E-Commerce & Personnalisation',
+    category: 'Application Full-Stack',
+    shortDesc:
+      'Boutique en ligne moderne avec personnalisation de produits, gestion de panier temps réel et tableau de bord analytique.',
+    fullDesc: `Perso My Style est une plateforme e-commerce dédiée à la vente et à la personnalisation d'articles de mode et d'accessoires. L'objectif du projet était d'offrir une expérience d'achat fluide, visuelle et rapide.
 
-Parcours complet et structuré : De la déclaration des variables aux notions fondamentales (tableaux, objets, fonctions), jusqu'à l'interaction avec l'utilisateur via le DOM et la gestion des événements.
+Le parcours client intègre une exploration dynamique des collections, un panier mis à jour en temps réel et un processus de commande simplifié en deux étapes.
 
-Pratique immédiate : Un éditeur avec console d'exécution intégrée pour tester son code en temps réel et visualiser instantanément les résultats.
-
-Validation des acquis : Des quiz ciblés à chaque étape pour ancrer les connaissances théoriques et s'auto-évaluer.
-
-Soutien communautaire : Un module de don simple et direct via Wave, permettant à la communauté de soutenir le développement et l'hébergement continu du projet.`,
+Côté administration, la plateforme dispose d'un back-office complet permettant de piloter le catalogue, de suivre l'état des stocks automatiquement et de visualiser les statistiques de ventes.`,
     features: [
-      'Apprentissage interactif avec éditeur intégré',
-      'Quiz et exercices pratiques',
-      'Suivi des progrès et statistiques personnalisées',
-      'partage de code ',
-      'Communauté et soutien via Wave',
-      'Interface responsive et accessible sur tous les appareils',
+      'Catalogue interactif et personnalisation d’articles',
+      'Panier dynamique en temps réel',
+      'Tunnel de commande optimisé et sécurisé',
+      'Panneau d’administration complet (catalogue, stocks, commandes)',
+      'Suivi analytique des performances commerciales',
     ],
-    tags: ['JavaScript', 'React js', 'Tailwind'],
-    tech: ['react', 'tailwin  css', 'Canvas API', 'local storage', 'Vite'],
-    emoji: '🎨',
-    gradient: 'from-[#1a0a0a] to-[#300a50]',
-    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a50)',
-    accentColor: '#6C63FF',
-    github: 'https://github.com',
-    demo: 'https://coursjs.vercel.app/',
-    year: '2025',
-    role: 'Frontend Developer',
-    duration: '1 mois',
-    image: '/cour_js/cour_js.png',
+    tags: ['React', 'Node.js', 'MongoDB'],
+    tech: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+    demo: 'https://front-tache212.vercel.app/accueil',
+    github: '',
+    year: '2026',
+    role: 'Développeur Frontend & Intégrateur',
+    duration: '4 mois',
+    image: '/perso_my_style/tache_21_1.png',
     gallery: [
-      '/cour_js/cour_js_image2.png',
-      '/cour_js/cour_js_image3.png',
-      '/cour_js/cour_js_image4.png',
-      '/cour_js/cour_js_image5.png',
-      '/cour_js/cour_js_image1.png'
+      '/perso_my_style/tache_21_1.png',
+      '/perso_my_style/tache_21_2.png',
+      '/perso_my_style/tache_21_3.png',
+      '/perso_my_style/tache_21_4.png',
     ],
     visible: true,
   },
   {
     id: 5,
-    slug: 'J2C',
-    title: 'Job Construction & Conception',
-    shortDesc: 'une entreprise spécialisée dans la construction et la conception de maisons ',
-    fullDesc: `Le site ndeye-diagne.fr est une plateforme personnelle et commerciale dédiée au marketing de réseau (MLM), à l'entrepreneuriat à domicile et à la vente de produits de bien-être/beauté, animée par Ndèye Diagne sous la marque Team Power. 
-    
-     Axes principaux du site
-Opportunité d'affaires & Recrutement (Business Team Power) :
-Ndèye Diagne met en avant son statut de " Présidente LR France " avec plus de 8 ans d'expérience. Le site sert d'entonnoir pour recruter et former des partenaires indépendants souhaitant générer des revenus depuis chez eux, sans gestion de stock ni investissement lourd.
+    slug: 'Cours_js',
+    title: 'CoursJS — Plateforme Interactive d’Apprentissage',
+    category: 'EdTech & Pédagogie',
+    shortDesc:
+      'Plateforme éducative interactive pour apprendre JavaScript de zéro avec éditeur de code intégré, console temps réel et quiz.',
+    fullDesc: `En tant que formateur et tuteur en programmation, j'ai conçu CoursJS pour offrir aux étudiants et autodidactes un environnement d'apprentissage du langage JavaScript à la fois structuré et immédiatement pratique.
 
-Boutique & Produits Bien-être :
-Mise en avant et distribution des gammes de la marque partenaire (LR Health & Beauty), notamment des compléments pour l'énergie (Mind Master Gold), la gestion du poids (Body Mission) et la beauté (Élixir 5-en-1).
+La plateforme couvre l'ensemble du programme fondamental : variables, structures de contrôle, fonctions, tableaux, objets, manipulation du DOM et gestion des événements.
 
-Coaching & Événements :
-Offre d'accompagnement étape par étape, formations en ligne, e-books et événements d'équipe pour guider les nouveaux membres vers l'indépendance financière.
-
-Canaux de contact :
-Prise de contact ciblée orientée vers la France et le Sénégal (intégration directe avec WhatsApp).`,
+Chaque leçon est accompagnée d'un bac à sable (sandbox) avec éditeur de code et console d'exécution intégrée permettant de tester son code directement dans le navigateur, ainsi que de quiz d'auto-évaluation et d'un suivi de progression sauvegardé localement.`,
     features: [
-      'Opportunité d\'affaires & Recrutement (Business Team Power)',
-      'Boutique & Produits Bien-être',
-      'Coaching & Événements',
-      'Canaux de contact',
+      'Parcours pédagogique progressif du niveau débutant au niveau avancé',
+      'Éditeur de code intégré avec console d’exécution en temps réel',
+      'Quiz de validation des acquis à chaque chapitre',
+      'Sauvegarde automatique de la progression de l’apprenant',
+      'Module de soutien communautaire intégré (Wave)',
     ],
-    tags: ['React Vite', 'Tailwind css', 'HTML', 'CSS', 'JavaScript'],
-    tech: ['HTML', 'CSS', 'JavaScript', 'Tailwind css', 'hostiguer ', 'responsive design'],
-    emoji: '',
-    gradient: 'from-[#1a0a0a] to-[#300a20]',
-    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
-    accentColor: '#eb4f1bff',
+    tags: ['React', 'JavaScript', 'EdTech'],
+    tech: ['React (Vite)', 'JavaScript ES6+', 'Tailwind CSS', 'LocalStorage API'],
+    demo: 'https://coursjs.vercel.app/',
     github: '',
-    demo: 'https://j2c-five.vercel.app/',
     year: '2025',
-    role: 'Concepteur et Developpeur web',
+    role: 'Concepteur Pédagogique & Développeur',
+    duration: '1 mois',
+    image: '/cour_js/cour_js.png',
+    gallery: [
+      '/cour_js/cour_js.png',
+      '/cour_js/cour_js_image1.png',
+      '/cour_js/cour_js_image2.png',
+      '/cour_js/cour_js_image3.png',
+      '/cour_js/cour_js_image4.png',
+      '/cour_js/cour_js_image5.png',
+    ],
+    visible: true,
+  },
+  {
+    id: 6,
+    slug: 'J2C',
+    title: 'J2C — Job Conception & Construction',
+    category: 'Site Vitrine BTP & Architecture',
+    shortDesc:
+      'Plateforme digitale et identité visuelle pour une entreprise d’ingénierie du bâtiment, d’architecture 2D/3D et de construction à Thiès.',
+    fullDesc: `J2C (Job Conception & Construction) est une entreprise spécialisée dans l'étude architecturale, l'ingénierie béton armé et la construction immobilière clé en main basée à Thiès (Cité Senghor).
+
+Ce projet global comprenait à la fois le développement du site vitrine professionnel et la conception de supports de communication visuelle (affiches publicitaires print et digitales).
+
+Le site présente de manière structurée l'ensemble des prestations de l'entreprise (plans d'architecture 2D/3D, plans béton armé, suivi de chantier, réalisation complète), intègre un portefeuille de réalisations immobilières et facilite la prise de rendez-vous et de devis pour les particuliers et promoteurs.`,
+    features: [
+      'Présentation structurée des expertises BTP (Plans 2D/3D, Béton armé, Suivi de chantier)',
+      'Galerie des réalisations architecturales et chantiers livrés',
+      'Formulaire de demande de devis et prise de contact rapide',
+      'Conception conjointe des affiches publicitaires et de l’identité visuelle',
+      'Optimisation mobile et déploiement haute performance',
+    ],
+    tags: ['React', 'Tailwind CSS', 'BTP & Immobilier'],
+    tech: ['React (Vite)', 'Tailwind CSS', 'JavaScript', 'Responsive Design', 'Identité Visuelle'],
+    demo: 'https://j2c-five.vercel.app/',
+    github: '',
+    year: '2025',
+    role: 'Concepteur Web & Designer Graphique',
     duration: '2 mois',
     image: '/j2c/j2C_image1.png',
     gallery: [
+      '/j2c/j2C_image1.png',
       '/j2c/j2C_image2.png',
       '/j2c/j2C_image3.png',
       '/j2c/j2C_image4.png',
       '/j2c/j2C_image5.png',
       '/j2c/j2C_image6.png',
-
-
     ],
     visible: true,
   },
   {
-    id: 5,
+    id: 7,
     slug: 'ndeye_diagne',
-    title: 'Ndeye Diagne',
-    shortDesc: 'Ndeye Diagne une entrepreneuse dans le domaine du bien etre et du soin ',
-    fullDesc: `Le site ndeye-diagne.fr est une plateforme personnelle et commerciale dédiée au marketing de réseau (MLM), à l'entrepreneuriat à domicile et à la vente de produits de bien-être/beauté, animée par Ndèye Diagne sous la marque Team Power. 
-    
-     Axes principaux du site
-Opportunité d'affaires & Recrutement (Business Team Power) :
-Ndèye Diagne met en avant son statut de " Présidente LR France " avec plus de 8 ans d'expérience. Le site sert d'entonnoir pour recruter et former des partenaires indépendants souhaitant générer des revenus depuis chez eux, sans gestion de stock ni investissement lourd.
+    title: 'Ndèye Diagne — Plateforme Entrepreneuriale & Bien-être',
+    category: 'Site Vitrine & E-Business',
+    shortDesc:
+      'Portail professionnel et commercial dédié à l’entrepreneuriat, au coaching et à la présentation de gammes bien-être entre la France et le Sénégal.',
+    fullDesc: `Le site ndeyediagne.com est une plateforme digitale professionnelle conçue pour accompagner les activités de Ndèye Diagne (Team Power) dans les domaines du coaching entrepreneurial et de la distribution de produits de bien-être et de soin.
 
-Boutique & Produits Bien-être :
-Mise en avant et distribution des gammes de la marque partenaire (LR Health & Beauty), notamment des compléments pour l'énergie (Mind Master Gold), la gestion du poids (Body Mission) et la beauté (Élixir 5-en-1).
-
-Coaching & Événements :
-Offre d'accompagnement étape par étape, formations en ligne, e-books et événements d'équipe pour guider les nouveaux membres vers l'indépendance financière.
-
-Canaux de contact :
-Prise de contact ciblée orientée vers la France et le Sénégal (intégration directe avec WhatsApp).`,
+L'architecture de l'information a été pensée pour répondre à trois objectifs : présenter les programmes d'accompagnement et de formation en ligne, mettre en avant les gammes de produits partenaires (énergie, nutrition, soin), et offrir un canal de prise de contact direct adapté aux audiences basées en France et au Sénégal.`,
     features: [
-      'Opportunité d\'affaires & Recrutement (Business Team Power)',
-      'Boutique & Produits Bien-être',
-      'Coaching & Événements',
-      'Canaux de contact',
+      'Espace dédié à l’accompagnement entrepreneurial et au coaching d’équipe',
+      'Catalogue de présentation des gammes bien-être et nutrition',
+      'Système de prise de contact multicanal (formulaire PHP Mailer et intégration WhatsApp)',
+      'Administration autonome des contenus via WordPress',
     ],
-    tags: ['Wordpress', 'PHP', 'HTML', 'CSS', 'JavaScript'],
-    tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'wordpress ', 'hostiguer ', 'php mailer', 'responsive design'],
-    emoji: '🎨',
-    gradient: 'from-[#1a0a0a] to-[#300a20]',
-    gradientStyle: 'linear-gradient(135deg, #1a0a0a, #300a20)',
-    accentColor: '#eb4f1bff',
-    github: '',
+    tags: ['WordPress', 'PHP', 'JavaScript'],
+    tech: ['WordPress', 'PHP', 'PHPMailer', 'HTML5', 'CSS3', 'JavaScript', 'Hostinger'],
     demo: 'https://ndeyediagne.com/',
+    github: '',
     year: '2026',
-    role: 'Concepteur et Developpeur web',
+    role: 'Concepteur & Développeur Web',
     duration: '2 mois',
     image: '/ndeye_diagne/ndeye_diagne_image3.png',
     gallery: [
-      '/ndeye_diagne/ndeye_diagne_image2.png',
       '/ndeye_diagne/ndeye_diagne_image3.png',
+      '/ndeye_diagne/ndeye_diagne_image1.png',
+      '/ndeye_diagne/ndeye_diagne_image2.png',
       '/ndeye_diagne/ndeye_diagne_image4.png',
       '/ndeye_diagne/ndeye_diagne_image5.png',
-      '/ndeye_diagne/ndeye_diagne_image1.png'
     ],
     visible: true,
   },
-
-
-
 ]
 
 export const getProjectBySlug = (slug) => projects.find((p) => p.slug === slug)

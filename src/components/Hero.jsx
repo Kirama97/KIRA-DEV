@@ -1,59 +1,8 @@
 import { motion } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
-import { SiReact, SiFlutter } from 'react-icons/si'
-import { HiOutlineVideoCamera } from 'react-icons/hi2'
+import { HiOutlineArrowUpRight, HiOutlineMapPin, HiOutlineBriefcase, HiOutlineAcademicCap } from 'react-icons/hi2'
 import profil from '../assets/profil.png'
 
-const container = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.12, delayChildren: 0.2 },
-  },
-}
-
-const item = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] } },
-}
-
-const specialties = [
-  'Ingénieur Logiciel',
-  'Développeur Full-stack',
-  'Direction Technique',
-  'Intelligence Artificielle',
-  'Visual Creator',
-]
-
-function RotatingSpecialty() {
-  const [index, setIndex] = useState(0)
-
-  useEffect(() => {
-    const iv = setInterval(() => {
-      setIndex((i) => (i + 1) % specialties.length)
-    }, 2800)
-    return () => clearInterval(iv)
-  }, [])
-
-  return (
-    <motion.span
-      key={index}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.4 }}
-      className="gradient-text"
-    >
-      {specialties[index]}
-    </motion.span>
-  )
-}
-
-import { useState, useEffect } from 'react'
-import { AnimatePresence } from 'framer-motion'
-
 export default function Hero() {
-  const navigate = useNavigate()
-
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -61,152 +10,170 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden"
+      className="relative pt-28 pb-20 md:pt-36 md:pb-28 border-b border-border z-10"
     >
-      <div className="container-custom relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left — Text */}
-          <motion.div variants={container} initial="hidden" animate="show">
-            {/* Badge */}
-            <motion.div variants={item} className="inline-flex items-center gap-2 bg-accent/10 border border-accent/25 rounded-full px-4 py-2 mb-8">
-              <span className="w-2 h-2 rounded-full bg-accent2 animate-blink" />
-              <span className="text-accent2 text-xs font-medium tracking-widest uppercase">
-                Prêt à travailler — Disponible
+      <div className="container-custom">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+          {/* Left Column — Editorial Presentation (7 cols) */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-7 flex flex-col items-start"
+          >
+            {/* Status & Location Pill */}
+            <div className="inline-flex flex-wrap items-center gap-3 px-3.5 py-1.5 rounded-md border border-border bg-surface text-xs font-mono text-muted mb-7">
+              <span className="inline-flex items-center gap-1.5 text-text font-medium">
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                Disponible
               </span>
-            </motion.div>
+              <span className="text-border">|</span>
+              <span className="inline-flex items-center gap-1">
+                <HiOutlineMapPin className="w-3.5 h-3.5" />
+                Dakar & Thiès, Sénégal
+              </span>
+            </div>
 
-            {/* Name */}
-            <motion.h1
-              variants={item}
-              className="font-display font-black text-5xl md:text-6xl xl:text-7xl leading-[0.95] tracking-[-0.03em] mb-4"
-            >
-              Diene
-              <br />
-              <span className="gradient-text">Thiam</span>
-            </motion.h1>
+            {/* Name & Title */}
+            <h1 className="font-display font-extrabold text-4xl sm:text-5xl xl:text-6xl tracking-tight text-text leading-[1.08] mb-5">
+              Diène Thiam
+            </h1>
 
-            {/* Rotating specialty */}
-            <motion.div
-              variants={item}
-              className="font-display font-bold text-2xl md:text-3xl text-text/40 mb-6 h-10 overflow-hidden"
-            >
-              <AnimatePresence mode="wait">
-                <RotatingSpecialty />
-              </AnimatePresence>
-             
-            </motion.div>
+            <h2 className="font-display font-semibold text-xl sm:text-2xl text-muted leading-snug mb-6 max-w-2xl">
+              Ingénieur Logiciel, Développeur Full-Stack & Directeur Technique (CTO).
+            </h2>
 
-            {/* Sub */}
-            <motion.p
-              variants={item}
-              className="text-muted font-body text-lg leading-relaxed max-w-md mb-10"
-            >
-              Je transforme des idées complexes en interfaces élégantes, rapides
-              et mémorables. Du code au pixel, du montage à l'écran — j'assure.
-            </motion.p>
+            {/* Bio Summary */}
+            <p className="text-muted text-base sm:text-lg leading-relaxed max-w-2xl mb-9">
+              Je conçois, développe et déploie des applications web complètes (React, Node.js, WordPress), 
+              pilote des équipes techniques et forme des profils informatiques. En parallèle, je dirige 
+              la production de contenus visuels et audiovisuels assistés par l’intelligence artificielle.
+            </p>
 
-            {/* CTAs */}
-            <motion.div variants={item} className="flex flex-wrap gap-4">
+            {/* Primary & Secondary CTAs */}
+            <div className="flex flex-wrap items-center gap-3.5 mb-12">
               <button
                 onClick={() => scrollTo('projects')}
-                className="group relative px-7 py-3.5 bg-accent rounded-full font-medium text-sm text-white overflow-hidden transition-all duration-300 hover:shadow-[0_0_50px_rgba(108,99,255,0.5)] hover:-translate-y-0.5"
-                data-hover
+                className="btn-primary"
               >
-                <span className="relative z-10">Voir mes projets →</span>
-                <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                Voir les réalisations web
+                <HiOutlineArrowUpRight className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => scrollTo('designs')}
+                className="btn-secondary"
+              >
+                Espace Design & Vidéo
               </button>
               <button
                 onClick={() => scrollTo('contact')}
-                className="px-7 py-3.5 border border-text/10 rounded-full font-medium text-sm text-text/80 hover:border-accent/50 hover:text-text hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm"
-                data-hover
+                className="px-4 py-3 text-sm font-medium text-muted hover:text-text transition-colors"
               >
-                Me contacter
+                Me contacter →
               </button>
-            </motion.div>
+            </div>
 
-            {/* Stats */}
-            <motion.div variants={item} className="flex gap-8 mt-12 pt-10 border-t border-text/10">
-              {[
-                { n: '6+', l: "ans d'expérience tech" },
-                { n: '50+', l: 'projets & formations' },
-                { n: '100%', l: 'engagement' },
-              ].map((s) => (
-                <div key={s.l}>
-                  <div className="font-display font-black text-2xl gradient-text">{s.n}</div>
-                  <div className="text-muted text-xs uppercase tracking-wider mt-0.5">{s.l}</div>
+            {/* Key Facts Grid */}
+            <div className="w-full grid grid-cols-3 border-t border-border pt-8 gap-6">
+              <div>
+                <div className="font-display font-bold text-2xl sm:text-3xl text-text tracking-tight">
+                  7+
                 </div>
-              ))}
-            </motion.div>
+                <div className="font-mono text-xs text-muted mt-1">
+                  Plateformes web livrées
+                </div>
+              </div>
+              <div className="border-l border-border pl-6">
+                <div className="font-display font-bold text-2xl sm:text-3xl text-text tracking-tight">
+                  CTO
+                </div>
+                <div className="font-mono text-xs text-muted mt-1">
+                  Direction technique & IA
+                </div>
+              </div>
+              <div className="border-l border-border pl-6">
+                <div className="font-display font-bold text-2xl sm:text-3xl text-text tracking-tight">
+                  6+ ans
+                </div>
+                <div className="font-mono text-xs text-muted mt-1">
+                  IT, Réseaux & Développement
+                </div>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Right — Orb */}
+          {/* Right Column — Structured Engineer Profile Card (5 cols) */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="hidden lg:flex items-center justify-center relative"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="lg:col-span-5"
           >
-            <div className="relative w-96 h-96 animate-float">
-              {/* Rings */}
-              <div
-                className="absolute inset-0 rounded-full border border-accent/10 animate-spin-slow"
-                style={{ width: '100%', height: '100%' }}
-              />
-              <div
-                className="absolute rounded-full border border-accent2/08 animate-spin-slower"
-                style={{ inset: '-40px'  }}
-              />
-              <div
-                className="absolute rounded-full border border-accent3/05"
-                style={{ inset: '-80px', animationDuration: '25s' }}
-              />
-              {/* Core orb */}
-              <div
-                className="absolute inset-8 rounded-full bg-cover"
-                style={{
-                  // background:
-                  //   'radial-gradient(circle at 35% 35%, #00D4FF, #6C63FF, #3d3880)',
-                    backgroundImage: `url(${profil})`,
-                  boxShadow:
-                    '0 0 80px rgba(108,99,255,0.4), 0 0 40px rgba(0,212,255,0.2), inset 0 0 40px rgba(255,255,255,0.1)',
-                }}
-              />
-              {/* Floating cards */}
-              <motion.div
-                animate={{ y: [-8, 8, -8] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-4 -right-8 glass px-4 py-3 rounded-2xl"
-              >
-                <div className="font-display font-bold text-accent2 text-xl">3+</div>
-                <div className="text-muted text-xs">ans d'exp.</div>
-              </motion.div>
-              <motion.div
-                animate={{ y: [8, -8, 8] }}
-                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                className="absolute -bottom-4 -left-6 glass px-4 py-3 rounded-2xl"
-              >
-                <div className="text-xs text-muted mb-1">Stack</div>
-                <div className="flex gap-2 text-base text-accent">
-                  <SiReact title="React" />
-                  <SiFlutter title="Flutter" />
-                  <HiOutlineVideoCamera title="Motion" />
+            <div className="card-surface p-4 sm:p-5">
+              {/* Portrait */}
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-surface2 border border-border mb-5">
+                <img
+                  src={profil}
+                  alt="Diène Thiam — Ingénieur Logiciel"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+
+              {/* Technical Dossier Metadata */}
+              <div className="space-y-3.5">
+                <div className="flex items-center justify-between pb-3 border-b border-border">
+                  <div>
+                    <div className="font-display font-bold text-base text-text">
+                      Diène Thiam
+                    </div>
+                    <div className="font-mono text-xs text-muted">
+                      Ingénieur Logiciel & Technicien Supérieur IT
+                    </div>
+                  </div>
+                  <span className="px-2.5 py-1 rounded bg-surface2 border border-border font-mono text-[11px] text-text">
+                    Dakar, SN
+                  </span>
                 </div>
-              </motion.div>
+
+                <div className="space-y-2.5 text-xs">
+                  <div className="flex items-start gap-2.5">
+                    <HiOutlineBriefcase className="w-4 h-4 text-muted shrink-0 mt-0.5" />
+                    <div>
+                      <span className="text-muted">Fonctions actuelles : </span>
+                      <span className="text-text font-medium">
+                        Coach Formateur (Bakeli) · Co-fondateur & CTO (Studio Amed Njie) · CTO (OnlineClass)
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2.5">
+                    <HiOutlineAcademicCap className="w-4 h-4 text-muted shrink-0 mt-0.5" />
+                    <div>
+                      <span className="text-muted">Formation : </span>
+                      <span className="text-text font-medium">
+                        Master en Ingénierie Logicielle — UNCHK (2024–2026)
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-3 border-t border-border flex flex-wrap gap-1.5">
+                  {['React.js', 'Node.js', 'Tailwind CSS', 'WordPress', 'MongoDB', 'Design & IA'].map(
+                    (tech) => (
+                      <span
+                        key={tech}
+                        className="px-2.5 py-1 rounded bg-surface2 text-text font-mono text-[11px]"
+                      >
+                        {tech}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute -bottom-14 sm:-bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted"
-      >
-        <div className="w-px h-12 bg-gradient-to-b from-accent to-transparent animate-float" />
-        <span className="text-[10px] uppercase tracking-[0.2em]">scroll</span>
-      </motion.div>
     </section>
   )
 }

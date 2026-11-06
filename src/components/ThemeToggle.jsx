@@ -1,42 +1,21 @@
-import { useTheme } from '../hooks/ThemeContext';
-import { motion, AnimatePresence } from 'framer-motion';
-import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi2';
+import { useTheme } from '../hooks/ThemeContext'
+import { HiOutlineSun, HiOutlineMoon } from 'react-icons/hi2'
 
 export default function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme()
 
   return (
-    <motion.button
+    <button
       onClick={toggleTheme}
-      className="relative p-2 rounded-xl glass hover:bg-accent/10 transition-colors"
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      data-hover
+      className="p-2 rounded-lg border border-border bg-surface hover:bg-surface2 text-muted hover:text-text transition-colors"
+      aria-label={`Passer en mode ${theme === 'dark' ? 'clair' : 'sombre'}`}
       title={`Passer en mode ${theme === 'dark' ? 'clair' : 'sombre'}`}
     >
-      <AnimatePresence mode="wait">
-        {theme === 'dark' ? (
-          <motion.div
-            key="sun"
-            initial={{ y: 20, opacity: 0, rotate: 45 }}
-            animate={{ y: 0, opacity: 1, rotate: 0 }}
-            exit={{ y: -20, opacity: 0, rotate: -45 }}
-            transition={{ duration: 0.2 }}
-          >
-            <HiOutlineSun className="w-5 h-5 text-accent2" />
-          </motion.div>
-        ) : (
-          <motion.div
-            key="moon"
-            initial={{ y: 20, opacity: 0, rotate: 45 }}
-            animate={{ y: 0, opacity: 1, rotate: 0 }}
-            exit={{ y: -20, opacity: 0, rotate: -45 }}
-            transition={{ duration: 0.2 }}
-          >
-            <HiOutlineMoon className="w-5 h-5 text-accent" />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.button>
-  );
+      {theme === 'dark' ? (
+        <HiOutlineSun className="w-4 h-4" />
+      ) : (
+        <HiOutlineMoon className="w-4 h-4" />
+      )}
+    </button>
+  )
 }

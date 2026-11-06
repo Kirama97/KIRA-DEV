@@ -1,23 +1,24 @@
-import { motion } from 'framer-motion'
-
 export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="relative z-10 border-t border-text/10 py-8">
+    <footer className="relative z-10 border-t border-border bg-surface py-10">
       <div className="container-custom">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="flex flex-col sm:flex-row items-center justify-between gap-3 text-muted text-xs"
-        >
-          <span className="font-display font-bold text-base gradient-text">DT.</span>
-          <span>© {year} Diene Thiam — Tous droits réservés</span>
-          <div className="flex items-center gap-2">
-            <span className="gradient-text">KIRA/DEV</span>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
+          <div className="flex items-center gap-3">
+            <span className="w-6 h-6 rounded bg-text text-bg font-mono font-semibold text-[11px] flex items-center justify-center">
+              DT
+            </span>
+            <span className="font-display font-semibold text-text">
+              Diène Thiam
+            </span>
+            <span>— Ingénieur Logiciel & Directeur Technique</span>
           </div>
-        </motion.div>
+
+          <div className="font-mono text-xs text-muted">
+            © {year} Diène Thiam · Dakar & Thiès, Sénégal
+          </div>
+        </div>
       </div>
     </footer>
   )

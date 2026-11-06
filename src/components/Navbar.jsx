@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import ThemeToggle from './ThemeToggle'
 
 const navLinks = [
   { label: 'À propos', href: '#about' },
-  { label: 'Projets', href: '#projects' },
-  { label: 'Design Visuel', href: '#designs' },
-  { label: 'Expérience', href: '#experience' },
+  { label: 'Projets Web', href: '#projects' },
+  { label: 'Design & Médias', href: '#designs' },
+  { label: 'Parcours', href: '#experience' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -19,7 +19,7 @@ export default function Navbar() {
   const isHome = location.pathname === '/'
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 30)
+    const fn = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', fn)
     return () => window.removeEventListener('scroll', fn)
   }, [])
@@ -38,74 +38,70 @@ export default function Navbar() {
   }
 
   return (
-    <motion.nav
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 ${
         scrolled
-          ? 'bg-bg/80 backdrop-blur-2xl border-b border-white/[0.06]'
-          : 'bg-transparent'
+          ? 'bg-bg/95 backdrop-blur-md border-b border-border'
+          : 'bg-bg/80 backdrop-blur-sm border-b border-transparent'
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16 md:h-18">
-          {/* Logo */}
-          <Link
-            to="/"
-            className="font-display font-black text-xl tracking-tight"
-            data-hover
-          >
-            <span className="gradient-text">KD.</span>
+        <div className="flex items-center justify-between h-16">
+          {/* Brand Identity */}
+          <Link to="/" className="flex items-center gap-3 group">
+            <span className="w-8 h-8 rounded-lg bg-text text-bg font-mono font-semibold text-xs flex items-center justify-center tracking-tighter">
+              DT
+            </span>
+            <div className="flex flex-col">
+              <span className="font-display font-bold text-sm tracking-tight text-text leading-none">
+                Diène Thiam
+              </span>
+              <span className="font-mono text-[10px] text-muted mt-1 leading-none">
+                Ingénieur Logiciel
+              </span>
+            </div>
           </Link>
 
-          {/* Desktop Nav */}
-          <ul className="hidden md:flex items-center gap-8">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-7">
             {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  onClick={(e) => scrollTo(e, link.href)}
-                  className="text-muted hover:text-text text-sm font-body tracking-wide transition-colors duration-300"
-                  data-hover
-                >
-                  {link.label}
-                </a>
-              </li>
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => scrollTo(e, link.href)}
+                className="text-muted hover:text-text text-sm font-medium transition-colors duration-150"
+              >
+                {link.label}
+              </a>
             ))}
-          </ul>
+          </nav>
 
-          {/* CTA */}
-          <div className="flex items-center gap-3">
+          {/* Actions */}
+          <div className="flex items-center gap-2.5">
             <ThemeToggle />
             <a
               href="#contact"
               onClick={(e) => scrollTo(e, '#contact')}
-              className="hidden md:inline-flex items-center gap-2 bg-accent/10 border border-accent/30 text-accent hover:bg-accent hover:text-white px-4 py-2 rounded-full text-xs font-medium transition-all duration-300"
-              data-hover
+              className="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border border-border bg-surface hover:border-text/30 text-xs font-medium text-text transition-colors"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-accent2 animate-blink" />
-              indisponible
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              Disponible
             </a>
+
             {/* Mobile menu toggle */}
             <button
-              className="md:hidden flex flex-col gap-1.5 p-2"
+              className="md:hidden flex flex-col justify-center items-center w-9 h-9 rounded-lg border border-border bg-surface gap-1.5"
               onClick={() => setMenuOpen(!menuOpen)}
-              data-hover
+              aria-label="Menu"
             >
               <span
-                className={`block h-0.5 w-6 bg-text transition-all duration-300 ${
-                  menuOpen ? 'rotate-45 translate-y-2' : ''
+                className={`block h-0.5 w-4 bg-text transition-transform duration-200 ${
+                  menuOpen ? 'rotate-45 translate-y-1' : ''
                 }`}
               />
               <span
-                className={`block h-0.5 w-6 bg-text transition-all duration-300 ${
-                  menuOpen ? 'opacity-0' : ''
-                }`}
-              />
-              <span
-                className={`block h-0.5 w-6 bg-text transition-all duration-300 ${
-                  menuOpen ? '-rotate-45 -translate-y-2' : ''
+                className={`block h-0.5 w-4 bg-text transition-transform duration-200 ${
+                  menuOpen ? '-rotate-45 -translate-y-1' : ''
                 }`}
               />
             </button>
@@ -113,31 +109,38 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-bg/95 backdrop-blur-2xl border-t border-white/[0.06]"
+            className="md:hidden bg-bg border-b border-border overflow-hidden"
           >
-            <div className="container-custom py-6 flex flex-col gap-4">
+            <div className="container-custom py-5 flex flex-col gap-3">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={(e) => scrollTo(e, link.href)}
-                  className="text-muted hover:text-text text-base font-body py-2 transition-colors"
-                  data-hover
+                  className="text-muted hover:text-text text-sm font-medium py-1.5 transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
+              <a
+                href="#contact"
+                onClick={(e) => scrollTo(e, '#contact')}
+                className="mt-2 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg bg-text text-bg text-xs font-medium"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                Disponible — Me contacter
+              </a>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </header>
   )
 }

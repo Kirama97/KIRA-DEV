@@ -1,71 +1,80 @@
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import { HiOutlineArrowUpRight } from 'react-icons/hi2'
 
 export default function ProjectCard({ project, index }) {
   const navigate = useNavigate()
+  const formattedIndex = String(index + 1).padStart(2, '0')
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
+    <motion.article
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.1, duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+      transition={{ delay: index * 0.06, duration: 0.45 }}
       onClick={() => navigate(`/project/${project.slug}`)}
-      className="overflow-hidden rounded-lg project-card group glass cursor-none"
-      data-hover
+      className="card-surface-interactive overflow-hidden flex flex-col cursor-pointer group"
     >
-      <div className="relative overflow-hidden h-52">
-        {project.image ? (
+      {/* Top Meta Bar */}
+      <div className="px-5 py-3 border-b border-border flex items-center justify-between text-xs font-mono text-muted bg-surface2/50">
+        <span>{formattedIndex} — {project.category || 'Application Web'}</span>
+        <span>{project.year}</span>
+      </div>
+
+      {/* Image Preview */}
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface2 border-b border-border">
+        {project.image && (
           <img
             src={project.image}
             alt={project.title}
-            className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
+            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
           />
-        ) : (
-          <div
-            className="flex items-center justify-center w-full h-full text-6xl transition-transform duration-700 group-hover:scale-110"
-            style={{ background: project.gradientStyle }}
-          >
-            {project.emoji}
-          </div>
         )}
-        {/* Overlay on hover */}
-        <div className="absolute inset-0 flex items-center justify-center gap-3 transition-opacity duration-300 opacity-0 bg-bg/85 group-hover:opacity-100">
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="px-4 py-2 text-xs font-medium text-white transition-colors rounded-full bg-accent hover:bg-accent/90"
-            data-hover
-          >
-            Visiter 
-          </a>
-       
-        </div>
       </div>
 
-      {/* Body */}
-      <div className="p-6">
-        <div className="flex flex-wrap gap-1.5 mb-3">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-[11px] px-2.5 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-medium"
+      {/* Card Content */}
+      <div className="p-6 flex-1 flex flex-col justify-between">
+        <div>
+          <div className="flex flex-wrap gap-1.5 mb-3">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="font-mono text-[11px] px-2.5 py-0.5 rounded bg-surface2 border border-border text-muted"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <h3 className="font-display font-bold text-lg text-text mb-2 group-hover:underline underline-offset-4">
+            {project.title}
+          </h3>
+
+          <p className="text-sm text-muted leading-relaxed line-clamp-2">
+            {project.shortDesc}
+          </p>
+        </div>
+
+        {/* Footer Actions */}
+        <div className="mt-6 pt-4 border-t border-border flex items-center justify-between text-xs font-medium">
+          <span className="text-text inline-flex items-center gap-1">
+            Étude de cas →
+          </span>
+
+          {project.demo && project.demo !== '#' && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md border border-border bg-surface2 hover:bg-text hover:text-bg text-text transition-colors"
             >
-              {tag}
-            </span>
-          ))}
-        </div>
-        <h3 className="mb-2 text-lg font-bold transition-colors duration-300 font-display group-hover:text-accent">
-          {project.title}
-        </h3>
-        <p className="text-sm leading-relaxed text-muted line-clamp-2">{project.shortDesc}</p>
-
-        <div className="mt-4 flex items-center gap-1.5 text-accent text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Voir le détail <span>→</span>
+              Visiter le site
+              <HiOutlineArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+          )}
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   )
 }

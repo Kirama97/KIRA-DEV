@@ -1,142 +1,148 @@
 import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
-import { HiOutlineVideoCamera } from 'react-icons/hi2'
-import { skills } from '../data/skills'
-
-const categories = ['Tous', 'Frontend', 'Backend', 'Mobile', 'Créatif', 'Design', 'DevOps']
-
-function SkillCard({ skill, index }) {
-  const Icon = skill.icon
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.05, duration: 0.5 }}
-      whileHover={{ y: -4, scale: 1.03 }}
-      className="group glass p-3 rounded-2xl text-center cursor-default hover:border-accent/40 hover:bg-accent/[0.06] transition-colors duration-300"
-      data-hover
-    >
-      <div className="flex justify-center mb-1.5">
-        <div 
-          className="text-xl transition-transform duration-300 group-hover:scale-110"
-          style={{ color: skill.color || 'var(--accent)' }}
-        >
-          <Icon />
-        </div>
-      </div>
-      <div className="text-xs font-medium transition-colors duration-300 text-muted group-hover:text-accent">
-        {skill.name}
-      </div>
-      <div className="text-[10px] text-muted/50 mt-0.5">{skill.category}</div>
-    </motion.div>
-  )
-}
+import { skillGroups, education, certifications } from '../data/skills'
 
 export default function About() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
-
   return (
-    <section id="about" className="relative z-10 section-padding">
+    <section id="about" className="section-padding border-b border-border relative z-10">
       <div className="container-custom">
-        <div className="grid items-center gap-16 lg:grid-cols-2 xl:gap-24">
-          {/* Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="relative order-2 lg:order-1"
-          >
-            <div className="relative flex items-center justify-center">
-              {/* Decorative rings */}
-              <div className="absolute border rounded-full w-80 h-80 border-accent/10 animate-spin-slow" />
-              <div className="absolute w-64 h-64 border rounded-full border-accent2/08 animate-spin-slower" />
+        {/* Section Header */}
+        <div className="max-w-3xl mb-16">
+          <span className="section-label">01 — Profil & Compétences</span>
+          <h2 className="font-display font-bold text-3xl sm:text-4xl text-text tracking-tight mb-6">
+            Une double compétence d’ingénieur logiciel et de directeur créatif.
+          </h2>
+          <div className="space-y-4 text-muted text-base leading-relaxed">
+            <p>
+              Basé entre <strong className="text-text font-medium">Dakar et Thiès (Sénégal)</strong>, je suis 
+              Ingénieur Logiciel et Technicien Supérieur en Informatique. Mon parcours s’articule autour de 
+              la gestion complète du cycle de vie des applications : de l’architecture technique et du 
+              développement full-stack jusqu’au déploiement, la maintenance système/réseau et le support.
+            </p>
+            <p>
+              Au-delà du code, j’occupe des fonctions de <strong className="text-text font-medium">Direction Technique (CTO)</strong> chez 
+              OnlineClass et au sein du <strong className="text-text font-medium">Studio Amed Njie</strong>, où j’intègre des workflows 
+              d’intelligence artificielle appliqués à la réalisation audiovisuelle et au design graphique. 
+              J’interviens également comme <strong className="text-text font-medium">Coach Formateur</strong> à Bakeli School of Technology.
+            </p>
+          </div>
+        </div>
 
-              {/* Avatar */}
-              <div
-                className="relative w-56 h-56 rounded-[2.5rem] flex items-center justify-center z-10 border border-text/10"
-                style={{
-                  background: 'linear-gradient(135deg, var(--color-surface2), var(--color-surface))',
-                  boxShadow: '0 40px 80px rgba(0,0,0,0.2), 0 0 60px rgba(108,99,255,0.1)',
-                }}
-              >
-                <span className="font-black font-display text-7xl text-accent">DT</span>
-              </div>
-
-              {/* Floating badge */}
-              <motion.div
-                animate={{ y: [-6, 6, -6] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute z-20 px-4 py-3 -top-4 -right-4 glass rounded-2xl"
-              >
-                <div className="text-xl font-black font-display text-accent2">3+</div>
-                <div className="text-muted text-[10px] uppercase tracking-wider">ans d'exp.</div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [6, -6, 6] }}
-                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                className="absolute -bottom-4 -left-4 glass px-3 py-2.5 rounded-xl z-20"
-              >
-                <div className="flex items-center gap-2">
-                  <span className="text-xl text-accent2">
-                    <HiOutlineVideoCamera />
-                  </span>
-                  <div>
-                    <div className="text-xs font-medium">Motion & Dev</div>
-                    <div className="text-[10px] text-muted">Créatif complet</div>
-                  </div>
+        {/* 3-Column Technical & Creative Skills Matrix */}
+        <div className="grid lg:grid-cols-3 gap-6 mb-16">
+          {skillGroups.map((group, idx) => (
+            <motion.div
+              key={group.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.08, duration: 0.4 }}
+              className="card-surface p-6 flex flex-col justify-between"
+            >
+              <div>
+                <div className="font-mono text-xs text-muted mb-2">
+                  Domaine 0{idx + 1}
                 </div>
-              </motion.div>
+                <h3 className="font-display font-bold text-lg text-text mb-1.5">
+                  {group.title}
+                </h3>
+                <p className="text-muted text-xs leading-relaxed mb-6 pb-4 border-b border-border">
+                  {group.subtitle}
+                </p>
 
-              <motion.div
-                animate={{ x: [-4, 4, -4] }}
-                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-                className="absolute z-20 px-3 py-2 top-1/2 -right-10 glass rounded-xl"
-              >
-                <div className="text-xs font-medium text-accent">100%</div>
-                <div className="text-[10px] text-muted">Satisfaction</div>
-              </motion.div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2.5">
+                  {group.items.map((skill) => {
+                    const Icon = skill.icon
+                    return (
+                      <div
+                        key={skill.name}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-surface2 border border-border text-text text-xs font-medium"
+                      >
+                        <Icon className="w-4 h-4 text-muted shrink-0" />
+                        <span className="truncate">{skill.name}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Academic Education & Certifications Row */}
+        <div className="grid lg:grid-cols-12 gap-8 pt-6">
+          {/* Education (8 cols) */}
+          <div className="lg:col-span-8 card-surface p-6 sm:p-8">
+            <div className="flex items-center justify-between mb-6 pb-4 border-b border-border">
+              <h3 className="font-display font-bold text-lg text-text">
+                Formation Académique
+              </h3>
+              <span className="font-mono text-xs text-muted">cursus universitaire</span>
             </div>
-          </motion.div>
 
-          {/* Text */}
-          <motion.div
-            ref={ref}
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="order-1 lg:order-2"
-          >
-            <div className="text-accent text-xs uppercase tracking-[0.2em] mb-4 font-medium">
-              // À propos
-            </div>
-            <h2 className="font-display font-black text-4xl md:text-5xl leading-[1.05] tracking-tight mb-6">
-              Ingénieur Logiciel,
-              <br />
-              <span className="gradient-text">créatif dans l'âme</span>
-            </h2>
-            <p className="mb-4 leading-relaxed text-muted">
-              Bonjour ! Je suis <strong className="text-text">Diene Thiam</strong>, Ingénieur Logiciel & Technicien Supérieur en Informatique
-              basé à Thiés, Sénégal. Avec une solide expertise en développement web full-stack, administration système/réseau
-              et intégration d'IA, je conçois des solutions innovantes.
-            </p>
-            <p className="mb-8 leading-relaxed text-muted">
-              Ma singularité : je maîtrise autant le code que l'image. Du développement
-              web et architecture technique au montage vidéo assisté par l'IA — je suis capable de diriger
-              des projets complexes (CTO) et de former les futurs talents de la tech.
-            </p>
-
-            <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
-              {skills.map((skill, i) => ( 
-                <SkillCard key={skill.name} skill={skill} index={i} />
+            <div className="divide-y divide-border">
+              {education.map((edu) => (
+                <div key={edu.degree} className="py-4 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                  <div>
+                    <h4 className="font-display font-semibold text-sm sm:text-base text-text">
+                      {edu.degree}
+                    </h4>
+                    <div className="text-xs text-muted mt-0.5">{edu.institution}</div>
+                    {edu.detail && (
+                      <p className="text-xs text-muted/80 mt-1">{edu.detail}</p>
+                    )}
+                  </div>
+                  <span className="font-mono text-xs text-muted shrink-0">
+                    {edu.period}
+                  </span>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
+
+          {/* Certifications & Languages (4 cols) */}
+          <div className="lg:col-span-4 card-surface p-6 sm:p-8 flex flex-col justify-between gap-6">
+            <div>
+              <div className="flex items-center justify-between mb-6 pb-4 border-b border-border">
+                <h3 className="font-display font-bold text-lg text-text">
+                  Certifications
+                </h3>
+                <span className="font-mono text-xs text-muted">attestations</span>
+              </div>
+
+              <div className="space-y-4">
+                {certifications.map((cert) => (
+                  <div key={cert.title} className="p-3.5 rounded-lg bg-surface2 border border-border">
+                    <div className="font-mono text-[11px] text-muted mb-1">
+                      {cert.issuer} · {cert.year}
+                    </div>
+                    <div className="font-display font-semibold text-sm text-text">
+                      {cert.title}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-border">
+              <div className="font-mono text-xs uppercase tracking-wider text-muted mb-3">
+                Langues & Intérêts
+              </div>
+              <div className="space-y-2 text-xs">
+                <div className="flex justify-between">
+                  <span className="text-muted">Français</span>
+                  <span className="text-text font-medium">Courant / Professionnel</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted">Anglais</span>
+                  <span className="text-text font-medium">Technique</span>
+                </div>
+                <div className="flex justify-between pt-1">
+                  <span className="text-muted">Veille</span>
+                  <span className="text-text font-medium">IA générative, Architecture Web</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
