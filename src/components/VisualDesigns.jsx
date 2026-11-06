@@ -37,8 +37,8 @@ const designs = [
     tools: ['Design Publicitaire', 'Composition Visuelle', 'Branding'],
     desc: 'Création visuelle promotionnelle pour le lancement du jus de mandarine 100% naturel de Keulgui Farming à Thiès.',
     image: '/visuel/affiche_bouteille.png',
-    link: '#',
-    type: 'poster',
+    link: 'https://res.cloudinary.com/djop5kvgh/video/upload/v1793983262/affiche_keulgui_farming.mp4',
+    type: 'video',
   },
   {
     id: 4,
@@ -78,7 +78,7 @@ export default function VisualDesigns() {
           </div>
 
           <p className="text-muted text-sm max-w-md leading-relaxed">
-            Réalisations audiovisuelles assistées par IA, montage vidéo, affiches publicitaires 
+            Réalisations audiovisuelles assistées par IA, montage vidéo, affiches publicitaires
             et collaborations créatives réalisées pour des artistes et entreprises.
           </p>
         </div>
@@ -91,11 +91,10 @@ export default function VisualDesigns() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-lg text-xs font-mono transition-colors duration-150 ${
-                  isActive
+                className={`px-4 py-2 rounded-lg text-xs font-mono transition-colors duration-150 ${isActive
                     ? 'bg-text text-bg font-medium'
                     : 'bg-surface border border-border text-muted hover:text-text hover:border-text/30'
-                }`}
+                  }`}
               >
                 {cat}
               </button>

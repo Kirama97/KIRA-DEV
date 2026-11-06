@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Background from './components/Background'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import BackToTop from './components/BackToTop'
 
 import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
@@ -49,6 +50,7 @@ export default function App() {
       </AnimatePresence>
 
       <Footer />
+      <BackToTop />
     </div>
   )
 }
