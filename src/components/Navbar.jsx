@@ -79,14 +79,7 @@ export default function Navbar() {
           {/* Actions */}
           <div className="flex items-center gap-2.5">
             <ThemeToggle />
-            <a
-              href="#contact"
-              onClick={(e) => scrollTo(e, '#contact')}
-              className="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border border-border bg-surface hover:border-muted text-xs font-medium text-text transition-colors"
-            >
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
-              Disponible
-            </a>
+          
 
             {/* Mobile menu toggle */}
             <button
