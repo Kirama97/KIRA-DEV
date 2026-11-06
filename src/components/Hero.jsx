@@ -24,13 +24,13 @@ export default function Hero() {
             {/* Status & Location Pill */}
             <div className="inline-flex flex-wrap items-center gap-3 px-3.5 py-1.5 rounded-md border border-border bg-surface text-xs font-mono text-muted mb-7">
               <span className="inline-flex items-center gap-1.5 text-text font-medium">
-                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+             
                 Disponible
               </span>
               <span className="text-border">|</span>
               <span className="inline-flex items-center gap-1">
                 <HiOutlineMapPin className="w-3.5 h-3.5" />
-                Dakar & Thiès, Sénégal
+                Thies, Sénégal
               </span>
             </div>
 
@@ -40,14 +40,15 @@ export default function Hero() {
             </h1>
 
             <h2 className="font-display font-semibold text-xl sm:text-2xl text-muted leading-snug mb-6 max-w-2xl">
-              Ingénieur Logiciel, Développeur Full-Stack & Directeur Technique (CTO).
+              Développeur Front-End & Full-Stack, Technicien en Informatique & CTO.
             </h2>
 
-            {/* Bio Summary */}
+            {/* Bio Summary from CV */}
             <p className="text-muted text-base sm:text-lg leading-relaxed max-w-2xl mb-9">
-              Je conçois, développe et déploie des applications web complètes (React, Node.js, WordPress), 
-              pilote des équipes techniques et forme des profils informatiques. En parallèle, je dirige 
-              la production de contenus visuels et audiovisuels assistés par l’intelligence artificielle.
+              Technicien en informatique polyvalent, fort d’une solide expertise en développement web, 
+              infographie et maintenance informatique. Compétent dans la gestion complète du cycle de 
+              vie des applications (conception, développement, déploiement CI/CD et support), la direction 
+              technique (CTO), le mentorat et l’intégration de l’intelligence artificielle.
             </p>
 
             {/* Primary & Secondary CTAs */}
@@ -88,12 +89,12 @@ export default function Hero() {
                   CTO
                 </div>
                 <div className="font-mono text-xs text-muted mt-1">
-                  Direction technique & IA
+                  Studio Amed Njie & OnlineClass
                 </div>
               </div>
               <div className="border-l border-border pl-6">
                 <div className="font-display font-bold text-2xl sm:text-3xl text-text tracking-tight">
-                  6+ ans
+                  Depuis 2018
                 </div>
                 <div className="font-mono text-xs text-muted mt-1">
                   IT, Réseaux & Développement
@@ -102,7 +103,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column — Structured Engineer Profile Card (5 cols) */}
+          {/* Right Column — Structured Profile Card (5 cols) */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -114,7 +115,7 @@ export default function Hero() {
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-surface2 border border-border mb-5">
                 <img
                   src={profil}
-                  alt="Diène Thiam — Ingénieur Logiciel"
+                  alt="Diène Thiam — Développeur Web"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
@@ -127,21 +128,19 @@ export default function Hero() {
                       Diène Thiam
                     </div>
                     <div className="font-mono text-xs text-muted">
-                      Ingénieur Logiciel & Technicien Supérieur IT
+                      Développeur Front-End / Monteur / Freelance
                     </div>
                   </div>
-                  <span className="px-2.5 py-1 rounded bg-surface2 border border-border font-mono text-[11px] text-text">
-                    Dakar, SN
-                  </span>
+                 
                 </div>
 
                 <div className="space-y-2.5 text-xs">
                   <div className="flex items-start gap-2.5">
                     <HiOutlineBriefcase className="w-4 h-4 text-muted shrink-0 mt-0.5" />
                     <div>
-                      <span className="text-muted">Fonctions actuelles : </span>
+                      <span className="text-muted">Rôles actuels : </span>
                       <span className="text-text font-medium">
-                        Coach Formateur (Bakeli) · Co-fondateur & CTO (Studio Amed Njie) · CTO (OnlineClass)
+                        Développeur Full-Stack (Sunu CV) · Co-fondateur & CTO (Studio Amed Njie) · CTO & Tuteur (OnlineClass)
                       </span>
                     </div>
                   </div>
@@ -149,16 +148,16 @@ export default function Hero() {
                   <div className="flex items-start gap-2.5">
                     <HiOutlineAcademicCap className="w-4 h-4 text-muted shrink-0 mt-0.5" />
                     <div>
-                      <span className="text-muted">Formation : </span>
+                      <span className="text-muted">Formations : </span>
                       <span className="text-text font-medium">
-                        Master en Ingénierie Logicielle — UNCHK (2024–2026)
+                        Master 2 Ingénierie Logicielle (UNCHK) · Développement Web/Mobile (Bakeli)
                       </span>
                     </div>
                   </div>
                 </div>
 
                 <div className="pt-3 border-t border-border flex flex-wrap gap-1.5">
-                  {['React.js', 'Node.js', 'Tailwind CSS', 'WordPress', 'MongoDB', 'Design & IA'].map(
+                  {['React.js', 'Node.js', 'Tailwind CSS', 'MongoDB', 'WordPress', 'Design & IA'].map(
                     (tech) => (
                       <span
                         key={tech}

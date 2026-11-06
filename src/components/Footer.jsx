@@ -12,11 +12,11 @@ export default function Footer() {
             <span className="font-display font-semibold text-text">
               Diène Thiam
             </span>
-            <span>— Ingénieur Logiciel & Directeur Technique</span>
+            <span>— Développeur Web, Technicien IT & CTO</span>
           </div>
 
           <div className="font-mono text-xs text-muted">
-            © {year} Diène Thiam · Dakar & Thiès, Sénégal
+            © {year} Diène Thiam · Dakar, Sénégal
           </div>
         </div>
       </div>

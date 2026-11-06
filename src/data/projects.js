@@ -1,28 +1,63 @@
 export const projects = [
   {
     id: 1,
-    slug: 'sbci',
-    title: 'SBCI — E-Commerce Informatique & Mobilier',
-    category: 'Application Full-Stack',
+    slug: 'sunu-cv',
+    title: 'Sunu CV — Plateforme SaaS de Création de CV Pro',
+    category: 'SaaS & IA',
     shortDesc:
-      'Plateforme e-commerce complète dédiée à la vente d’équipements informatiques, électroniques et de mobilier de bureau au Sénégal.',
-    fullDesc: `SBCI (Senegal Business Computers and Informatics) est une plateforme e-commerce conçue pour digitaliser la distribution de matériel informatique, électronique et de mobilier de bureau professionnel.
+      'Plateforme SaaS de création de CV professionnels assistée par IA avec paiement mobile intégré (Wave, Orange Money) et export PDF/Word.',
+    fullDesc: `Sunu CV (sunu_cv) est une plateforme SaaS complète permettant aux candidats et professionnels de concevoir des CV modernes, optimisés pour les systèmes ATS grâce à l'intelligence artificielle.
 
-La plateforme structure un large catalogue par catégories et sous-catégories avec un moteur de recherche et de filtrage rapide. Chaque fiche produit présente les spécifications techniques détaillées, la disponibilité en temps réel et permet aussi bien la commande en ligne que la commande rapide assistée via WhatsApp.
+La plateforme propose plus de 20 modèles professionnels personnalisables en temps réel, un module d'aide à la rédaction par IA et un système d'exportation immédiat.
 
-Sur le plan architectural, l'application repose sur une séparation claire entre le client React (Vite + Tailwind CSS) et l'API REST Node.js / Express adossée à MongoDB. Elle intègre une authentification sécurisée par JWT, une gestion des rôles et un tableau de bord d'administration complet pour le suivi des stocks, des produits et des commandes.`,
+Sur le plan technique, l'application Full-Stack a été développée avec React (Vite) et Tailwind CSS côté client, et Node.js / MongoDB côté serveur. Elle intègre la gestion des images via Cloudinary, l'envoi transactionnel d'e-mails via NodeMailer, ainsi que les moyens de paiement locaux Wave et Orange Money (avec gestion de codes promotionnels, dont le code promo de 50% : BAKELI).`,
     features: [
-      'Architecture Full-Stack découplée (React Vite + Node.js / Express / MongoDB)',
-      'Catalogue structuré par catégories avec recherche et filtrage instantanés',
-      'Authentification sécurisée par JWT et gestion des comptes clients',
-      'Tunnel de commande hybride : panier classique et commande directe WhatsApp',
-      'Tableau de bord administrateur complet (produits, stocks, commandes)',
+      'Conception de CV professionnels assistée par IA et optimisation ATS',
+      'Paiement mobile intégré via Wave et Orange Money',
+      'Système de codes promotionnels (Code test -50% : BAKELI)',
+      'Stockage et optimisation des médias via Cloudinary',
+      'Notifications et envois d’e-mails automatisés avec NodeMailer',
     ],
-    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
-    tech: ['React (Vite)', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'JWT', 'Socket.IO'],
+    tags: ['React Vite', 'Node.js', 'MongoDB', 'Cloudinary'],
+    tech: ['React Vite', 'Tailwind CSS', 'Node.js', 'MongoDB', 'NodeMailer', 'Cloudinary', 'Wave & Orange Money'],
+    demo: '#',
+    github: '',
+    year: 'Oct. 2026 — Actuel',
+    role: 'Développeur Full-Stack',
+    duration: 'En production',
+    image: '/sunu_cv/sunu_cv_image1.png',
+    gallery: [
+      '/sunu_cv/sunu_cv_image1.png',
+      '/sunu_cv/sunu_cv_image2.png',
+      '/sunu_cv/sunu_cv_image3.png',
+      '/sunu_cv/sunu_cv_image4.png',
+    ],
+    visible: true,
+  },
+  {
+    id: 2,
+    slug: 'sbci',
+    title: 'SBCI Thiès — E-Commerce Informatique & Mobilier',
+    category: 'Plateforme E-Commerce',
+    shortDesc:
+      'Site e-commerce complet pour la vente de matériel informatique, électronique et de mobilier de bureau à Thiès.',
+    fullDesc: `SBCI (Senegal Business Computers and Informatics) est une plateforme e-commerce conçue pour digitaliser la vente de matériel informatique, électronique et de mobilier de bureau à Thiès.
+
+La plateforme propose une organisation claire des produits par catégories et sous-catégories avec recherche et filtrage instantanés, gestion des comptes clients, commandes en ligne et suivi par notifications e-mail.
+
+Développée autour d'une architecture Full-Stack (React Vite, Tailwind CSS, Node.js et MongoDB), elle utilise Cloudinary pour l'hébergement optimisé des visuels produits et NodeMailer pour les notifications de commande, complétée par un tableau de bord d'administration complet.`,
+    features: [
+      'Catalogue e-commerce structuré (matériel informatique et mobilier de bureau)',
+      'Architecture Full-Stack React Vite, Node.js et MongoDB',
+      'Gestion des médias produits dans le cloud avec Cloudinary',
+      'Notifications transactionnelles par e-mail via NodeMailer',
+      'Tableau de bord administrateur pour la gestion des produits et des commandes',
+    ],
+    tags: ['React Vite', 'Node.js', 'MongoDB', 'Cloudinary'],
+    tech: ['React Vite', 'Tailwind CSS', 'Node.js', 'MongoDB', 'NodeMailer', 'Cloudinary'],
     demo: 'https://v2-votrenom.vercel.app',
     github: '',
-    year: '2026',
+    year: 'Juin 2026 — Nov. 2026',
     role: 'Développeur Full-Stack',
     duration: '5 mois',
     image: '/sbci/sbci_image1.png',
@@ -37,66 +72,64 @@ Sur le plan architectural, l'application repose sur une séparation claire entre
     visible: true,
   },
   {
-    id: 2,
-    slug: 'sunu-cv',
-    title: 'Sunu CV — Générateur de CV assisté par IA',
-    category: 'Plateforme SaaS & IA',
+    id: 3,
+    slug: 'ndeye_diagne',
+    title: 'Ndèye Diagne — Plateforme Commerciale & MLM',
+    category: 'Site Vitrine & E-Commerce',
     shortDesc:
-      'Application web permettant de concevoir des CV professionnels optimisés pour les systèmes ATS grâce à l’intelligence artificielle.',
-    fullDesc: `Sunu CV est une plateforme SaaS pensée pour accompagner les candidats et professionnels dans la création de CV modernes, structurés et conformes aux standards ATS (Applicant Tracking Systems).
+      'Site vitrine et e-commerce dédié à l’entrepreneuriat à domicile et à la distribution de produits de bien-être.',
+    fullDesc: `La plateforme ndeyediagne.com est un site vitrine et e-commerce conçu pour accompagner les activités entrepreneuriales (Business Team Power) et la commercialisation de gammes de produits de bien-être et de soin.
 
-L'application combine plus de 20 modèles de mise en page professionnels avec un assistant de rédaction par intelligence artificielle qui aide à formuler les expériences, synthétiser le profil et optimiser les mots-clés métiers.
+Le projet couvre la présentation des opportunités d'accompagnement et de coaching, la mise en avant du catalogue de produits bien-être, ainsi que des canaux de contact directs orientés vers la France et le Sénégal.
 
-L'interface offre une prévisualisation en temps réel et permet un export immédiat au format PDF ou Word haute définition.`,
+Sur le plan technique, j'ai assuré l'intégration complète sous WordPress, la configuration de l'hébergement sur Hostinger ainsi que la sécurisation des envois d'e-mails via protocole SMTP.`,
     features: [
-      'Éditeur de CV interactif avec prévisualisation en temps réel',
-      'Assistance à la rédaction et optimisation ATS par intelligence artificielle',
-      'Catalogue de plus de 20 modèles professionnels personnalisables',
-      'Exportation instantanée aux formats PDF et Word',
-      'Interface fluide, responsive et centrée sur l’expérience utilisateur',
+      'Présentation des programmes d’entrepreneuriat à domicile et de coaching',
+      'Espace boutique dédié aux produits de bien-être et de soin',
+      'Intégration sur mesure sous WordPress et responsive design',
+      'Configuration de l’hébergement Hostinger et sécurisation SMTP des e-mails',
     ],
-    tags: ['React', 'IA Générative', 'Tailwind CSS'],
-    tech: ['React.js', 'Tailwind CSS', 'Intégration API IA', 'Export PDF'],
-    demo: '#',
+    tags: ['WordPress', 'Hostinger', 'SMTP'],
+    tech: ['WordPress', 'PHP', 'SMTP', 'Hostinger', 'HTML5', 'CSS3', 'JavaScript'],
+    demo: 'https://ndeyediagne.com/',
     github: '',
-    year: '2026',
-    role: 'Concepteur & Développeur Full-Stack',
-    duration: '2 mois',
-    image: '/sunu_cv/sunu_cv_image1.png',
+    year: 'Fév. 2026 — Avr. 2026',
+    role: 'Développeur Web',
+    duration: '3 mois',
+    image: '/ndeye_diagne/ndeye_diagne_image3.png',
     gallery: [
-      '/sunu_cv/sunu_cv_image1.png',
-      '/sunu_cv/sunu_cv_image2.png',
-      '/sunu_cv/sunu_cv_image3.png',
-      '/sunu_cv/sunu_cv_image4.png',
+      '/ndeye_diagne/ndeye_diagne_image3.png',
+      '/ndeye_diagne/ndeye_diagne_image1.png',
+      '/ndeye_diagne/ndeye_diagne_image2.png',
+      '/ndeye_diagne/ndeye_diagne_image4.png',
+      '/ndeye_diagne/ndeye_diagne_image5.png',
     ],
     visible: true,
   },
   {
-    id: 3,
+    id: 4,
     slug: 'villa-petit-baobab',
-    title: 'Villa Petit Baobab — Réservation Hôtelière',
+    title: 'Villa Petit Baobab — Site de Réservation de Séjours',
     category: 'Système de Réservation',
     shortDesc:
-      'Plateforme officielle de présentation et de réservation en ligne pour une résidence hôtelière située à Warang, Mbour.',
-    fullDesc: `La Villa Petit Baobab est une résidence d'exception située à Warang (Mbour, Sénégal). Ce projet consistait à concevoir sa présence digitale complète ainsi que son système de réservation directe en ligne.
+      'Site de réservation de séjours à Warang (Mbour) avec calendrier interactif et gestion autonome des demandes.',
+    fullDesc: `La Villa Petit Baobab est une résidence hôtelière située à Warang (Mbour). L'objectif de ce projet était de concevoir sa plateforme de réservation en ligne permettant aux voyageurs de réserver leurs séjours en toute autonomie.
 
-Le site met en valeur l'architecture et les espaces de la résidence (chambres, piscine, jardin, services) tout en intégrant un moteur de réservation avec calendrier de disponibilité en temps réel, calcul automatique des tarifs selon les saisons et notifications par e-mail pour les propriétaires comme pour les voyageurs.
-
-J'ai également réalisé les capsules vidéo tutoriels permettant aux clients de maîtriser le parcours de demande de réservation en quelques secondes.`,
+J'ai réalisé l'intégration sous WordPress / WooCommerce avec le thème spécialisé WP Rental, configuré le calendrier interactif des disponibilités, mis en place la passerelle d'envoi d'e-mails transactionnels (SMTP) et déployé la solution sur l'hébergement Hostinger.`,
     features: [
-      'Système de réservation en ligne avec calendrier de disponibilité adaptatif',
-      'Alertes et confirmations automatisées par e-mail',
-      'Tableau de bord de gestion des réservations et des tarifs saisonniers',
-      'Galerie photographique optimisée et présentation détaillée des prestations',
-      'Production de capsules vidéo explicatives pour accompagner les clients',
+      'Réservation de séjours en ligne avec calendrier interactif adaptatif',
+      'Gestion autonome des demandes et tableau de bord administrateur',
+      'Intégration WordPress / WooCommerce (thème WP Rental)',
+      'Configuration de la passerelle SMTP pour les alertes e-mail',
+      'Déploiement et mise en production sur Hostinger',
     ],
-    tags: ['WordPress', 'Booking System', 'PHP'],
-    tech: ['WordPress', 'WP Rentals', 'PHP', 'CSS3', 'Responsive Design'],
+    tags: ['WordPress', 'WooCommerce', 'WP Rental'],
+    tech: ['WordPress', 'WooCommerce', 'WP Rental', 'SMTP', 'Hostinger'],
     demo: 'https://villa-petitbaobab.com/?bypass_code=ZemkLnitHVGfezkQ',
     github: '',
-    year: '2025',
-    role: 'Développeur Web & Créateur Média',
-    duration: '3 mois',
+    year: 'Sept. 2025 — Déc. 2025',
+    role: 'Développeur Web',
+    duration: '4 mois',
     image: '/villa_petit_baobab/villa_petit_baobab_1.png',
     gallery: [
       '/villa_petit_baobab/villa_petit_baobab_1.png',
@@ -107,30 +140,27 @@ J'ai également réalisé les capsules vidéo tutoriels permettant aux clients d
     visible: true,
   },
   {
-    id: 4,
+    id: 5,
     slug: 'luxe-commerce',
     title: 'Perso My Style — E-Commerce & Personnalisation',
     category: 'Application Full-Stack',
     shortDesc:
-      'Boutique en ligne moderne avec personnalisation de produits, gestion de panier temps réel et tableau de bord analytique.',
-    fullDesc: `Perso My Style est une plateforme e-commerce dédiée à la vente et à la personnalisation d'articles de mode et d'accessoires. L'objectif du projet était d'offrir une expérience d'achat fluide, visuelle et rapide.
+      'Boutique en ligne moderne avec personnalisation d’articles, panier temps réel et tableau de bord d’administration.',
+    fullDesc: `Perso My Style est une plateforme e-commerce dédiée à la vente et à la personnalisation d'articles de mode et d'accessoires, conçue pour offrir une navigation fluide et rapide.
 
-Le parcours client intègre une exploration dynamique des collections, un panier mis à jour en temps réel et un processus de commande simplifié en deux étapes.
-
-Côté administration, la plateforme dispose d'un back-office complet permettant de piloter le catalogue, de suivre l'état des stocks automatiquement et de visualiser les statistiques de ventes.`,
+Elle intègre un panier dynamique mis à jour en temps réel, un tunnel de commande optimisé et un panneau d'administration complet pour la gestion du catalogue, le suivi automatique des stocks et l'analyse des ventes.`,
     features: [
-      'Catalogue interactif et personnalisation d’articles',
+      'Catalogue interactif et personnalisation de produits',
       'Panier dynamique en temps réel',
-      'Tunnel de commande optimisé et sécurisé',
       'Panneau d’administration complet (catalogue, stocks, commandes)',
-      'Suivi analytique des performances commerciales',
+      'Suivi analytique des ventes en temps réel',
     ],
     tags: ['React', 'Node.js', 'MongoDB'],
     tech: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
     demo: 'https://front-tache212.vercel.app/accueil',
     github: '',
     year: '2026',
-    role: 'Développeur Frontend & Intégrateur',
+    role: 'Développeur Front-End',
     duration: '4 mois',
     image: '/perso_my_style/tache_21_1.png',
     gallery: [
@@ -142,30 +172,28 @@ Côté administration, la plateforme dispose d'un back-office complet permettant
     visible: true,
   },
   {
-    id: 5,
+    id: 6,
     slug: 'Cours_js',
     title: 'CoursJS — Plateforme Interactive d’Apprentissage',
-    category: 'EdTech & Pédagogie',
+    category: 'EdTech & Programmation',
     shortDesc:
-      'Plateforme éducative interactive pour apprendre JavaScript de zéro avec éditeur de code intégré, console temps réel et quiz.',
-    fullDesc: `En tant que formateur et tuteur en programmation, j'ai conçu CoursJS pour offrir aux étudiants et autodidactes un environnement d'apprentissage du langage JavaScript à la fois structuré et immédiatement pratique.
+      'Plateforme éducative interactive pour apprendre JavaScript avec éditeur de code intégré, console temps réel et quiz.',
+    fullDesc: `Dans le cadre de mes activités de formateur et tuteur en programmation, j'ai conçu CoursJS afin d'offrir aux étudiants un support interactif pour apprendre le langage JavaScript de zéro jusqu'à la manipulation avancée du DOM.
 
-La plateforme couvre l'ensemble du programme fondamental : variables, structures de contrôle, fonctions, tableaux, objets, manipulation du DOM et gestion des événements.
-
-Chaque leçon est accompagnée d'un bac à sable (sandbox) avec éditeur de code et console d'exécution intégrée permettant de tester son code directement dans le navigateur, ainsi que de quiz d'auto-évaluation et d'un suivi de progression sauvegardé localement.`,
+La plateforme intègre un éditeur de code avec console d'exécution en temps réel directement dans le navigateur, des quiz d'auto-évaluation à chaque étape, un suivi de progression et un module de soutien communautaire via Wave.`,
     features: [
-      'Parcours pédagogique progressif du niveau débutant au niveau avancé',
+      'Parcours structuré : variables, fonctions, tableaux, objets et DOM',
       'Éditeur de code intégré avec console d’exécution en temps réel',
       'Quiz de validation des acquis à chaque chapitre',
-      'Sauvegarde automatique de la progression de l’apprenant',
-      'Module de soutien communautaire intégré (Wave)',
+      'Suivi des progrès et sauvegarde locale',
+      'Module de soutien communautaire via Wave',
     ],
-    tags: ['React', 'JavaScript', 'EdTech'],
+    tags: ['React', 'JavaScript', 'Tailwind CSS'],
     tech: ['React (Vite)', 'JavaScript ES6+', 'Tailwind CSS', 'LocalStorage API'],
     demo: 'https://coursjs.vercel.app/',
     github: '',
     year: '2025',
-    role: 'Concepteur Pédagogique & Développeur',
+    role: 'Développeur Front-End',
     duration: '1 mois',
     image: '/cour_js/cour_js.png',
     gallery: [
@@ -179,30 +207,27 @@ Chaque leçon est accompagnée d'un bac à sable (sandbox) avec éditeur de code
     visible: true,
   },
   {
-    id: 6,
+    id: 7,
     slug: 'J2C',
     title: 'J2C — Job Conception & Construction',
-    category: 'Site Vitrine BTP & Architecture',
+    category: 'Site Vitrine BTP & Immobilier',
     shortDesc:
-      'Plateforme digitale et identité visuelle pour une entreprise d’ingénierie du bâtiment, d’architecture 2D/3D et de construction à Thiès.',
-    fullDesc: `J2C (Job Conception & Construction) est une entreprise spécialisée dans l'étude architecturale, l'ingénierie béton armé et la construction immobilière clé en main basée à Thiès (Cité Senghor).
+      'Site vitrine et supports visuels pour une entreprise spécialisée dans les plans 2D/3D, le béton armé et la construction à Thiès.',
+    fullDesc: `J2C (Job Conception & Construction) est une entreprise spécialisée dans l'étude architecturale, la conception de plans 2D/3D, le calcul de plans béton armé et le suivi complet de chantiers immobiliers à Thiès.
 
-Ce projet global comprenait à la fois le développement du site vitrine professionnel et la conception de supports de communication visuelle (affiches publicitaires print et digitales).
-
-Le site présente de manière structurée l'ensemble des prestations de l'entreprise (plans d'architecture 2D/3D, plans béton armé, suivi de chantier, réalisation complète), intègre un portefeuille de réalisations immobilières et facilite la prise de rendez-vous et de devis pour les particuliers et promoteurs.`,
+J'ai conçu et développé le site vitrine de l'entreprise ainsi que ses affiches promotionnelles afin de présenter ses réalisations, détailler ses prestations techniques et faciliter la prise de contact des clients.`,
     features: [
-      'Présentation structurée des expertises BTP (Plans 2D/3D, Béton armé, Suivi de chantier)',
-      'Galerie des réalisations architecturales et chantiers livrés',
-      'Formulaire de demande de devis et prise de contact rapide',
-      'Conception conjointe des affiches publicitaires et de l’identité visuelle',
-      'Optimisation mobile et déploiement haute performance',
+      'Présentation des services : plans 2D/3D, béton armé et suivi de chantier',
+      'Galerie des projets immobiliers et réalisations architecturales',
+      'Interface responsive et prise de contact rapide',
+      'Conception de l’affiche publicitaire et des supports visuels',
     ],
-    tags: ['React', 'Tailwind CSS', 'BTP & Immobilier'],
-    tech: ['React (Vite)', 'Tailwind CSS', 'JavaScript', 'Responsive Design', 'Identité Visuelle'],
+    tags: ['React Vite', 'Tailwind CSS', 'JavaScript'],
+    tech: ['React Vite', 'Tailwind CSS', 'HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
     demo: 'https://j2c-five.vercel.app/',
     github: '',
     year: '2025',
-    role: 'Concepteur Web & Designer Graphique',
+    role: 'Concepteur & Développeur Web',
     duration: '2 mois',
     image: '/j2c/j2C_image1.png',
     gallery: [
@@ -212,39 +237,6 @@ Le site présente de manière structurée l'ensemble des prestations de l'entrep
       '/j2c/j2C_image4.png',
       '/j2c/j2C_image5.png',
       '/j2c/j2C_image6.png',
-    ],
-    visible: true,
-  },
-  {
-    id: 7,
-    slug: 'ndeye_diagne',
-    title: 'Ndèye Diagne — Plateforme Entrepreneuriale & Bien-être',
-    category: 'Site Vitrine & E-Business',
-    shortDesc:
-      'Portail professionnel et commercial dédié à l’entrepreneuriat, au coaching et à la présentation de gammes bien-être entre la France et le Sénégal.',
-    fullDesc: `Le site ndeyediagne.com est une plateforme digitale professionnelle conçue pour accompagner les activités de Ndèye Diagne (Team Power) dans les domaines du coaching entrepreneurial et de la distribution de produits de bien-être et de soin.
-
-L'architecture de l'information a été pensée pour répondre à trois objectifs : présenter les programmes d'accompagnement et de formation en ligne, mettre en avant les gammes de produits partenaires (énergie, nutrition, soin), et offrir un canal de prise de contact direct adapté aux audiences basées en France et au Sénégal.`,
-    features: [
-      'Espace dédié à l’accompagnement entrepreneurial et au coaching d’équipe',
-      'Catalogue de présentation des gammes bien-être et nutrition',
-      'Système de prise de contact multicanal (formulaire PHP Mailer et intégration WhatsApp)',
-      'Administration autonome des contenus via WordPress',
-    ],
-    tags: ['WordPress', 'PHP', 'JavaScript'],
-    tech: ['WordPress', 'PHP', 'PHPMailer', 'HTML5', 'CSS3', 'JavaScript', 'Hostinger'],
-    demo: 'https://ndeyediagne.com/',
-    github: '',
-    year: '2026',
-    role: 'Concepteur & Développeur Web',
-    duration: '2 mois',
-    image: '/ndeye_diagne/ndeye_diagne_image3.png',
-    gallery: [
-      '/ndeye_diagne/ndeye_diagne_image3.png',
-      '/ndeye_diagne/ndeye_diagne_image1.png',
-      '/ndeye_diagne/ndeye_diagne_image2.png',
-      '/ndeye_diagne/ndeye_diagne_image4.png',
-      '/ndeye_diagne/ndeye_diagne_image5.png',
     ],
     visible: true,
   },

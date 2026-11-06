@@ -9,20 +9,21 @@ export default function About() {
         <div className="max-w-3xl mb-16">
           <span className="section-label">01 — Profil & Compétences</span>
           <h2 className="font-display font-bold text-3xl sm:text-4xl text-text tracking-tight mb-6">
-            Une double compétence d’ingénieur logiciel et de directeur créatif.
+            Développeur Web, Technicien Informatique & Créateur Visuel.
           </h2>
           <div className="space-y-4 text-muted text-base leading-relaxed">
             <p>
-              Basé entre <strong className="text-text font-medium">Dakar et Thiès (Sénégal)</strong>, je suis 
-              Ingénieur Logiciel et Technicien Supérieur en Informatique. Mon parcours s’articule autour de 
-              la gestion complète du cycle de vie des applications : de l’architecture technique et du 
-              développement full-stack jusqu’au déploiement, la maintenance système/réseau et le support.
+              Basé à <strong className="text-text font-medium">Dakar (Sénégal)</strong>, je suis 
+              Développeur Front-End / Full-Stack et Technicien en Informatique polyvalent, fort d’une 
+              solide expertise en développement web, infographie et maintenance informatique. J’interviens 
+              sur la gestion complète du cycle de vie des applications : conception, développement, 
+              déploiement CI/CD, maintenance et support technique.
             </p>
             <p>
-              Au-delà du code, j’occupe des fonctions de <strong className="text-text font-medium">Direction Technique (CTO)</strong> chez 
-              OnlineClass et au sein du <strong className="text-text font-medium">Studio Amed Njie</strong>, où j’intègre des workflows 
-              d’intelligence artificielle appliqués à la réalisation audiovisuelle et au design graphique. 
-              J’interviens également comme <strong className="text-text font-medium">Coach Formateur</strong> à Bakeli School of Technology.
+              J’assure également la <strong className="text-text font-medium">Direction Technique (CTO)</strong> chez 
+              OnlineClass ainsi qu’au sein du <strong className="text-text font-medium">Studio Amed Njie</strong>, où 
+              je pilote des workflows d’intelligence artificielle dédiés à la production audiovisuelle et 
+              multimédia, tout en accompagnant des apprenants en programmation et algorithmique depuis 2022.
             </p>
           </div>
         </div>
@@ -40,7 +41,7 @@ export default function About() {
             >
               <div>
                 <div className="font-mono text-xs text-muted mb-2">
-                  Domaine 0{idx + 1}
+                  Pôle 0{idx + 1}
                 </div>
                 <h3 className="font-display font-bold text-lg text-text mb-1.5">
                   {group.title}
@@ -74,9 +75,9 @@ export default function About() {
           <div className="lg:col-span-8 card-surface p-6 sm:p-8">
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-border">
               <h3 className="font-display font-bold text-lg text-text">
-                Formation Académique
+                Éducation & Formations
               </h3>
-              <span className="font-mono text-xs text-muted">cursus universitaire</span>
+              <span className="font-mono text-xs text-muted">parcours académique</span>
             </div>
 
             <div className="divide-y divide-border">
@@ -130,15 +131,15 @@ export default function About() {
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between">
                   <span className="text-muted">Français</span>
-                  <span className="text-text font-medium">Courant / Professionnel</span>
+                  <span className="text-text font-medium">Courant</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted">Anglais</span>
                   <span className="text-text font-medium">Technique</span>
                 </div>
                 <div className="flex justify-between pt-1">
-                  <span className="text-muted">Veille</span>
-                  <span className="text-text font-medium">IA générative, Architecture Web</span>
+                  <span className="text-muted">Centres d’intérêt</span>
+                  <span className="text-text font-medium">IA générative, Veille Tech, Entrepreneuriat</span>
                 </div>
               </div>
             </div>
