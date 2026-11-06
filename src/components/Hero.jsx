@@ -88,16 +88,16 @@ export default function Hero() {
                 <div className="font-display font-bold text-2xl sm:text-3xl text-text tracking-tight">
                   CTO
                 </div>
-                <div className="font-mono text-xs text-muted mt-1">
-                  Studio Amed Njie & OnlineClass
+                <div className="font-mono text-xs text-muted mt-1 line-clamp-1">
+                  Studio IA & OnlineClass
                 </div>
               </div>
               <div className="border-l border-border pl-6">
-                <div className="font-display font-bold text-2xl sm:text-3xl text-text tracking-tight">
+                <div className="font-display font-bold text-2xl sm:text-3xl line-clamp-1 text-text tracking-tight">
                   Depuis 2018
                 </div>
                 <div className="font-mono text-xs text-muted mt-1">
-                  IT, Réseaux & Développement
+                  IT, Vente , commerce
                 </div>
               </div>
             </div>
