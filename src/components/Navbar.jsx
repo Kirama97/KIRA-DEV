@@ -57,7 +57,7 @@ export default function Navbar() {
                 Diène Thiam
               </span>
               <span className="font-mono text-[10px] text-muted mt-1 leading-none">
-                Développeur Front-End & Full-Stack
+                Développeur web & Freelance
               </span>
             </div>
           </Link>
