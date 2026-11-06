@@ -91,7 +91,7 @@ Sur le plan technique, j'ai assuré l'intégration complète sous WordPress, la 
     ],
     tags: ['WordPress', 'Hostinger', 'SMTP'],
     tech: ['WordPress', 'PHP', 'SMTP', 'Hostinger', 'HTML5', 'CSS3', 'JavaScript'],
-    demo: 'https://ndeyediagne.com/',
+    demo: 'https://ndeye-diagne.fr',
     github: '',
     year: 'Fév. 2026 — Avr. 2026',
     role: 'Développeur Web',
